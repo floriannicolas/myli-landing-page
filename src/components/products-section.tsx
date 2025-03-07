@@ -217,7 +217,7 @@ export default function ProductsSection() {
                 <div className="flex flex-col lg:flex-row items-center justify-center h-full w-full">
                   <ProductsSectionMenu section="seo" />
                   <motion.div
-                    className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-autoflex-1 h-full flex justify-center items-center"
+                    className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center"
                     style={{
                       transform: isLgScreen ? translateYTemplateSeo : mdTranslateY,
                       opacity: isLgScreen ? opacitySeo : 1
@@ -233,7 +233,7 @@ export default function ProductsSection() {
                           <LogoMyliChat />
                         </div>
                         <div className="flex flex-wrap flex-1 flex-col gap-2">
-                          <div className="w-auto lg:w-max max-w-max bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                          <div className="w-auto max-w-fit bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
                             Votre <b className="font-semibold">Store Locator</b>{' '}
                             est prêt. <b className="font-semibold">356 pages</b>{' '}
                             locales parfaitement optimisées.
