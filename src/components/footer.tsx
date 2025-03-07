@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="max-w-md font-medium mt-10 lg:mt-12 text-[2rem] leading-[2.25rem] lg:text-[3rem] lg:leading-[3.25rem] tracking-[-.02em]">
-            L'intelligence client nouvelle génération
+            L&apos;intelligence client nouvelle génération
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mt-6 lg:mt-8">
             <div>

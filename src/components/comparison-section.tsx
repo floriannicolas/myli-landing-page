@@ -133,7 +133,7 @@ export default function ComparisonSection() {
                     <PinContent className="lg:top-[-130px] lg:left-[-220px]">
                       <span className="block bg-[#da2828] rounded-full w-3 h-3" />
                       <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
-                        Mauvais&nbsp;horaires&nbsp;d'ouverture
+                        Mauvais&nbsp;horaires&nbsp;d&apos;ouverture
                       </div>
                     </PinContent>
                   </PinContainer>

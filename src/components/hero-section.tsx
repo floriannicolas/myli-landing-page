@@ -8,11 +8,11 @@ export default function HeroSection() {
         Vos établissements méritent une plateforme à leur mesure.
       </h1>
       <div className="mt-6 max-w-lg mx-auto text-[1rem] leading-[1.5rem] lg:text-[1.5rem] lg:leading-[2rem] font-medium bg-gradient-to-r from-[#3d77d3] to-[#9b59c4] bg-clip-text text-transparent">
-        <p>De l'acquisition à la satisfation client :</p>
-        <p>L'audace comme signature,</p>
+        <p>De l&apos;acquisition à la satisfation client :</p>
+        <p>L&apos;audace comme signature,</p>
         <p>
           <HeroSparkles className="h-4 lg:h-6 inline mr-1 lg:mr-2" />
-          l'IA comme force.
+          l&apos;IA comme force.
         </p>
       </div>
       <div className="mt-10 flex justify-center">

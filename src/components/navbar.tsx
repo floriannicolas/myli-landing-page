@@ -7,6 +7,7 @@ import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
 import CentralContainer from "@/components/ui/central-container";
 import MagicButton from "@/components/ui/magic-button";
 import { useMediaQuery } from "usehooks-ts";
+import Link from "next/link";
 
 export default function NavBar() {
   const sectionRef = useRef(null);
@@ -38,10 +39,10 @@ export default function NavBar() {
         <nav className="px-0 lg:px-6">
           <ul className="flex gap-0 items-center justify-center">
             <li>
-              <a href="/">
+              <Link href="/">
                 <LogoMyli className="hidden lg:block" />
                 <LogoMyliMobile className="block lg:hidden h-8" />
-              </a>
+              </Link>
             </li>
             <li className="ml-auto lg:bg-white lg:px-1 lg:py-1 lg:rounded-l-full overflow-hidden">
               <MagicButton asChild variant="transparent-gray" style={isLgScreen ? {} : loginBtnStyle}>

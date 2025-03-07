@@ -88,7 +88,7 @@ export default function ProductsSection() {
                   <div className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center">
                     <div className="flex flex-col w-full max-w-[43.75rem] gap-6">
                       <div className="w-auto max-w-fit bg-[#ffce67] px-6 py-5 lg:text-lg rounded-[1.25rem]">
-                        Y'a t-il des{" "}
+                        Y&apos;a t-il des{" "}
                         <b className="font-semibold">soucis particuliers</b>{" "}
                         dans mes établissements ?
                       </div>
@@ -111,7 +111,7 @@ export default function ProductsSection() {
                               <span className="leading-[20px] bg-white border border-[#e1e2e9] inline-flex gap-1 lg:gap-2 justify-center items-center rounded-lg p-1 lg:p-2">
                                 <span className="w-[.625rem] h-[.625rem] bg-[#da2828] rounded-full" />
                                 <span className="lg:text-lg font-semibold">
-                                  Temps d'attente
+                                  Temps d&apos;attente
                                 </span>
                               </span>
                             </div>
