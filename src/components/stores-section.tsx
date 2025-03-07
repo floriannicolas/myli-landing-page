@@ -216,7 +216,7 @@ export default function StoresSection() {
                 height="124"
                 src={`/stores/${image}`}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0">
+              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0 group-focus:translate-y-0">
                 {label}
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function StoresSection() {
                 height="124"
                 src={`/stores/${image}`}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0">
+              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0 group-focus:translate-y-0">
                 {label}
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function StoresSection() {
                 height="124"
                 src={`/stores/${image}`}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0">
+              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0 group-focus:translate-y-0">
                 {label}
               </div>
             </div>
