@@ -1,0 +1,27 @@
+import HeroSparkles from "@/components/icons/hero-sparkles";
+import MagicButton from "@/components/ui/magic-button";
+
+export default function HeroSection() {
+  return (
+    <section className="min-h-100/2 px-8 py-10 text-center">
+      <h1 className="mx-auto text-balance lg:max-w-3xl text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em] font-medium">
+        Vos établissements méritent une plateforme à leur mesure.
+      </h1>
+      <div className="mt-6 max-w-lg mx-auto text-[1rem] leading-[1.5rem] lg:text-[1.5rem] lg:leading-[2rem] font-medium bg-gradient-to-r from-[#3d77d3] to-[#9b59c4] bg-clip-text text-transparent">
+        <p>De l'acquisition à la satisfation client :</p>
+        <p>L'audace comme signature,</p>
+        <p>
+          <HeroSparkles className="h-4 lg:h-6 inline mr-1 lg:mr-2" />
+          l'IA comme force.
+        </p>
+      </div>
+      <div className="mt-10 flex justify-center">
+        <MagicButton size="big">
+          <a href="#">
+            Planifier votre démo
+          </a>
+        </MagicButton>
+      </div>
+    </section>
+  );
+}
