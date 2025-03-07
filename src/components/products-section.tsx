@@ -82,7 +82,7 @@ export default function ProductsSection() {
                 transform: isLgScreen ? containerInnerTransform : undefined,
               }}
             >
-              <div className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 rounded-[2rem] lg:rounded-none relative w-full h-full flex justify-center items-center bg-linear-180 from-[#ffefc6] to-[#fff9eb]">
+              <div className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 mt-4 lg:mt-0 rounded-[2rem] lg:rounded-none relative w-full h-full flex justify-center items-center bg-linear-180 from-[#ffefc6] to-[#fff9eb]">
                 <div className="flex flex-col lg:flex-row items-center justify-center h-full w-full">
                   <ProductsSectionMenu section="review" />
                   <div className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center">

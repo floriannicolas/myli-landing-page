@@ -70,7 +70,7 @@ export default function TeamSection() {
         <CentralMiniContainer fluidSize={false}>
           <div className="flex items-center justify-center lg:justify-normal lg:flex-row-reverse mt-10 lg:-mt-10">
             <motion.div
-              className="relative bg-white rounded-[2.5rem] p-6 lg:p-10 text-base lg:text-lg z-2 w-[calc(.6666666667*100vw-.6666666667*16px*2+.6666666667*1rem)] lg:w-[calc(.33*100vw-.33*16px*2+.333*1rem)]"
+              className="relative bg-white rounded-[2.5rem] p-6 lg:p-10 text-base lg:text-lg z-2 w-[calc(.8333333333*100vw-.8333333333*16px*2+.8333333333*1rem)] lg:w-[calc(.6666666667*100vw-.6666666667*16px*2+.6666666667*1rem)] lg:w-[calc(.33*100vw-.33*16px*2+.333*1rem)]"
               style={{
                 transform: textTranslateYTransform,
               }}

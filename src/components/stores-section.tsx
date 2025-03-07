@@ -135,7 +135,7 @@ const stores3 = [
 ];
 
 export default function StoresSection() {
-  const [currentStoreType, setCurrentStoreType] = useState("type-1-50");
+  const [currentStoreType, setCurrentStoreType] = useState("type-50-200");
 
   const handleChangeStoreType = (newStoreType: string) => {
     setCurrentStoreType(newStoreType);
