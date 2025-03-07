@@ -24,8 +24,3 @@ body {
   color: var(--foreground);
   font-family: var(--font-mosvita);
 }
-
-.group-always-hover\:translate-y-0:is(:where(.group):hover *) {
-  --tw-translate-y: calc(var(--spacing)* 0);
-  translate: var(--tw-translate-x) var(--tw-translate-y);
-}
