@@ -17,9 +17,7 @@ export default function HeroSection() {
       </div>
       <div className="mt-10 flex justify-center">
         <MagicButton size="big">
-          <a href="#">
             Planifier votre démo
-          </a>
         </MagicButton>
       </div>
     </section>

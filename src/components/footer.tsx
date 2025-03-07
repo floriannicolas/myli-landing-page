@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mt-6 lg:mt-8">
             <div>
               <MagicButton size="big">
-                <a href="#">Planifier votre démo</a>
+                Planifier votre démo
               </MagicButton>
             </div>
             <div>
