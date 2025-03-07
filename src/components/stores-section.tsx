@@ -207,7 +207,7 @@ export default function StoresSection() {
           {stores1.map(({ image, label }) => (
             <div
               key={image}
-              className="relative overflow-hidden mx-auto group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
             >
               <img
                 alt=""
@@ -216,8 +216,10 @@ export default function StoresSection() {
                 height="124"
                 src={`/stores/${image}`}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0 group-focus:translate-y-0">
-                {label}
+              <div className="absolute top-0 left-0 w-full h-full group">
+                <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0">
+                  {label}
+                </div>
               </div>
             </div>
           ))}
@@ -236,7 +238,7 @@ export default function StoresSection() {
           {stores2.map(({ image, label }) => (
             <div
               key={image}
-              className="relative overflow-hidden mx-auto group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
             >
               <img
                 alt=""
@@ -245,8 +247,10 @@ export default function StoresSection() {
                 height="124"
                 src={`/stores/${image}`}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0 group-focus:translate-y-0">
-                {label}
+              <div className="absolute top-0 left-0 w-full h-full group">
+                <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0">
+                  {label}
+                </div>
               </div>
             </div>
           ))}
@@ -263,7 +267,7 @@ export default function StoresSection() {
           {stores3.map(({ image, label }) => (
             <div
               key={image}
-              className="relative overflow-hidden mx-auto group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
             >
               <img
                 alt=""
@@ -272,8 +276,10 @@ export default function StoresSection() {
                 height="124"
                 src={`/stores/${image}`}
               />
-              <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0 group-focus:translate-y-0">
-                {label}
+              <div className="absolute top-0 left-0 w-full h-full group">
+                <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full group-hover:translate-y-0">
+                  {label}
+                </div>
               </div>
             </div>
           ))}

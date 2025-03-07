@@ -49,13 +49,13 @@ const MagicButton = React.forwardRef<HTMLButtonElement, MagicButtonProps>(
       return React.cloneElement(child, {
         ...props,
         className: cn(baseClass, child.props.className),
-        children: <span className="relative z-10">{child.props.children}</span>
+        children: <span className="relative z-10 select-none">{child.props.children}</span>
       });
     }
 
     return (
       <button ref={ref} className={baseClass} {...props}>
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10 select-none">{children}</span>
       </button>
     );
   }

@@ -52,7 +52,7 @@ export default function ToolsSection() {
           <h2 className="font-medium text-balance text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em]">
             Quatre outils puissants, une seule plateforme
           </h2>
-          <div className="mt-6 lg:mt-10 text-lg max-w-lg mx-auto">
+          <div className="mx-4 mt-6 lg:mt-10 text-lg max-w-lg lg:mx-auto">
             De la gestion des avis à la conquête locale, nous avons créé des
             solutions puissantes, complémentaires et faciles à intégrer :
             Review, Presence, Store Locator, Lottery.
