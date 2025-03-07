@@ -1,54 +1,55 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import Asterisk from './icons/asterisk';
 
 const stores1 = [
   {
-    image: "logo-bocuse_002.webp",
+    image: 'logo-bocuse_002.webp',
     label: (
       <>
         Depuis 2018
         <br />
         Le restaurant de Mr Paul !
       </>
-    ),
+    )
   },
   {
-    image: "logo-trampoline-park_002.webp",
+    image: 'logo-trampoline-park_002.webp',
     label: (
       <>
         Depuis 2016
         <br />
         De FeelSport à Youjump - Du challenge et de la confiance !
       </>
-    ),
+    )
   },
   {
-    image: "logo-black&white_002.webp",
+    image: 'logo-black&white_002.webp',
     label: (
       <>
         Connu via Pokawa
         <br />
         Reconnu grâce à nos résultats
       </>
-    ),
+    )
   },
   {
-    image: "logo-pny_002.webp",
+    image: 'logo-pny_002.webp',
     label: (
       <>
         2020-22 : Début de l&apos;histoire
         <br />
         2024 : Les retrouvailles après un essai chez un confrère.
       </>
-    ),
-  },
+    )
+  }
 ];
 
 const stores2 = [
   {
-    image: "logo-pokawa_002.webp",
+    image: 'logo-pokawa_002.webp',
     label: (
       <>
         2020 : 29 restaurants
@@ -57,43 +58,43 @@ const stores2 = [
         <br />
         (On grandit ensemble 😌)
       </>
-    ),
+    )
   },
   {
-    image: "logo-laboucherie_002.webp",
+    image: 'logo-laboucherie_002.webp',
     label: (
       <>
         Depuis 2020
         <br />
         Bienveillance, Challenge, Fidélité… comme tous nos clients à Angers !
       </>
-    ),
+    )
   },
   {
-    image: "logo-b&m_002.webp",
+    image: 'logo-b&m_002.webp',
     label: (
       <>
         135 magasins
         <br />
         Une confiance basée sur du concret
       </>
-    ),
+    )
   },
   {
-    image: "logo-pizzacosy_002.webp",
+    image: 'logo-pizzacosy_002.webp',
     label: (
       <>
         2018 : 15 pizzerias et 1 produit Myli
         <br />
         2025 : 73 pizzerias et 4 produits Myli
       </>
-    ),
-  },
+    )
+  }
 ];
 
 const stores3 = [
   {
-    image: "logo-groupe-bertrand_002.webp",
+    image: 'logo-groupe-bertrand_002.webp',
     label: (
       <>
         2017 : Pitaya 10 restos
@@ -102,40 +103,40 @@ const stores3 = [
         <br />
         2020 : Groupe Kamel Boulhadid
       </>
-    ),
+    )
   },
   {
-    image: "logo-adecco_002.webp",
+    image: 'logo-adecco_002.webp',
     label: (
       <>
         Écartés en 2021, Précieux aujourd&apos;hui. 98% des avis ont une réponse
         grâce à Myli et aux équipes Adecco.
       </>
-    ),
+    )
   },
   {
-    image: "logo-amorino_002.webp",
+    image: 'logo-amorino_002.webp',
     label: (
       <>
         270 boutiques
         <br />
         Un plaisir de valoriser l’image de leur Gelato dans 18 pays.
       </>
-    ),
+    )
   },
   {
-    image: "logo-monceaux-fleurs_002.webp",
+    image: 'logo-monceaux-fleurs_002.webp',
     label: (
       <>
         211 fleuristes et 2 produits déployés avec des résultats bien visibles
         ☺️
       </>
-    ),
-  },
+    )
+  }
 ];
 
 export default function StoresSection() {
-  const [currentStoreType, setCurrentStoreType] = useState("type-50-200");
+  const [currentStoreType, setCurrentStoreType] = useState('type-50-200');
 
   const handleChangeStoreType = (newStoreType: string) => {
     setCurrentStoreType(newStoreType);
@@ -144,7 +145,17 @@ export default function StoresSection() {
   return (
     <section className="min-h-100/2 px-8 py-10 text-center">
       <h2 className="mx-auto text-balance lg:max-w-lg text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
-        Leaders dans la restauration.
+        Leaders
+        <span className="relative mx-2 translate-y-[-50%] lg:translate-y-[-100%] transition-all group inline-flex items-center justify-center rounded-full aspect-square w-6 bg-[#ffce67] lg:hover:bg-[#171b26]">
+          <Asterisk className="fill-black lg:group-hover:fill-white transition-all lg:group-hover:-rotate-90" />
+          <div className="hidden lg:flex absolute text-balance items-center top-[calc(-200%-3.5rem)] pt-[.5625rem] px-4 pb-2 rounded-full bg-[#ffefc6] text-sm font-semibold transition-all opacity-0 transform translate-y-9 scale-0 rotate-[25deg] group-hover:opacity-100 group-hover:translate-z-0 group-hover:scale-100 group-hover:rotate-0">
+            <span className="w-[1000px] max-w-83">
+              40% du Top 100 des chaînes de la restauration rapide par France
+              Snacking Avril 2024
+            </span>
+          </div>
+        </span>
+        dans la restauration.
         <br />
         Reconnus dans tous les secteurs.
       </h2>
@@ -152,33 +163,33 @@ export default function StoresSection() {
         <div className="flex lg:hidden items-center justify-center gap-2 mb-8 p-2 rounded-full border border-[#e1e2e9]">
           <div
             className={cn(
-              "transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold",
-              currentStoreType === "type-1-50" && "bg-[#ffce67]"
+              'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+              currentStoreType === 'type-1-50' && 'bg-[#ffce67]'
             )}
             onClick={() => {
-              handleChangeStoreType("type-1-50");
+              handleChangeStoreType('type-1-50');
             }}
           >
             1-50
           </div>
           <div
             className={cn(
-              "transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold",
-              currentStoreType === "type-50-200" && "bg-[#a2cd92]"
+              'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+              currentStoreType === 'type-50-200' && 'bg-[#a2cd92]'
             )}
             onClick={() => {
-              handleChangeStoreType("type-50-200");
+              handleChangeStoreType('type-50-200');
             }}
           >
             50-200
           </div>
           <div
             className={cn(
-              "transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold",
-              currentStoreType === "type-200+" && "bg-[#faa96b]"
+              'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+              currentStoreType === 'type-200+' && 'bg-[#faa96b]'
             )}
             onClick={() => {
-              handleChangeStoreType("type-200+");
+              handleChangeStoreType('type-200+');
             }}
           >
             200+
@@ -186,8 +197,8 @@ export default function StoresSection() {
         </div>
         <div
           className={cn(
-            "flex flex-wrap items-center justify-center gap-4 lg:!flex",
-            currentStoreType !== "type-1-50" && "hidden",
+            'flex flex-wrap items-center justify-center gap-4 lg:!flex',
+            currentStoreType !== 'type-1-50' && 'hidden'
           )}
         >
           <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#ffce67] text-center">
@@ -213,8 +224,8 @@ export default function StoresSection() {
         </div>
         <div
           className={cn(
-            "flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex",
-            currentStoreType !== "type-50-200" && "hidden",
+            'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
+            currentStoreType !== 'type-50-200' && 'hidden'
           )}
         >
           <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#a2cd92] text-center">
@@ -242,8 +253,8 @@ export default function StoresSection() {
         </div>
         <div
           className={cn(
-            "flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex",
-            currentStoreType !== "type-200+" && "hidden",
+            'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
+            currentStoreType !== 'type-200+' && 'hidden'
           )}
         >
           <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#faa96b] text-center">
