@@ -233,7 +233,7 @@ export default function ProductsSection() {
                           <LogoMyliChat />
                         </div>
                         <div className="flex flex-wrap flex-1 flex-col gap-2">
-                          <div className="w-auto max-w-max bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                          <div className="w-auto lg:w-max max-w-max bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
                             Votre <b className="font-semibold">Store Locator</b>{' '}
                             est prêt. <b className="font-semibold">356 pages</b>{' '}
                             locales parfaitement optimisées.
