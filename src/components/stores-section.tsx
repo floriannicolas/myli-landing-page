@@ -38,7 +38,7 @@ const stores1 = [
     image: "logo-pny_002.webp",
     label: (
       <>
-        2020-22 : Début de l'histoire
+        2020-22 : Début de l&apos;histoire
         <br />
         2024 : Les retrouvailles après un essai chez un confrère.
       </>
@@ -108,7 +108,7 @@ const stores3 = [
     image: "logo-adecco_002.webp",
     label: (
       <>
-        Écartés en 2021, Précieux aujourd'hui. 98% des avis ont une réponse
+        Écartés en 2021, Précieux aujourd&apos;hui. 98% des avis ont une réponse
         grâce à Myli et aux équipes Adecco.
       </>
     ),

@@ -33,13 +33,15 @@ const MagicButton = React.forwardRef<HTMLButtonElement, MagicButtonProps>(
       "leading-[40px]",
       variant === "transparent-gray" &&
         "bg-transparent after:bg-[#f5f6f8] before:bg-[#f5f6f8] hover:text-[#171b26]",
-      variant === "hover-white" && "after:bg-white before:bg-white hover:text-[#171b26]",
+      variant === "hover-white" &&
+        "after:bg-white before:bg-white hover:text-[#171b26]",
       size === "big" &&
         "py-[1.125rem] px-8 font-semibold text-lg leading-[28px]",
       className
     );
 
     if (asChild && React.isValidElement(children)) {
+      // @typescript-eslint/no-explicit-any
       const child = children as React.ReactElement<any>;
 
       return React.cloneElement(child, {

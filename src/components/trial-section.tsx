@@ -9,7 +9,7 @@ export default function TrialSection() {
           Testez-nous maintenant
         </h2>
         <p className="text-white text-lg lg:text-2xl mt-2">
-          Les chiffres parleront d'eux-mêmes.
+          Les chiffres parleront d&apos;eux-mêmes.
         </p>
         <div className="mt-10 flex justify-center">
           <MagicButton size="big" variant="hover-white">

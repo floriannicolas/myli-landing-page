@@ -102,7 +102,7 @@ export default function ComparisonSection() {
                     <PinContent className="lg:top-[-110px] lg:left-[40px]">
                       <Reviews />
                       <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
-                        Peu&nbsp;d'avis&nbsp;clients
+                        Peu&nbsp;d&apos;avis&nbsp;clients
                       </div>
                     </PinContent>
                   </PinContainer>

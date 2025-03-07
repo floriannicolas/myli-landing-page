@@ -75,8 +75,8 @@ export default function TeamSection() {
                 transform: textTranslateYTransform,
               }}
             >
-              Nous avons choisi d'être une équipe à taille humaine pour garder
-              l'agilité des startups et la folie des pionniers. Certains misent
+              Nous avons choisi d&apos;être une équipe à taille humaine pour garder
+              l&apos;agilité des startups et la folie des pionniers. Certains misent
               sur la quantité, nous misons sur la qualité. Et ça change tout.
             </motion.div>
           </div>
