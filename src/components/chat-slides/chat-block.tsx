@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export type ChatInfo = {
   client: {
     label: string;
@@ -47,7 +49,7 @@ export default function ChatBlock({
         })}
       </div>
       <div className="mt-auto pt-8 flex items-center gap-3">
-        <img
+        <Image
           alt={chatInfo.client.label}
           src={chatInfo.client.image}
           width={44}

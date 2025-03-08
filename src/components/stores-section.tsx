@@ -1,12 +1,14 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { useState } from 'react';
-import Asterisk from './icons/asterisk';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
+import Asterisk from '@/components/icons/asterisk';
+import CentralMiniContainer from '@/components/ui/central-mini-container';
 
 const stores1 = [
   {
-    image: 'logo-bocuse_002.webp',
+    image: '/images/stores/logo-bocuse_002.webp',
     label: (
       <>
         Depuis 2018
@@ -16,7 +18,7 @@ const stores1 = [
     )
   },
   {
-    image: 'logo-trampoline-park_002.webp',
+    image: '/images/stores/logo-trampoline-park_002.webp',
     label: (
       <>
         Depuis 2016
@@ -26,7 +28,7 @@ const stores1 = [
     )
   },
   {
-    image: 'logo-black&white_002.webp',
+    image: '/images/stores/logo-black&white_002.webp',
     label: (
       <>
         Connu via Pokawa
@@ -36,7 +38,7 @@ const stores1 = [
     )
   },
   {
-    image: 'logo-pny_002.webp',
+    image: '/images/stores/logo-pny_002.webp',
     label: (
       <>
         2020-22 : Début de l&apos;histoire
@@ -49,7 +51,7 @@ const stores1 = [
 
 const stores2 = [
   {
-    image: 'logo-pokawa_002.webp',
+    image: '/images/stores/logo-pokawa_002.webp',
     label: (
       <>
         2020 : 29 restaurants
@@ -61,7 +63,7 @@ const stores2 = [
     )
   },
   {
-    image: 'logo-laboucherie_002.webp',
+    image: '/images/stores/logo-laboucherie_002.webp',
     label: (
       <>
         Depuis 2020
@@ -71,7 +73,7 @@ const stores2 = [
     )
   },
   {
-    image: 'logo-b&m_002.webp',
+    image: '/images/stores/logo-b&m_002.webp',
     label: (
       <>
         135 magasins
@@ -81,7 +83,7 @@ const stores2 = [
     )
   },
   {
-    image: 'logo-pizzacosy_002.webp',
+    image: '/images/stores/logo-pizzacosy_002.webp',
     label: (
       <>
         2018 : 15 pizzerias et 1 produit Myli
@@ -94,7 +96,7 @@ const stores2 = [
 
 const stores3 = [
   {
-    image: 'logo-groupe-bertrand_002.webp',
+    image: '/images/stores/logo-groupe-bertrand_002.webp',
     label: (
       <>
         2017 : Pitaya 10 restos
@@ -106,7 +108,7 @@ const stores3 = [
     )
   },
   {
-    image: 'logo-adecco_002.webp',
+    image: '/images/stores/logo-adecco_002.webp',
     label: (
       <>
         Écartés en 2021, Précieux aujourd&apos;hui. 98% des avis ont une réponse
@@ -115,7 +117,7 @@ const stores3 = [
     )
   },
   {
-    image: 'logo-amorino_002.webp',
+    image: '/images/stores/logo-amorino_002.webp',
     label: (
       <>
         270 boutiques
@@ -125,7 +127,7 @@ const stores3 = [
     )
   },
   {
-    image: 'logo-monceaux-fleurs_002.webp',
+    image: '/images/stores/logo-monceaux-fleurs_002.webp',
     label: (
       <>
         211 fleuristes et 2 produits déployés avec des résultats bien visibles
@@ -143,148 +145,136 @@ export default function StoresSection() {
   };
 
   return (
-    <section className="min-h-100/2 px-8 py-10 text-center">
-      <h2 className="mx-auto text-balance lg:max-w-lg text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
-        Leaders
-        <span className="relative mx-2 translate-y-[-50%] lg:translate-y-[-100%] transition-all group inline-flex items-center justify-center rounded-full aspect-square w-6 bg-[#ffce67] lg:hover:bg-[#171b26]">
-          <Asterisk className="fill-black lg:group-hover:fill-white transition-all duration-300 lg:group-hover:-rotate-90" />
-          <div className="hidden lg:flex absolute text-balance items-center top-[calc(-200%-3.5rem)] pt-[.5625rem] px-4 pb-2 rounded-full bg-[#ffefc6] text-sm font-semibold transition-all duration-300 opacity-0 transform translate-y-9 scale-0 rotate-[25deg] group-hover:opacity-100 group-hover:translate-z-0 group-hover:scale-100 group-hover:rotate-0">
-            <span className="w-[1000px] max-w-83">
-              40% du Top 100 des chaînes de la restauration rapide par France
-              Snacking Avril 2024
-            </span>
+    <section className="min-h-100/2 py-10 text-center">
+      <CentralMiniContainer>
+        <h2 className="mx-auto text-balance lg:max-w-lg text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
+          Leaders
+          <span className="relative mx-2 translate-y-[-50%] lg:translate-y-[-100%] transition-all group inline-flex items-center justify-center rounded-full aspect-square w-6 bg-[#ffce67] lg:hover:bg-[#171b26]">
+            <Asterisk className="fill-black lg:group-hover:fill-white transition-all duration-300 lg:group-hover:-rotate-90" />
+            <div className="hidden lg:flex absolute text-balance items-center top-[calc(-200%-3.5rem)] pt-[.5625rem] px-4 pb-2 rounded-full bg-[#ffefc6] text-sm font-semibold transition-all duration-300 opacity-0 transform translate-y-9 scale-0 rotate-[25deg] group-hover:opacity-100 group-hover:translate-z-0 group-hover:scale-100 group-hover:rotate-0">
+              <span className="w-[1000px] max-w-83">
+                40% du Top 100 des chaînes de la restauration rapide par France
+                Snacking Avril 2024
+              </span>
+            </div>
+          </span>
+          dans la restauration.
+          <br />
+          Reconnus dans tous les secteurs.
+        </h2>
+        <div className="relative mx-auto max-w-[647px] lg:max-w-[972px] mt-6 lg:mt-16">
+          <div className="flex lg:hidden items-center justify-center gap-2 mb-8 p-2 rounded-full border border-[#e1e2e9]">
+            <div
+              className={cn(
+                'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+                currentStoreType === 'type-1-50' && 'bg-[#ffce67]'
+              )}
+              onClick={() => {
+                handleChangeStoreType('type-1-50');
+              }}
+            >
+              1-50
+            </div>
+            <div
+              className={cn(
+                'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+                currentStoreType === 'type-50-200' && 'bg-[#a2cd92]'
+              )}
+              onClick={() => {
+                handleChangeStoreType('type-50-200');
+              }}
+            >
+              50-200
+            </div>
+            <div
+              className={cn(
+                'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+                currentStoreType === 'type-200+' && 'bg-[#faa96b]'
+              )}
+              onClick={() => {
+                handleChangeStoreType('type-200+');
+              }}
+            >
+              200+
+            </div>
           </div>
-        </span>
-        dans la restauration.
-        <br />
-        Reconnus dans tous les secteurs.
-      </h2>
-      <div className="relative mx-auto max-w-[647px] lg:max-w-[972px] mt-6 lg:mt-16">
-        <div className="flex lg:hidden items-center justify-center gap-2 mb-8 p-2 rounded-full border border-[#e1e2e9]">
           <div
             className={cn(
-              'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
-              currentStoreType === 'type-1-50' && 'bg-[#ffce67]'
+              'flex flex-wrap items-center justify-center gap-4 lg:!flex',
+              currentStoreType !== 'type-1-50' && 'hidden'
             )}
-            onClick={() => {
-              handleChangeStoreType('type-1-50');
-            }}
           >
-            1-50
+            <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#ffce67] text-center">
+              <span className="text-lg leading-7 px-4">
+                1-50 établissements
+              </span>
+            </div>
+            {stores1.map(({ image, label }) => (
+              <div
+                key={image}
+                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              >
+                <Image alt="" width={124} height={124} src={image} />
+                <div className="absolute top-0 left-0 w-full h-full group">
+                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
+                    {label}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
           <div
             className={cn(
-              'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
-              currentStoreType === 'type-50-200' && 'bg-[#a2cd92]'
+              'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
+              currentStoreType !== 'type-50-200' && 'hidden'
             )}
-            onClick={() => {
-              handleChangeStoreType('type-50-200');
-            }}
           >
-            50-200
+            <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#a2cd92] text-center">
+              <span className="text-lg leading-7 px-4">
+                50-200 établissements
+              </span>
+            </div>
+            {stores2.map(({ image, label }) => (
+              <div
+                key={image}
+                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              >
+                <Image alt="" width={124} height={124} src={image} />
+                <div className="absolute top-0 left-0 w-full h-full group">
+                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
+                    {label}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
           <div
             className={cn(
-              'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
-              currentStoreType === 'type-200+' && 'bg-[#faa96b]'
+              'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
+              currentStoreType !== 'type-200+' && 'hidden'
             )}
-            onClick={() => {
-              handleChangeStoreType('type-200+');
-            }}
           >
-            200+
-          </div>
-        </div>
-        <div
-          className={cn(
-            'flex flex-wrap items-center justify-center gap-4 lg:!flex',
-            currentStoreType !== 'type-1-50' && 'hidden'
-          )}
-        >
-          <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#ffce67] text-center">
-            <span className="text-lg leading-7 px-4">1-50 établissements</span>
-          </div>
-          {stores1.map(({ image, label }) => (
-            <div
-              key={image}
-              className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-            >
-              <img
-                alt=""
-                loading="lazy"
-                width="124"
-                height="124"
-                src={`/stores/${image}`}
-              />
-              <div className="absolute top-0 left-0 w-full h-full group">
-                <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
-                  {label}
+            <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#faa96b] text-center">
+              <span className="text-lg leading-7 px-4">
+                200+ établissements
+              </span>
+            </div>
+            {stores3.map(({ image, label }) => (
+              <div
+                key={image}
+                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              >
+                <Image alt="" width={124} height={124} src={image} />
+                <div className="absolute top-0 left-0 w-full h-full group">
+                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
+                    {label}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div
-          className={cn(
-            'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
-            currentStoreType !== 'type-50-200' && 'hidden'
-          )}
-        >
-          <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#a2cd92] text-center">
-            <span className="text-lg leading-7 px-4">
-              50-200 établissements
-            </span>
+            ))}
           </div>
-          {stores2.map(({ image, label }) => (
-            <div
-              key={image}
-              className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-            >
-              <img
-                alt=""
-                loading="lazy"
-                width="124"
-                height="124"
-                src={`/stores/${image}`}
-              />
-              <div className="absolute top-0 left-0 w-full h-full group">
-                <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
-                  {label}
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
-        <div
-          className={cn(
-            'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
-            currentStoreType !== 'type-200+' && 'hidden'
-          )}
-        >
-          <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#faa96b] text-center">
-            <span className="text-lg leading-7 px-4">200+ établissements</span>
-          </div>
-          {stores3.map(({ image, label }) => (
-            <div
-              key={image}
-              className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-            >
-              <img
-                alt=""
-                loading="lazy"
-                width="124"
-                height="124"
-                src={`/stores/${image}`}
-              />
-              <div className="absolute top-0 left-0 w-full h-full group">
-                <div className="absolute inset-0 flex items-center justify-center px-3 bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
-                  {label}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      </CentralMiniContainer>
     </section>
   );
 }

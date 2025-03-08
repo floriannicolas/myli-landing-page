@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <NavBar />
-      <div className="relative pt-[90px]">
+      <div className="relative pt-[104px]">
         <HeroSection />
         <ComparisonSection />
         <StoresSection />

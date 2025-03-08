@@ -7,6 +7,7 @@ import {
   useMotionTemplate
 } from 'motion/react';
 import { useRef } from 'react';
+import Image from 'next/image';
 import ProductsSectionMenu from '@/components/ui/products-section-menu';
 import LogoMyliChat from '@/components/icons/logo-myli-chat';
 import SmileyAngry from '@/components/icons/smiley-angry';
@@ -27,7 +28,7 @@ export default function ProductsSection() {
   });
 
   const mdClipPath = useMotionTemplate`polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)`;
-  const mdTranslateY = useMotionTemplate`translateY(0%)`;;
+  const mdTranslateY = useMotionTemplate`translateY(0%)`;
 
   // Presence
   const clipPathPercentPresence = useTransform(
@@ -121,7 +122,9 @@ export default function ProductsSection() {
             <motion.div
               className="relative w-full h-full"
               style={{
-                transform: isLgScreen ? containerInnerTransform : mdContainerInnerTransform
+                transform: isLgScreen
+                  ? containerInnerTransform
+                  : mdContainerInnerTransform
               }}
             >
               <div className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 mt-4 lg:mt-0 rounded-[2rem] lg:rounded-none relative w-full h-full flex justify-center items-center bg-linear-180 from-[#ffefc6] to-[#fff9eb]">
@@ -197,11 +200,12 @@ export default function ProductsSection() {
                             Souhaitez-vous la modifier ?
                           </div>
                           <div className="w-auto max-w-fit flex items-center gap-2 bg-white border border-[#e1e2e9] px-2 py-2 lg:text-lg rounded-[1.25rem]">
-                            <img
+                            <Image
                               className="rounded-[.75rem]"
                               src="/products/products-chat-burger.webp"
                               alt=""
                               width={220}
+                              height={141}
                             />
                           </div>
                         </div>
@@ -219,7 +223,9 @@ export default function ProductsSection() {
                   <motion.div
                     className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center"
                     style={{
-                      transform: isLgScreen ? translateYTemplateSeo : mdTranslateY,
+                      transform: isLgScreen
+                        ? translateYTemplateSeo
+                        : mdTranslateY,
                       opacity: isLgScreen ? opacitySeo : 1
                     }}
                   >

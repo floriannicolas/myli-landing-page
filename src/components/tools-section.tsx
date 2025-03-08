@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
 import {
   motion,
   useScroll,
   useTransform,
-  useMotionTemplate,
-} from "motion/react";
-import { useRef } from "react";
-import ToolLottery from "@/components/icons/tool-lottery";
-import ToolPresence from "@/components/icons/tool-presence";
-import ToolReview from "@/components/icons/tool-review";
-import ToolStoreLocator from "@/components/icons/tool-store-locator";
-import { useMediaQuery } from "usehooks-ts";
+  useMotionTemplate
+} from 'motion/react';
+import { useRef } from 'react';
+import ToolLottery from '@/components/icons/tool-lottery';
+import ToolPresence from '@/components/icons/tool-presence';
+import ToolReview from '@/components/icons/tool-review';
+import ToolStoreLocator from '@/components/icons/tool-store-locator';
+import { useMediaQuery } from 'usehooks-ts';
 
 export default function ToolsSection() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery("(width >= 64rem)");
+  const isLgScreen = useMediaQuery('(width >= 64rem)');
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["-50vh", "150vh"],
+    offset: ['-50vh', '150vh']
   });
 
   const textContainerTranslate = useTransform(
@@ -45,7 +45,9 @@ export default function ToolsSection() {
       <motion.div
         className="absolute flex items-center justify-center h-full w-full"
         style={{
-          transform: isLgScreen ? lgTextContainerTransform : textContainerTransform,
+          transform: isLgScreen
+            ? lgTextContainerTransform
+            : textContainerTransform
         }}
       >
         <div className="relative max-w-xl lg:max-w-4xl mx-auto">
