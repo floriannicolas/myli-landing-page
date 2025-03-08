@@ -13,7 +13,7 @@ export default function TrialSection() {
         </p>
         <div className="mt-10 flex justify-center">
           <MagicButton size="big" variant="hover-white">
-            Planifier votre démo
+            Planifiez votre démo
           </MagicButton>
         </div>
       </CentralMiniContainer>

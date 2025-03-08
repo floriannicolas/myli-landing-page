@@ -51,7 +51,7 @@ export default function NavBar() {
             </li>
             <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">
               <MagicButton>
-                Planifier votre démo
+                Planifiez votre démo
               </MagicButton>
             </li>
           </ul>

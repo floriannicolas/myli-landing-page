@@ -62,7 +62,7 @@ export default function ComparisonSection() {
   );
 
   return (
-    <section className="relative h-[200svh]">
+    <section className="relative py-6 lg:py-10 h-[200svh]">
       <div ref={sectionRef} className="h-full px-4 mx-auto">
         <div className="sticky top-[13svh] lg:top-4 mx-auto max-w-[806px] lg:max-w-full flex justify-center items-center">
           <motion.div
