@@ -39,7 +39,7 @@ export default function NavBar() {
         <nav className="px-0 lg:px-6">
           <ul className="flex gap-0 items-center justify-center">
             <li>
-              <Link href="/">
+              <Link href="/" aria-label="Myli">
                 <LogoMyli className="hidden lg:block" />
                 <LogoMyliMobile className="block lg:hidden h-8" />
               </Link>
