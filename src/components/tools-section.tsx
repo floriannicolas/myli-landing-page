@@ -33,7 +33,7 @@ export default function ToolsSection() {
   const lgLextContainerTranslate = useTransform(
     scrollYProgress,
     [0, 1],
-    [-20, 20]
+    [-12.5, 20]
   );
   const lgTextContainerTransform = useMotionTemplate`translateY(${lgLextContainerTranslate}vh)`;
 
@@ -68,7 +68,7 @@ export default function ToolsSection() {
           </div>
           <span className="text-xl">Store Locator</span>
         </div>
-        <div className="mt-18 lg:mt-60 translate-x-[calc(min(100vw,1800px)*-.25)] relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
+        <div className="mt-18 lg:mt-60 xl:mt-70 translate-x-[calc(min(100vw,1800px)*-.25)] relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
           <div className="rounded-full bg-[#ffce67] w-10 h-10 flex items-center justify-center">
             <ToolReview className="h-[22px]" />
           </div>
@@ -80,7 +80,7 @@ export default function ToolsSection() {
           </div>
           <span className="text-xl">Presence</span>
         </div>
-        <div className="mt-20 xl:mt-20 translate-x-[calc(min(100vw,1800px)*-.085)] mb-20 xl:mb-30 relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
+        <div className="mt-20 xl:mt-20 xl:mt-30 translate-x-[calc(min(100vw,1800px)*-.085)] mb-20 xl:mb-30 relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
           <div className="rounded-full bg-[#d3b3ea] w-10 h-10 flex items-center justify-center">
             <ToolLottery className="h-[22px]" />
           </div>
