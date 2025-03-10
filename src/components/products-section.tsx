@@ -4,7 +4,8 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionTemplate
+  useMotionTemplate,
+  useSpring
 } from 'motion/react';
 import { useRef } from 'react';
 import Image from 'next/image';
@@ -12,6 +13,7 @@ import ProductsSectionMenu from '@/components/ui/products-section-menu';
 import LogoMyliChat from '@/components/icons/logo-myli-chat';
 import SmileyAngry from '@/components/icons/smiley-angry';
 import { useMediaQuery } from 'usehooks-ts';
+import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
 export default function ProductsSection() {
   const sectionRef = useRef(null);
@@ -21,80 +23,82 @@ export default function ProductsSection() {
     target: sectionRef,
     offset: ['end end', 'start start']
   });
+  const smoothScrollYClipPathProgress = useSpring(scrollYClipPathProgress, { mass: SPRING_SCROLL_MASS });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['-80vh', '470vh']
   });
+  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
 
   const mdClipPath = useMotionTemplate`polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)`;
   const mdTranslateY = useMotionTemplate`translateY(0%)`;
 
   // Presence
   const clipPathPercentPresence = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.75, 1],
     [0, 100]
   );
   const clipPathPresence = useMotionTemplate`polygon(0% ${clipPathPercentPresence}%, 100% ${clipPathPercentPresence}%, 100% 100%, 0% 100%)`;
   const translateYPercentPresence = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.75, 1],
     [0, 6.5]
   );
   const translateYTemplatePresence = useMotionTemplate`translateY(${translateYPercentPresence}%)`;
   const opacityPresence = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.75, 1],
     [1, 0.35]
   );
 
   // SEO
   const clipPathPercentSeo = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.5, 0.75],
     [0, 100]
   );
   const clipPathSeo = useMotionTemplate`polygon(0% ${clipPathPercentSeo}%, 100% ${clipPathPercentSeo}%, 100% 100%, 0% 100%)`;
   const translateYPercentSeo = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.5, 0.75],
     [0, 6.5]
   );
   const translateYTemplateSeo = useMotionTemplate`translateY(${translateYPercentSeo}%)`;
   const opacitySeo = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.5, 0.75],
     [1, 0.35]
   );
 
   // Lottery
   const clipPathPercentLottery = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.25, 0.5],
     [0, 100]
   );
   const clipPathLottery = useMotionTemplate`polygon(0% ${clipPathPercentLottery}%, 100% ${clipPathPercentLottery}%, 100% 100%, 0% 100%)`;
   const translateYPercentLottery = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.25, 0.5],
     [0, 6.5]
   );
   const translateYTemplateLottery = useMotionTemplate`translateY(${translateYPercentLottery}%)`;
   const opacityLottery = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0.25, 0.5],
     [1, 0.35]
   );
 
   // Container
   const containerTranslate = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 0.14, 0.8, 1],
     [-5, 0, 0, -5]
   );
   const containerScale = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 0.14, 0.8, 1],
     [0.825, 1, 1, 0.825]
   );
@@ -102,7 +106,7 @@ export default function ProductsSection() {
   const mdContainerTransform = useMotionTemplate`translate(0%, 0%) scale(1, 1)`;
 
   const containerInnerScale = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 0.14, 0.8, 1],
     [1.25, 1, 1, 1.25]
   );
@@ -111,7 +115,7 @@ export default function ProductsSection() {
 
   return (
     <section className="relative lg:h-[400svh]">
-      <div ref={sectionRef} className="h-full px-4 mx-auto 2xl:px-16">
+      <div ref={sectionRef} className="h-full px-4 mx-auto 2xl:px-17">
         <div className="lg:sticky lg:top-4 2xl:top-[104px] flex justify-center items-center">
           <motion.div
             className="relative w-full lg:h-[calc(100vh-2rem)] 2xl:h-[calc(100vh-208px)] rounded-none lg:rounded-[2rem] overflow-hidden"

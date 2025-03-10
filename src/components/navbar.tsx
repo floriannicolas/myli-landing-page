@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll, useMotionValueEvent } from "motion/react";
+import { useScroll, useMotionValueEvent, useSpring } from "motion/react";
 import { useRef, useState } from "react";
 import LogoMyli from "@/components/icons/logo-myli";
 import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
@@ -8,6 +8,7 @@ import CentralContainer from "@/components/ui/central-container";
 import MagicButton from "@/components/ui/magic-button";
 import { useMediaQuery } from "usehooks-ts";
 import Link from "next/link";
+import { SPRING_SCROLL_MASS } from "@/lib/constants";
 
 export default function NavBar() {
   const sectionRef = useRef(null);
@@ -18,8 +19,9 @@ export default function NavBar() {
     target: sectionRef,
     offset: ["end end", "start start"],
   });
+  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
 
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
+  useMotionValueEvent(smoothScrollYProgress, "change", (current) => {
     if (current < 0.96) {
       setLoginBtnStyle({
         transform: "translateY(0%)",

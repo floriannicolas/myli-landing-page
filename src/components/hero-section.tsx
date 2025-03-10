@@ -4,7 +4,7 @@ import Asterisk from '@/components/icons/asterisk';
 
 export default function HeroSection() {
   return (
-    <section className="lg:min-h-100/2 px-4 lg:px-8 py-6 lg:py-10 text-center">
+    <section className="lg:min-h-100/2 px-4 lg:px-8 py-6 lg:py-10 xl:py-15 text-center">
       <h1 className="mx-auto text-balance lg:max-w-4xl text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em] font-medium">
         Vos&nbsp;établissements méritent une plateforme à leur mesure.
       </h1>

@@ -5,13 +5,15 @@ import {
   useScroll,
   useTransform,
   useMotionTemplate,
-  useMotionValueEvent
+  useMotionValueEvent,
+  useSpring
 } from 'motion/react';
 import React, { useRef, useState } from 'react';
 import CentralContainer from '@/components/ui/central-container';
 import CentralMiniContainer from '@/components/ui/central-mini-container';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
 const sectors = [
   {
@@ -60,9 +62,10 @@ export default function SectorsSection() {
     target: sectionRef,
     offset: ['-50vh', 2.2]
   });
+  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
 
   const scrollKey = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     sectorInputsTransform,
     duplicatedSectorsKeys
   );
@@ -74,7 +77,7 @@ export default function SectorsSection() {
   });
 
   const imageTranslate = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     sectorInputsTransform,
     [0, 0, 20, 20, 40, 40, 60, 60, 80, 80]
   );

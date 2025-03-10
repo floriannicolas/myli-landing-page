@@ -5,6 +5,7 @@ import {
   useScroll,
   useTransform,
   useMotionTemplate,
+  useSpring,
 } from "motion/react";
 import { useRef } from "react";
 import LogoMyli from "@/components/icons/logo-myli";
@@ -15,6 +16,7 @@ import Pin from "@/components/ui/comparison/pin";
 import PinBar from "@/components/ui/comparison/pin-bar";
 import PinContent from "@/components/ui/comparison/pin-content";
 import PinContainer from "@/components/ui/comparison/pin-container";
+import { SPRING_SCROLL_MASS } from "@/lib/constants";
 
 export default function ComparisonSection() {
   const sectionRef = useRef(null);
@@ -23,47 +25,49 @@ export default function ComparisonSection() {
     target: sectionRef,
     offset: ["end end", "start start"],
   });
+  const smoothScrollYClipPathProgress = useSpring(scrollYClipPathProgress, { mass: SPRING_SCROLL_MASS });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["-80vh", "170vh"],
   });
+  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
 
   const clipPathPercent = useTransform(
-    scrollYClipPathProgress,
+    smoothScrollYClipPathProgress,
     [0, 0.8],
     [0, 100]
   );
   const clipPath = useMotionTemplate`polygon(0% ${clipPathPercent}%, 100% ${clipPathPercent}%, 100% 100%, 0% 100%)`;
 
   const containerTranslate = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 0.32, 0.8, 1],
     [-5, 0, 0, -5]
   );
   const containerScale = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 0.32, 0.8, 1],
     [0.825, 1, 1, 0.825]
   );
   const containerTransform = useMotionTemplate`translate(0%, ${containerTranslate}%) scale(${containerScale}, ${containerScale})`;
 
   const containerInnerScale = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 0.32, 0.8, 1],
     [1.25, 1, 1, 1.25]
   );
   const containerInnerTransform = useMotionTemplate`scale(${containerInnerScale}, ${containerInnerScale})`;
 
   const containerPinsOpacity = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0.26, 0.34, 0.78, 0.84],
     [0, 1, 1, 0]
   );
 
   return (
-    <section className="relative py-6 lg:py-10 h-[200svh]">
-      <div ref={sectionRef} className="h-full px-4 mx-auto 2xl:px-16">
+    <section className="relative py-6 lg:py-10 xl:py-15 h-[200svh]">
+      <div ref={sectionRef} className="h-full px-4 mx-auto 2xl:px-17">
         <div className="sticky top-[13svh] lg:top-4 2xl:top-[104px] mx-auto max-w-[806px] lg:max-w-full flex justify-center items-center">
           <motion.div
             className="relative w-full h-[calc(100vh-26svh)] lg:h-[calc(100vh-2rem)] 2xl:h-[calc(100vh-208px)]  rounded-[2rem] overflow-hidden"
@@ -87,7 +91,7 @@ export default function ComparisonSection() {
                   className="absolute top-8 left-1/2 -translate-x-1/2 transform flex justify-center items-center gap-2 bg-white py-2 px-4 rounded-2xl z-2"
                   style={{ opacity: containerPinsOpacity }}
                 >
-                  <span className="text-lg font-semibold opacity-60">
+                  <span className="text-lg xl:text-xl font-semibold opacity-60">
                     Avant
                   </span>
                   <LogoMyli className="opacity-60" />
@@ -152,7 +156,7 @@ export default function ComparisonSection() {
                   className="absolute top-8 left-1/2 -translate-x-1/2 transform flex justify-center items-center gap-3 bg-[#ffce67] py-2 px-4 rounded-2xl z-2"
                   style={{ opacity: containerPinsOpacity }}
                 >
-                  <span className="text-lg font-semibold">Avec</span>
+                  <span className="text-lg xl:text-xl font-semibold">Avec</span>
                   <LogoMyli />
                 </motion.div>
                 <motion.div

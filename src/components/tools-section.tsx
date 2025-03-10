@@ -4,7 +4,8 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionTemplate
+  useMotionTemplate,
+  useSpring
 } from 'motion/react';
 import { useRef } from 'react';
 import ToolLottery from '@/components/icons/tool-lottery';
@@ -12,6 +13,7 @@ import ToolPresence from '@/components/icons/tool-presence';
 import ToolReview from '@/components/icons/tool-review';
 import ToolStoreLocator from '@/components/icons/tool-store-locator';
 import { useMediaQuery } from 'usehooks-ts';
+import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
 export default function ToolsSection() {
   const sectionRef = useRef(null);
@@ -21,9 +23,10 @@ export default function ToolsSection() {
     target: sectionRef,
     offset: ['-50vh', '150vh']
   });
+  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
 
   const textContainerTranslate = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 1],
     [-12.5, 12.5]
   );
@@ -31,7 +34,7 @@ export default function ToolsSection() {
   const textContainerTransform = useMotionTemplate`translateY(${textContainerTranslate}vh)`;
 
   const lgLextContainerTranslate = useTransform(
-    scrollYProgress,
+    smoothScrollYProgress,
     [0, 1],
     [-12.5, 20]
   );
@@ -40,7 +43,7 @@ export default function ToolsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-svh text-center py-5 lg:py-10 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]"
+      className="relative min-h-svh text-center py-5 lg:py-10 xl:py-15 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]"
     >
       <motion.div
         className="absolute flex items-center justify-center h-full w-full top-0 left-0"

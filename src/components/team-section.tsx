@@ -4,12 +4,14 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionTemplate
+  useMotionTemplate,
+  useSpring
 } from 'motion/react';
 import { useRef } from 'react';
 import CentralContainer from '@/components/ui/central-container';
 import CentralMiniContainer from '@/components/ui/central-mini-container';
 import Image from 'next/image';
+import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
 const sponsors = [
   { image: '/images/partners/logo-partner-jei_002.webp' },
@@ -24,12 +26,11 @@ export default function TeamSection() {
     target: sectionRef,
     offset: ['-50vh', 2]
   });
+  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
 
-  const smallTeamScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
-
-  const bigImpackScale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-
-  const textTranslateY = useTransform(scrollYProgress, [0, 1], [10, -10]);
+  const smallTeamScale = useTransform(smoothScrollYProgress, [0, 1], [1.1, 1]);
+  const bigImpackScale = useTransform(smoothScrollYProgress, [0, 1], [0.9, 1]);
+  const textTranslateY = useTransform(smoothScrollYProgress, [0, 1], [10, -10]);
 
   const smallTeamScaleTransform = useMotionTemplate`scale(${smallTeamScale})`;
   const bigImpackScaleTransform = useMotionTemplate`scale(${bigImpackScale})`;
