@@ -147,7 +147,7 @@ export default function StoresSection() {
   return (
     <section className="min-h-100/2 py-10 text-center">
       <CentralMiniContainer>
-        <h2 className="mx-auto text-balance lg:max-w-lg text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
+        <h2 className="mx-auto text-balance lg:max-w-lg xl:max-w-5xl text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
           Leaders
           <span className="relative mx-2 translate-y-[-50%] lg:translate-y-[-100%] transition-all group inline-flex items-center justify-center rounded-full aspect-square w-6 bg-[#ffce67] lg:hover:bg-[#171b26]">
             <Asterisk className="fill-black lg:group-hover:fill-white transition-all duration-300 lg:group-hover:-rotate-90" />
@@ -162,7 +162,7 @@ export default function StoresSection() {
           <br />
           Reconnus dans tous les secteurs.
         </h2>
-        <div className="relative mx-auto max-w-[647px] lg:max-w-[972px] mt-6 lg:mt-16">
+        <div className="relative mx-auto max-w-[647px] lg:max-w-[972px] xl:max-w-[1170px] mt-6 lg:mt-16">
           <div className="flex lg:hidden items-center justify-center gap-2 mb-8 p-2 rounded-full border border-[#e1e2e9]">
             <div
               className={cn(
@@ -204,7 +204,7 @@ export default function StoresSection() {
               currentStoreType !== 'type-1-50' && 'hidden'
             )}
           >
-            <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#ffce67] text-center">
+            <div className="hidden lg:flex mx-auto items-center justify-center w-[calc(20%-.8rem)] aspect-square rounded-3xl bg-[#ffce67] text-center">
               <span className="text-lg leading-7 px-4">
                 1-50 établissements
               </span>
@@ -212,7 +212,7 @@ export default function StoresSection() {
             {stores1.map(({ image, label }) => (
               <div
                 key={image}
-                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(20%-.8rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
               >
                 <Image alt="" width={124} height={124} src={image} />
                 <div className="absolute top-0 left-0 w-full h-full group">
@@ -229,7 +229,7 @@ export default function StoresSection() {
               currentStoreType !== 'type-50-200' && 'hidden'
             )}
           >
-            <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#a2cd92] text-center">
+            <div className="hidden lg:flex mx-auto items-center justify-center w-[calc(20%-.8rem)] aspect-square rounded-3xl bg-[#a2cd92] text-center">
               <span className="text-lg leading-7 px-4">
                 50-200 établissements
               </span>
@@ -237,7 +237,7 @@ export default function StoresSection() {
             {stores2.map(({ image, label }) => (
               <div
                 key={image}
-                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(20%-.8rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
               >
                 <Image alt="" width={124} height={124} src={image} />
                 <div className="absolute top-0 left-0 w-full h-full group">
@@ -254,7 +254,7 @@ export default function StoresSection() {
               currentStoreType !== 'type-200+' && 'hidden'
             )}
           >
-            <div className="hidden lg:flex mx-auto items-center justify-center w-44 h-44 rounded-3xl bg-[#faa96b] text-center">
+            <div className="hidden lg:flex mx-auto items-center justify-center w-[calc(20%-.8rem)] aspect-square rounded-3xl bg-[#faa96b] text-center">
               <span className="text-lg leading-7 px-4">
                 200+ établissements
               </span>
@@ -262,7 +262,7 @@ export default function StoresSection() {
             {stores3.map(({ image, label }) => (
               <div
                 key={image}
-                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(20%-.8rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
               >
                 <Image alt="" width={124} height={124} src={image} />
                 <div className="absolute top-0 left-0 w-full h-full group">

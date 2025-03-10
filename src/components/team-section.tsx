@@ -75,11 +75,11 @@ export default function TeamSection() {
           </div>
         </CentralMiniContainer>
         <CentralMiniContainer fluidSize={false}>
-          <div className="flex flex-wrap items-center gap-4 mt-20 mx-auto max-w-fit">
+          <div className="flex flex-wrap items-center gap-4 mt-20 mx-auto xl:max-w-[932px] w-full">
             {sponsors.map(({ image }) => (
               <div
                 key={image}
-                className="relative overflow-hidden group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-44 aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+                className="relative overflow-hidden group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(25%-.75rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
               >
                 <Image alt="" width={124} height={124} src={image} />
               </div>

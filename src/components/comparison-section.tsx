@@ -63,10 +63,10 @@ export default function ComparisonSection() {
 
   return (
     <section className="relative py-6 lg:py-10 h-[200svh]">
-      <div ref={sectionRef} className="h-full px-4 mx-auto">
-        <div className="sticky top-[13svh] lg:top-4 mx-auto max-w-[806px] lg:max-w-full flex justify-center items-center">
+      <div ref={sectionRef} className="h-full px-4 mx-auto 2xl:px-16">
+        <div className="sticky top-[13svh] lg:top-4 2xl:top-[104px] mx-auto max-w-[806px] lg:max-w-full flex justify-center items-center">
           <motion.div
-            className="relative w-full h-[calc(100vh-26svh)] lg:h-[calc(100vh-2rem)] rounded-[2rem] overflow-hidden"
+            className="relative w-full h-[calc(100vh-26svh)] lg:h-[calc(100vh-2rem)] 2xl:h-[calc(100vh-208px)]  rounded-[2rem] overflow-hidden"
             style={{
               transform: containerTransform,
             }}

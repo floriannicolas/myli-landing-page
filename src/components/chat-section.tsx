@@ -150,7 +150,7 @@ export default function ChatSection() {
       <CentralContainer className="flex items-center justify-center">
         <CentralMiniContainer className="flex-1">
           <div className="flex justify-between">
-            <div className="max-w-[560px]">
+            <div className="max-w-[560px] xl:max-w-[680px]">
               <h2 className="mx-auto max-w-3xl text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
                 Notre secret ?<br />
                 Ne jamais rien lâcher.
@@ -192,7 +192,7 @@ export default function ChatSection() {
             {chatsList.map((chatInfo) => (
               <SwiperSlide
                 key={chatInfo.client.label}
-                className="!w-[calc(.8333*100vw-.8333*16px*2+.8333*1rem)] md:!w-[calc(.5*100vw-.5*16px*2+.5*1rem)] lg:!w-[calc(.333*100vw-.333*16px*2+.333*1rem)] !h-auto"
+                className="!w-[calc(.8333*100vw-.8333*16px*2+.8333*1rem)] md:!w-[calc(.5*100vw-.5*16px*2+.5*1rem)] lg:!w-[calc(.333*100vw-.333*16px*2+.333*1rem)] xl:!w-[calc(.25*100vw-.25*16px*2+.25*1rem)] !h-[408px]"
               >
                 <ChatBlock chatInfo={chatInfo} />
               </SwiperSlide>
