@@ -8,13 +8,13 @@ export default function HeroSection() {
       <h1 className="mx-auto text-balance lg:max-w-4xl text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em] font-medium">
         Vos&nbsp;établissements méritent une plateforme à leur mesure.
       </h1>
-      <div className="mt-6 max-w-lg text-balance mx-auto text-[1rem] leading-[1.5rem] lg:text-[1.5rem] lg:leading-[1.95rem] tracking-[-.01em] font-medium bg-gradient-to-r from-[#3d77d3] to-[#9b59c4] bg-clip-text text-transparent">
-        <p>De l&apos;acquisition à la satisfation client :</p>
+      <div className="mt-6 max-w-lg text-balance mx-auto text-[1rem] leading-[1.5rem] lg:text-[1.5rem] lg:leading-[1.95rem] tracking-[-.01em] font-medium bg-clip-text text-transparent">
+        <p className="bg-[linear-gradient(270deg,#9b59c4_.38%,#8e5dc6_14.35%,#3d77d3_99.82%)] bg-clip-text">De l&apos;acquisition à la satisfation client :</p>
         <span className="inline-flex items-center flex-col xl:flex-row">
-          <span>
+          <span className="bg-[linear-gradient(270deg,#9b59c4_.38%,#8e5dc6_14.35%,#3d77d3_99.82%)] bg-clip-text">
             L&apos;audace comme signature,
           </span>
-          <span className="xl:ml-3 inline-flex items-center">
+          <span className="xl:ml-3 inline-flex items-center bg-[linear-gradient(270deg,#9b59c4_.38%,#8e5dc6_14.35%,#3d77d3_99.82%)] bg-clip-text">
             <HeroSparkles className="h-4 lg:h-6 inline mr-1 lg:mr-2" />
             l&apos;IA comme force.
           </span>

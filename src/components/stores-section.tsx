@@ -216,7 +216,7 @@ export default function StoresSection() {
               >
                 <Image alt="" width={124} height={124} src={image} />
                 <div className="absolute top-0 left-0 w-full h-full group">
-                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
+                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-[101%] [.group:hover_&]:translate-y-0">
                     {label}
                   </div>
                 </div>
@@ -241,7 +241,7 @@ export default function StoresSection() {
               >
                 <Image alt="" width={124} height={124} src={image} />
                 <div className="absolute top-0 left-0 w-full h-full group">
-                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
+                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-[101%] [.group:hover_&]:translate-y-0">
                     {label}
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export default function StoresSection() {
               >
                 <Image alt="" width={124} height={124} src={image} />
                 <div className="absolute top-0 left-0 w-full h-full group">
-                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-full [.group:hover_&]:translate-y-0">
+                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-[101%] [.group:hover_&]:translate-y-0">
                     {label}
                   </div>
                 </div>
