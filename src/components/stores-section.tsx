@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Asterisk from '@/components/icons/asterisk';
-import CentralMiniContainer from '@/components/ui/central-mini-container';
 import StoreItem from '@/components/ui/stores/store-item';
+import CentralContainer from '@/components/ui/central-container';
 
 const stores1 = [
   {
@@ -146,7 +146,7 @@ export default function StoresSection() {
 
   return (
     <section className="min-h-100/2 py-10 text-center">
-      <CentralMiniContainer>
+      <CentralContainer isMini>
         <h2 className="mx-auto text-balance lg:max-w-lg xl:max-w-5xl text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
           Leaders
           <span className="relative mx-2 translate-y-[-50%] lg:translate-y-[-100%] transition-all group inline-flex items-center justify-center rounded-full aspect-square w-6 bg-[#ffce67] lg:hover:bg-[#171b26]">
@@ -162,7 +162,7 @@ export default function StoresSection() {
           <br />
           Reconnus dans tous les secteurs.
         </h2>
-        <div className="relative mx-auto max-w-[647px] lg:max-w-[972px] xl:max-w-[1170px] mt-6 lg:mt-16">
+        <div className="relative mx-auto mt-6 lg:mt-16">
           <div className="flex lg:hidden items-center justify-center gap-2 mb-8 p-2 rounded-full border border-[#e1e2e9]">
             <div
               className={cn(
@@ -259,7 +259,7 @@ export default function StoresSection() {
             ))}
           </div>
         </div>
-      </CentralMiniContainer>
+      </CentralContainer>
     </section>
   );
 }

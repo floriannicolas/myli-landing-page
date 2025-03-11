@@ -23,10 +23,10 @@ export default function StoreItem({
         className={cn(
           'absolute top-0 left-0 w-full h-full group',
           classColorsByType[type],
-          "hover:after:bg-transparent after:content-[''] after:duration-350 after:transition-transform hover:after:transition-none",
-          'after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-3xl after:translate-y-[-101%] hover:after:translate-y-0',
-          "before:content-[''] before:duration-450 before:transition-none hover:before:transition-transform",
-          'before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-3xl before:translate-y-[101%] hover:before:translate-y-0'
+          "[&:hover::after]:bg-transparent after:content-[''] after:duration-350 after:transition-transform [&:hover::after]:transition-none",
+          'after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-3xl after:translate-y-[-101%] [&:hover::after]:translate-y-0',
+          "before:content-[''] before:duration-450 before:transition-none [&:hover::before]:transition-transform",
+          'before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-3xl before:translate-y-[101%] [&:hover::before]:translate-y-0'
         )}
       >
         <div

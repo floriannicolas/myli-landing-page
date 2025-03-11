@@ -10,7 +10,6 @@ import {
 } from 'motion/react';
 import React, { useRef, useState } from 'react';
 import CentralContainer from '@/components/ui/central-container';
-import CentralMiniContainer from '@/components/ui/central-mini-container';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { SPRING_SCROLL_MASS } from '@/lib/constants';
@@ -85,8 +84,7 @@ export default function SectorsSection() {
 
   return (
     <section className="py-10" ref={sectionRef}>
-      <CentralContainer>
-        <CentralMiniContainer>
+      <CentralContainer isMini>
           <div className="relative flex justify-between gap-12">
             <div className="flex flex-1 flex-col gap-12">
               {sectors.map(({ key, title, description }) => (
@@ -122,7 +120,6 @@ export default function SectorsSection() {
               </motion.div>
             </div>
           </div>
-        </CentralMiniContainer>
       </CentralContainer>
     </section>
   );

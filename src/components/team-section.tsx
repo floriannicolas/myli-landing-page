@@ -9,7 +9,6 @@ import {
 } from 'motion/react';
 import { useRef } from 'react';
 import CentralContainer from '@/components/ui/central-container';
-import CentralMiniContainer from '@/components/ui/central-mini-container';
 import Image from 'next/image';
 import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
@@ -60,7 +59,7 @@ export default function TeamSection() {
             Big impact
           </motion.div>
         </div>
-        <CentralMiniContainer fluidSize={false}>
+        <CentralContainer isMini>
           <div className="flex items-center justify-center lg:justify-normal lg:flex-row-reverse mt-10 lg:-mt-10">
             <motion.div
               className="relative bg-white rounded-[2.5rem] p-6 lg:p-10 text-base lg:text-lg z-2 w-[calc(.8333333333*100vw-.8333333333*16px*2+.8333333333*1rem)] md:w-[calc(.6666666667*100vw-.6666666667*16px*2+.6666666667*1rem)] lg:w-[calc(.33*100vw-.33*16px*2+.333*1rem)] xl:w-[calc(.25*100vw-.25*16px*2+.25*1rem)]"
@@ -74,8 +73,8 @@ export default function TeamSection() {
               change tout.
             </motion.div>
           </div>
-        </CentralMiniContainer>
-        <CentralMiniContainer fluidSize={false}>
+        </CentralContainer>
+        <CentralContainer isMini>
           <div className="flex flex-wrap items-center gap-4 mt-20 mx-auto xl:max-w-[932px] w-full">
             {sponsors.map(({ image }) => (
               <div
@@ -86,7 +85,7 @@ export default function TeamSection() {
               </div>
             ))}
           </div>
-        </CentralMiniContainer>
+        </CentralContainer>
       </CentralContainer>
     </section>
   );

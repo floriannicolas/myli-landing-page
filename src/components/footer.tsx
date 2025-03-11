@@ -45,7 +45,7 @@ export default function Footer() {
                   On parie qu&apos;on va vous surprendre avec au moins une info à ce
                   rendez-vous ?
                 </div>
-                <div className="ml-auto flex items-center shrink-0 justify-center rounded-full">
+                <div className="ml-auto flex items-center shrink-0 justify-center rounded-full transition-all duration-350 group-hover:rotate-90">
                   <Asterisk className="fill-black h-6" />
                 </div>
               </div>

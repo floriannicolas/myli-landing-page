@@ -5,7 +5,6 @@ import { Swiper as SwiperType } from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import CentralContainer from '@/components/ui/central-container';
-import CentralMiniContainer from '@/components/ui/central-mini-container';
 import ArrowLeft from '@/components/icons/arrow-left';
 import ArrowRight from '@/components/icons/arrow-right';
 import ChatBlock, { type ChatInfo } from '@/components/chat-slides/chat-block';
@@ -147,8 +146,8 @@ export default function ChatSection() {
 
   return (
     <section className="py-10 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]">
-      <CentralContainer className="flex items-center justify-center">
-        <CentralMiniContainer className="flex-1">
+      <CentralContainer className="flex items-center justify-center" isMini>
+        <div className="flex-1">
           <div className="flex justify-between">
             <div className="max-w-[560px] xl:max-w-[680px]">
               <h2 className="mx-auto max-w-3xl text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
@@ -176,29 +175,31 @@ export default function ChatSection() {
               </div>
             </div>
           </div>
-        </CentralMiniContainer>
+        </div>
       </CentralContainer>
       <div className="mt-6 lg:mt-12 overflow-hidden">
-        <CentralMiniContainer>
-          <Swiper
-            modules={[Navigation]}
-            onBeforeInit={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            className="w-full h-full !overflow-visible"
-            slidesPerView={'auto'}
-            spaceBetween={16}
-          >
-            {chatsList.map((chatInfo) => (
-              <SwiperSlide
-                key={chatInfo.client.label}
-                className="!w-[calc(.8333*100vw-.8333*16px*2+.8333*1rem)] md:!w-[calc(.5*100vw-.5*16px*2+.5*1rem)] lg:!w-[calc(.333*100vw-.333*16px*2+.333*1rem)] xl:!w-[calc(.25*100vw-.25*16px*2+.25*1rem)] !h-[408px]"
-              >
-                <ChatBlock chatInfo={chatInfo} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </CentralMiniContainer>
+        <CentralContainer isMini>
+          <div>
+            <Swiper
+              modules={[Navigation]}
+              onBeforeInit={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              className="w-full h-full !overflow-visible"
+              slidesPerView={'auto'}
+              spaceBetween={16}
+            >
+              {chatsList.map((chatInfo) => (
+                <SwiperSlide
+                  key={chatInfo.client.label}
+                  className="!w-[calc(.8333*100vw-.8333*16px*2+.8333*1rem)] md:!w-[calc(.5*100vw-.5*16px*2+.5*1rem)] lg:!w-[calc(.333*100vw-.333*16px*2+.333*1rem)] xl:!w-[calc(.25*100vw-.25*16px*2+.25*1rem)] max-w-[446px] !h-[408px]"
+                >
+                  <ChatBlock chatInfo={chatInfo} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </CentralContainer>
       </div>
     </section>
   );
