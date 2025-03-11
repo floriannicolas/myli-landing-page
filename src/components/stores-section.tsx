@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import Asterisk from '@/components/icons/asterisk';
 import CentralMiniContainer from '@/components/ui/central-mini-container';
+import StoreItem from '@/components/ui/stores/store-item';
 
 const stores1 = [
   {
@@ -210,17 +210,12 @@ export default function StoresSection() {
               </span>
             </div>
             {stores1.map(({ image, label }) => (
-              <div
+              <StoreItem
                 key={image}
-                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(20%-.8rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-              >
-                <Image alt="" width={124} height={124} src={image} />
-                <div className="absolute top-0 left-0 w-full h-full group">
-                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#ffce67] rounded-3xl leading-5 transition-all translate-y-[101%] [.group:hover_&]:translate-y-0">
-                    {label}
-                  </div>
-                </div>
-              </div>
+                image={image}
+                label={label}
+                type="type-1-50"
+              />
             ))}
           </div>
           <div
@@ -235,17 +230,12 @@ export default function StoresSection() {
               </span>
             </div>
             {stores2.map(({ image, label }) => (
-              <div
+              <StoreItem
                 key={image}
-                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(20%-.8rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-              >
-                <Image alt="" width={124} height={124} src={image} />
-                <div className="absolute top-0 left-0 w-full h-full group">
-                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#a2cd92] rounded-3xl leading-5 transition-all translate-y-[101%] [.group:hover_&]:translate-y-0">
-                    {label}
-                  </div>
-                </div>
-              </div>
+                image={image}
+                label={label}
+                type="type-50-200"
+              />
             ))}
           </div>
           <div
@@ -260,17 +250,12 @@ export default function StoresSection() {
               </span>
             </div>
             {stores3.map(({ image, label }) => (
-              <div
+              <StoreItem
                 key={image}
-                className="relative overflow-hidden mx-auto flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(20%-.8rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-              >
-                <Image alt="" width={124} height={124} src={image} />
-                <div className="absolute top-0 left-0 w-full h-full group">
-                  <div className="absolute inset-0 flex items-center justify-center px-[.625rem] py-[.625rem] text-balance bg-[#faa96b] rounded-3xl leading-5 transition-all translate-y-[101%] [.group:hover_&]:translate-y-0">
-                    {label}
-                  </div>
-                </div>
-              </div>
+                image={image}
+                label={label}
+                type="type-200+"
+              />
             ))}
           </div>
         </div>
