@@ -124,7 +124,7 @@ export default function ProductsSection() {
         <div ref={sectionRef} className="h-full">
           <div className="lg:sticky lg:top-4 2xl:top-26 mx-auto flex justify-center items-center">
             <motion.div
-              className="relative w-full lg:h-[calc(100vh-2rem)] 2xl:h-[calc(100vh-8.5rem)] rounded-none lg:rounded-[2rem] overflow-hidden"
+              className="relative w-full lg:h-[calc(100svh-2rem)] 2xl:h-[calc(100svh-8.5rem)] rounded-none lg:rounded-[2rem] overflow-hidden"
               style={{
                 transform: isLgScreen
                   ? containerTransform

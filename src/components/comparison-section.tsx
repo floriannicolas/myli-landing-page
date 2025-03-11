@@ -76,7 +76,7 @@ export default function ComparisonSection() {
         <div ref={sectionRef} className="h-full">
           <div className="sticky top-18 lg:top-4 2xl:top-26 mx-auto flex justify-center items-center">
             <motion.div
-              className="relative w-full h-[calc(100svh-5.5rem)] lg:h-[calc(100vh-2rem)] 2xl:h-[calc(100vh-8.5rem)] rounded-[2rem] overflow-hidden"
+              className="relative w-full h-[calc(100svh-5.5rem)] lg:h-[calc(100svh-2rem)] 2xl:h-[calc(100svh-8.5rem)] rounded-[2rem] overflow-hidden"
               style={{
                 transform: containerTransform
               }}
