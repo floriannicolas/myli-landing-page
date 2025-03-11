@@ -4,17 +4,20 @@ export default function CentralContainer({
   children,
   className,
   isMini = false,
+  withPadding = true,
 }: {
   children?: React.ReactNode;
   className?: string;
   isMini?: boolean;
+  withPadding?: boolean;
 }) {
   return (
     <div
       className={cn(
-        "mx-auto w-screen max-w-[calc(1800px+16px*2)] px-4",
+        "mx-auto w-screen max-w-[1800px]",
         className,
-        isMini && "lg:px-[135px]"
+        withPadding && "px-4 max-w-[1832px]",
+        withPadding && isMini && "lg:px-[135px]"
       )}
     >
       {children}

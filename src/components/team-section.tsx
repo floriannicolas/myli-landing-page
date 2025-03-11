@@ -11,6 +11,7 @@ import { useRef } from 'react';
 import CentralContainer from '@/components/ui/central-container';
 import Image from 'next/image';
 import { SPRING_SCROLL_MASS } from '@/lib/constants';
+import { useMediaQuery } from 'usehooks-ts';
 
 const sponsors = [
   { image: '/images/partners/logo-partner-jei_002.webp' },
@@ -20,27 +21,34 @@ const sponsors = [
 ];
 export default function TeamSection() {
   const sectionRef = useRef(null);
+  const isLgScreen = useMediaQuery('(width >= 64rem)');
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['-50vh', 2]
   });
-  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
+  const smoothScrollYProgress = useSpring(scrollYProgress, {
+    mass: SPRING_SCROLL_MASS
+  });
 
   const smallTeamScale = useTransform(smoothScrollYProgress, [0, 1], [1.1, 1]);
   const bigImpackScale = useTransform(smoothScrollYProgress, [0, 1], [0.9, 1]);
-  const textTranslateY = useTransform(smoothScrollYProgress, [0, 1], [10, -10]);
+  const textTranslateY = useTransform(smoothScrollYProgress, [0, 1], [5, 25]);
 
   const smallTeamScaleTransform = useMotionTemplate`scale(${smallTeamScale})`;
   const bigImpackScaleTransform = useMotionTemplate`scale(${bigImpackScale})`;
-  const textTranslateYTransform = useMotionTemplate`translateY(${textTranslateY}%)`;
+  const lgTextTranslateYTransform = useMotionTemplate`translateY(${textTranslateY}%)`;
+  const textTranslateYTransform = useMotionTemplate`translateY(5%)`;
 
   return (
     <section
       ref={sectionRef}
-      className="overflow-hidden mt-5 lg:mt-10 pt-23 lg:pt-50 pb-20 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd] flex items-center justify-center"
+      className="overflow-hidden mt-5 lg:mt-10 pt-23 lg:pt-50 pb-20 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]"
     >
-      <CentralContainer>
+      <CentralContainer
+        withPadding={false}
+        className="flex items-center justify-center"
+      >
         <div className="text-center">
           <motion.div
             className="text-[1.125rem] leading-[2rem] lg:text-[2rem] lg:leading-[2rem] tracking-[-.02em] font-medium"
@@ -59,33 +67,35 @@ export default function TeamSection() {
             Big impact
           </motion.div>
         </div>
-        <CentralContainer isMini>
-          <div className="flex items-center justify-center lg:justify-normal lg:flex-row-reverse mt-10 lg:-mt-10">
-            <motion.div
-              className="relative bg-white rounded-[2.5rem] p-6 lg:p-10 text-base lg:text-lg z-2 w-[calc(.8333333333*100vw-.8333333333*16px*2+.8333333333*1rem)] md:w-[calc(.6666666667*100vw-.6666666667*16px*2+.6666666667*1rem)] lg:w-[calc(.33*100vw-.33*16px*2+.333*1rem)] xl:w-[calc(.25*100vw-.25*16px*2+.25*1rem)]"
-              style={{
-                transform: textTranslateYTransform
-              }}
+      </CentralContainer>
+      <CentralContainer isMini>
+        <div className="flex items-center justify-center lg:justify-normal lg:flex-row-reverse mt-10 lg:-mt-10 lg:-mr-10">
+          <motion.div
+            className="relative bg-white rounded-[2.5rem] p-6 lg:p-10 text-base lg:text-lg z-2 w-[calc(.8333333333*100vw-.8333333333*16px*2+.8333333333*1rem)] lg:w-[calc(max(40%,490px))]"
+            style={{
+              transform: isLgScreen
+                ? lgTextTranslateYTransform
+                : textTranslateYTransform
+            }}
+          >
+            Nous avons choisi d&apos;être une équipe à taille humaine pour
+            garder l&apos;agilité des startups et la folie des pionniers.
+            Certains misent sur la quantité, nous misons sur la qualité. Et ça
+            change tout.
+          </motion.div>
+        </div>
+      </CentralContainer>
+      <CentralContainer isMini>
+        <div className="flex flex-wrap items-center gap-4 mt-20 mx-auto w-full">
+          {sponsors.map(({ image }) => (
+            <div
+              key={image}
+              className="relative overflow-hidden group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(25%-.75rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
             >
-              Nous avons choisi d&apos;être une équipe à taille humaine pour
-              garder l&apos;agilité des startups et la folie des pionniers.
-              Certains misent sur la quantité, nous misons sur la qualité. Et ça
-              change tout.
-            </motion.div>
-          </div>
-        </CentralContainer>
-        <CentralContainer isMini>
-          <div className="flex flex-wrap items-center gap-4 mt-20 mx-auto xl:max-w-[932px] w-full">
-            {sponsors.map(({ image }) => (
-              <div
-                key={image}
-                className="relative overflow-hidden group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(25%-.75rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
-              >
-                <Image alt="" width={124} height={124} src={image} />
-              </div>
-            ))}
-          </div>
-        </CentralContainer>
+              <Image alt="" width={124} height={124} src={image} />
+            </div>
+          ))}
+        </div>
       </CentralContainer>
     </section>
   );

@@ -36,7 +36,7 @@ export default function NavBar() {
   });
 
   return (
-    <header ref={sectionRef} className="fixed top-8 left-0 right-0 z-50">
+    <header ref={sectionRef} className="fixed top-4 lg:top-8 left-0 right-0 z-50">
       <CentralContainer>
         <nav className="px-0 lg:px-4 2xl:px-0">
           <ul className="flex gap-0 items-center justify-center">
