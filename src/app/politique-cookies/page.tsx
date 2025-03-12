@@ -25,7 +25,7 @@ export default function Page() {
             <span className="font-semibold">Retourner à l’accueil</span>
           </Link>
           <div className="mt-4 lg:mt-10">
-            <h2 className="text-[2.5rem] leading-[3rem] tracking-[-.01em]">
+            <h2 className="text-[2rem] leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               Politique des cookies
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -38,7 +38,7 @@ export default function Page() {
               l&apos;icône située en bas à gauche. Vous pouvez également refuser
               ces cookies en configurant les paramètres de votre navigateur.
             </p>
-            <h2 className="mt-6 text-[2.5rem] leading-[3rem] tracking-[-.01em]">
+            <h2 className="mt-6 text-[2rem] leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               Qu&apos;est-ce qu&apos;un cookie ?
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -51,7 +51,7 @@ export default function Page() {
               identifiant permettant de tracer votre navigation à des fins
               statistiques ou publicitaires etc…
             </p>
-            <h2 className="mt-6 text-[2.5rem] leading-[3rem] tracking-[-.01em]">
+            <h2 className="mt-6 text-[2rem] leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               À quelles fins My Local Influence utilise les cookies ?
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -63,7 +63,7 @@ export default function Page() {
               internet. Ces cookies sont soumis au consentement de
               l&apos;utilisateur.
             </p>
-            <h2 className="mt-6 text-[2.5rem] leading-[3rem] tracking-[-.01em]">
+            <h2 className="mt-6 text-[2rem] leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               Qu&apos;est ce que les cookies tiers exactement ?
             </h2>
             <div className="overflow-x-auto mt-4 lg:mt-6">

@@ -372,7 +372,7 @@ export default function Page() {
             <span className="font-semibold">Retourner à l’accueil</span>
           </Link>
           <div className="mt-4 lg:mt-10">
-            <h2 className="text-[2.5rem] leading-[3rem] tracking-[-.01em]">
+            <h2 className="text-[2rem] leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               Synthèse de la politique de confidentialité
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -504,7 +504,7 @@ export default function Page() {
               collecte respectueuse des consommateurs, en adéquation avec la
               finalité déterminée.
             </div>
-            <h2 className="my-8 lg:my-16 text-[2.5rem] leading-[3rem] tracking-[-.01em]">
+            <h2 className="my-8 lg:my-16 text-[2rem] leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               Politique de confidentialité
             </h2>
             <Accordion type="multiple" className="w-full">
