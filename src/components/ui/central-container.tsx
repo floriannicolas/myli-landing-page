@@ -1,23 +1,26 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
+
+type ContainerVariant = 'default' | 'small' | 'mini';
 
 export default function CentralContainer({
   children,
   className,
-  isMini = false,
-  withPadding = true,
+  variant = 'default',
+  withPadding = true
 }: {
   children?: React.ReactNode;
   className?: string;
-  isMini?: boolean;
+  variant?: ContainerVariant;
   withPadding?: boolean;
 }) {
   return (
     <div
       className={cn(
-        "mx-auto w-screen max-w-[1800px]",
+        'mx-auto w-screen max-w-[1800px]',
         className,
-        withPadding && "px-4 max-w-[1832px]",
-        withPadding && isMini && "lg:px-[135px]"
+        withPadding && 'px-4 max-w-[1832px]',
+        withPadding && variant == 'small' && 'lg:px-[135px]',
+        withPadding && variant == 'mini' && 'lg:px-[252px]',
       )}
     >
       {children}

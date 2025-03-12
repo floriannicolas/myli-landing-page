@@ -1,19 +1,20 @@
-import ChatSection from "@/components/chat-section";
-import ComparisonSection from "@/components/comparison-section";
+import Header from "@/components/header";
 import Footer from "@/components/footer";
-import HeroSection from "@/components/hero-section";
-import NavBar from "@/components/navbar";
-import ProductsSection from "@/components/products-section";
-import SectorsSection from "@/components/sectors-section";
-import StoresSection from "@/components/stores-section";
-import TeamSection from "@/components/team-section";
-import ToolsSection from "@/components/tools-section";
-import TrialSection from "@/components/trial-section";
+
+import HeroSection from "@/components/home/hero-section";
+import ComparisonSection from "@/components/home/comparison-section";
+import ProductsSection from "@/components/home/products-section";
+import SectorsSection from "@/components/home/sectors-section";
+import StoresSection from "@/components/home/stores-section";
+import TeamSection from "@/components/home/team-section";
+import ToolsSection from "@/components/home/tools-section";
+import ChatSection from "@/components/home/chat-section";
+import TrialSection from "@/components/home/trial-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <NavBar />
+      <Header />
       <div className="relative pt-18 lg:pt-28">
         <HeroSection />
         <ComparisonSection />
