@@ -15,14 +15,14 @@ export default function Header() {
   const isLgScreen = useMediaQuery("(width >= 64rem)");
   const [loginBtnStyle, setLoginBtnStyle] = useState({});
 
-  const { scrollYProgress } = useScroll({
+  const { scrollY } = useScroll({
     target: sectionRef,
     offset: ["end end", "start start"],
   });
-  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
+  const smoothScrollY = useSpring(scrollY, { mass: SPRING_SCROLL_MASS });
 
-  useMotionValueEvent(smoothScrollYProgress, "change", (current) => {
-    if (current < 0.96) {
+  useMotionValueEvent(smoothScrollY, "change", (current) => {
+    if (current < 55) {
       setLoginBtnStyle({
         transform: "translateY(0%)",
         opacity: 1,
