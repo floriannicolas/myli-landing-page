@@ -14,7 +14,7 @@ export default function Footer() {
               <LogoMyli className="h-8" />
               <a
                 className="ml-auto rounded-full bg-transparent border border-[#e1e2e9] py-2 px-4 font-semibold text-sm hover:bg-[#171b26] hover:text-white transition-all"
-                href="/login"
+                href="https://next.myli.io/fr"
               >
                 Se connecter
               </a>

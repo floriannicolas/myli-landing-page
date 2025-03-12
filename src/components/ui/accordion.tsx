@@ -42,7 +42,7 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <div className="content-icon flex items-center pointer-events-none shrink-0 justify-center aspect-square h-10 transition-transform duration-200">
+        <div className="content-icon flex items-center pointer-events-none shrink-0 -mr-2 justify-center aspect-square h-10 transition-transform duration-200">
           <AccordionChevron className="h-6 fill-black"/>
         </div>
       </AccordionPrimitive.Trigger>

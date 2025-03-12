@@ -48,7 +48,7 @@ export default function Header() {
             </li>
             <li className="ml-auto lg:bg-white lg:px-1 lg:py-1 lg:rounded-l-full overflow-hidden">
               <MagicButton asChild variant="transparent-gray" style={isLgScreen ? {} : loginBtnStyle}>
-                <a href="/login">Se connecter</a>
+                <a href="https://next.myli.io/fr">Se connecter</a>
               </MagicButton>
             </li>
             <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">

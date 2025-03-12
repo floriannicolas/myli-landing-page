@@ -20,8 +20,11 @@ export default function Page() {
           <h1>Politique des cookies</h1>
         </PageHeader>
         <CentralContainer variant="mini" className="my-8 lg:my-16">
-          <Link href="/" className="inline-flex gap-1 items-center">
-            <ArrowLeft className="h-4 fill-black" />
+          <Link
+            href="/"
+            className="inline-flex gap-1 items-center group hover:text-[#464646]"
+          >
+            <ArrowLeft className="h-4 fill-black group-hover:fill-[#464646]" />
             <span className="font-semibold">Retourner à l’accueil</span>
           </Link>
           <div className="mt-4 lg:mt-10">
