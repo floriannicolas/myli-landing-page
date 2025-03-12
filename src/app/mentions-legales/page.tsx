@@ -10,7 +10,9 @@ export default function Page() {
     <main className="min-h-screen relative pt-18 lg:pt-28 flex flex-col">
       <Header />
       <div>
-        <PageHeader><h1>Mentions légales</h1></PageHeader>
+        <PageHeader>
+          <h1>Mentions légales</h1>
+        </PageHeader>
         <CentralContainer variant="mini" className="my-8 lg:my-16">
           <Link href="/" className="inline-flex gap-1 items-center">
             <ArrowLeft className="h-4 fill-black" />
@@ -18,25 +20,26 @@ export default function Page() {
           </Link>
           <div className="mt-4 lg:mt-10 flex flex-col gap-4 lg:gap-6 text-base lg:text-2xl">
             <p>
-              <b className='font-semibold'>Nom de la société : </b>
+              <b className="font-semibold">Nom de la société : </b>
               <span>My Local Influence</span>
             </p>
             <p>
-              <b className='font-semibold'>Siège social : </b>
-              <span>
-                38 rue de la république 13001 Marseille
-              </span>
+              <b className="font-semibold">Siège social : </b>
+              <span>38 rue de la république 13001 Marseille</span>
             </p>
             <p>
-              <b className='font-semibold'>Numéro de téléphone : </b>
+              <b className="font-semibold">Numéro de téléphone : </b>
               <span>
-                <a className="text-[#3d77d3] hover:text-[#70a6fe] transition-all" href="tel:0176420579">
+                <a
+                  className="text-[#3d77d3] hover:text-[#70a6fe] transition-all"
+                  href="tel:0176420579"
+                >
                   01 76 42 05 79
                 </a>
               </span>
             </p>
             <p>
-              <b className='font-semibold'>Email : </b>
+              <b className="font-semibold">Email : </b>
               <span>
                 <a
                   className="text-[#3d77d3] hover:text-[#70a6fe] transition-all"
@@ -47,27 +50,31 @@ export default function Page() {
               </span>
             </p>
             <p>
-              <b className='font-semibold'>Numéro d'immatriculation au RCS : </b>
+              <b className="font-semibold">
+                Numéro d&apos;immatriculation au RCS :{' '}
+              </b>
               <span>Marseille B 822 948 949</span>
             </p>
             <p>
-              <b className='font-semibold'>Numéro SIREN : </b>
+              <b className="font-semibold">Numéro SIREN : </b>
               <span>822948949</span>
             </p>
             <p>
-              <b className='font-semibold'>Capital social : </b>
+              <b className="font-semibold">Capital social : </b>
               <span>10 500,00 €</span>
             </p>
             <p>
-              <b className='font-semibold'>Numéro de TVA intracommunautaire : </b>
+              <b className="font-semibold">
+                Numéro de TVA intracommunautaire :{' '}
+              </b>
               <span>FR46822948949</span>
             </p>
             <p>
-              <b className='font-semibold'>Directeur de la publication : </b>
+              <b className="font-semibold">Directeur de la publication : </b>
               <span>Adrien GIBAULT</span>
             </p>
             <p>
-              <b className='font-semibold'>Hébergeur : </b>
+              <b className="font-semibold">Hébergeur : </b>
               <span>
                 Vercel Inc. 440 N Barranca Ave #4133, Covina, CA 91723, USA
               </span>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <section className='mt-auto'>
+    <section className="mt-auto">
       <CentralContainer>
         <footer className="py-6 px-4 mt-4 lg:py-14 lg:px-20 bg-[#f5f6f8] rounded-t-[2rem]">
           <div className="flex flex-col lg:flex-row items-start justify-between">
@@ -22,14 +22,18 @@ export default function Footer() {
             <div className="flex flex-col justify-end gap-4 mt-12 lg:mt-0">
               <div>Nous contacter :</div>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/mylocalinfluence/"
                 className="font-semibold text-[#171b26] hover:text-[#737373] transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Linkedin
               </a>
               <a
-                href="#"
+                href="tel:0176420579"
                 className="font-semibold text-[#171b26] hover:text-[#737373] transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 01 76 42 05 79
               </a>
@@ -43,8 +47,8 @@ export default function Footer() {
               <MagicButton size="big">Planifiez votre démo</MagicButton>
               <div className="hidden xl:flex items-center justify-center p-5 h-16 w-16 justify-center rounded-full overflow-hidden bg-[#ffce67] transition-all duration-350 group hover:w-[344px] hover:bg-[#ffefc6]">
                 <div className="text-left w-[280px] px-2 shrink-0 delay-200 duration-1000 opacity-0 leading-[1.375rem] hidden group-hover:block group-hover:opacity-100">
-                  On parie qu&apos;on va vous surprendre avec au moins une info à ce
-                  rendez-vous ?
+                  On parie qu&apos;on va vous surprendre avec au moins une info
+                  à ce rendez-vous ?
                 </div>
                 <div className="ml-auto flex items-center shrink-0 justify-center rounded-full transition-all duration-350 group-hover:rotate-90">
                   <Asterisk className="fill-black h-6" />
@@ -66,12 +70,12 @@ export default function Footer() {
                 >
                   Politique de confidentialité
                 </Link>
-                <a
+                <Link
                   className="hover:text-[#737373] transition-all"
                   href="/politique-cookies"
                 >
                   Politique des cookies
-                </a>
+                </Link>
               </div>
             </div>
           </div>
