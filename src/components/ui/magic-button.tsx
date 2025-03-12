@@ -10,7 +10,7 @@ type MagicButtonProps = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 type Size = 'base' | 'big';
-type Variant = 'base' | 'transparent-gray' | 'hover-white';
+type Variant = 'base' | 'transparent-gray' | 'hover-white' | 'dark';
 
 const MagicButton = React.forwardRef<HTMLButtonElement, MagicButtonProps>(
   (
@@ -35,6 +35,8 @@ const MagicButton = React.forwardRef<HTMLButtonElement, MagicButtonProps>(
         'bg-transparent after:bg-[#f5f6f8] before:bg-[#f5f6f8] hover:text-[#171b26]',
       variant === 'hover-white' &&
         'after:bg-white before:bg-white hover:text-[#171b26]',
+      variant === 'dark' &&
+        'bg-[#171b26] text-white after:bg-white before:bg-white hover:text-[#171b26]',
       size === 'big' &&
         'py-[1.125rem] px-8 font-semibold text-lg leading-[28px]',
       className
@@ -49,7 +51,11 @@ const MagicButton = React.forwardRef<HTMLButtonElement, MagicButtonProps>(
       return React.cloneElement(child, {
         ...props,
         className: cn(baseClass, child.props.className),
-        children: <span className="relative z-10 select-none">{child.props.children}</span>
+        children: (
+          <span className="relative z-10 select-none">
+            {child.props.children}
+          </span>
+        )
       });
     }
 
