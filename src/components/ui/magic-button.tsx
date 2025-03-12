@@ -36,7 +36,7 @@ const MagicButton = React.forwardRef<HTMLButtonElement, MagicButtonProps>(
       variant === 'hover-white' &&
         'after:bg-white before:bg-white hover:text-[#171b26]',
       variant === 'dark' &&
-        'bg-[#171b26] text-white after:bg-white before:bg-white hover:text-[#171b26]',
+        'bg-[#171b26] text-[#fafafa] after:bg-[#fafafa] before:bg-[#fafafa] hover:text-[#171b26]',
       size === 'big' &&
         'py-[1.125rem] px-8 font-semibold text-lg leading-[28px]',
       className
