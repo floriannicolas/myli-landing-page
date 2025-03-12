@@ -60,11 +60,12 @@ function Button({
 
     return React.cloneElement(child, {
       ...props,
-      className: cn(buttonVariants({ variant, size, className }), child.props.className),
+      className: cn(
+        buttonVariants({ variant, size, className }),
+        child.props.className
+      ),
       children: (
-        <span className="relative z-2 select-none">
-          {child.props.children}
-        </span>
+        <span className="relative z-2 select-none">{child.props.children}</span>
       )
     });
   }
@@ -74,12 +75,9 @@ function Button({
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-      children={(
-        <span className="relative z-2 select-none">
-          {children}
-        </span>
-      )}
-    />
+    >
+      <span className="relative z-2 select-none">{children}</span>
+    </button>
   );
 }
 
