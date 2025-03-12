@@ -6,56 +6,46 @@ const mosvita = localFont({
   variable: "--font-mosvita",
   src: [
     {
-      path: "../fonts/mosvita/mosvita-light.woff2",
-      weight: "300",
-      style: "normal",
+      path: '../fonts/mosvita/mosvita-regular.woff2',
+      weight: '400',
+      style: 'normal',
     },
     {
-      path: "../fonts/mosvita/mosvita-regular.woff2",
-      weight: "400",
-      style: "normal",
+      path: '../fonts/mosvita/mosvita-medium.woff2',
+      weight: '500',
+      style: 'normal',
     },
     {
-      path: "../fonts/mosvita/mosvita-medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../fonts/mosvita/mosvita-semibold.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../fonts/mosvita/mosvita-bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/mosvita/mosvita-extrabold.woff2",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../fonts/mosvita/mosvita-black.woff2",
-      weight: "900",
-      style: "normal",
+      path: '../fonts/mosvita/mosvita-semi-bold.woff2',
+      weight: '600',
+      style: 'normal',
     },
   ],
 });
 
 export const metadata: Metadata = {
-  title:
-    "Myli - AI-Powered E-Reputation &amp; Customer Acquisition Platform for Multi-Location Businesses",
+  title: 'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses',
   description:
-    "Plateforme d&#39;E-réputation et d&#39;Acquisition, pour les chaines d&#39;établissements, perfusée à l&#39;IA et soutenue par une équipe reconnue par la fidélité de nos clients",
+    "Plateforme d'E-réputation et d'Acquisition, pour les chaines d'établissements, perfusée à l'IA et soutenue par une équipe reconnue par la fidélité de nos clients",
   icons: {
-    icon: [
-      { url: "/images/favicon.png" },
+    icon: [{ url: '/meta/favicon.png' }, { url: '/meta/favicon-dark.png', media: '(prefers-color-scheme: dark)' }],
+    apple: [{ url: '/meta/favicon.png' }, { url: '/meta/favicon-apple-x3.png', sizes: '196x196', type: 'image/png' }],
+  },
+  openGraph: {
+    url: process.env.HOST_DOMAIN,
+    type: 'website',
+    images: [
       {
-        url: "/images/favicon-dark.png",
-        media: "(prefers-color-scheme: dark)",
+        url: `${process.env.HOST_DOMAIN}/meta/og-image-fr.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [`${process.env.HOST_DOMAIN}/meta/og-image-fr.jpg`],
   },
 };
 

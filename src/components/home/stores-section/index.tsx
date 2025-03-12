@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useState } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Asterisk from '@/components/icons/asterisk';
 import CentralContainer from '@/components/ui/central-container';

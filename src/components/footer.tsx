@@ -2,12 +2,13 @@ import LogoMyli from '@/components/icons/logo-myli';
 import CentralContainer from '@/components/ui/central-container';
 import MagicButton from '@/components/ui/magic-button';
 import Asterisk from '@/components/icons/asterisk';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <section>
+    <section className='mt-auto'>
       <CentralContainer>
-        <footer className="py-6 px-4 lg:py-14 lg:px-20 bg-[#f5f6f8] rounded-t-[2rem]">
+        <footer className="py-6 px-4 mt-4 lg:py-14 lg:px-20 bg-[#f5f6f8] rounded-t-[2rem]">
           <div className="flex flex-col lg:flex-row items-start justify-between">
             <div className="flex lg:flex-col items-center justify-between lg:justify-start gap-6 w-full lg:w-auto">
               <LogoMyli className="h-8" />
@@ -53,18 +54,18 @@ export default function Footer() {
             <div>
               <div className="flex flex-col lg:flex-row mt-8 lg:mt-0 text-sm font-semibold gap-2 lg:gap-6">
                 <span className="text-[#737373]">@Myli 2025</span>
-                <a
+                <Link
                   className="hover:text-[#737373] transition-all"
                   href="/mentions-legales"
                 >
                   Mentions légales
-                </a>
-                <a
+                </Link>
+                <Link
                   className="hover:text-[#737373] transition-all"
                   href="/politique-de-confidentialite"
                 >
                   Politique de confidentialité
-                </a>
+                </Link>
                 <a
                   className="hover:text-[#737373] transition-all"
                   href="/politique-cookies"
