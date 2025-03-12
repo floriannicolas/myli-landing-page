@@ -26,7 +26,7 @@ export default function HeroSection() {
           <div className="text-left w-[280px] px-2 shrink-0 delay-200 duration-1000 opacity-0 leading-[1.375rem] hidden group-hover:block group-hover:opacity-100">
             On parie qu&apos;on va vous surprendre avec au moins une info à ce rendez-vous ?
           </div>
-          <div className="ml-auto flex items-center shrink-0 justify-center transition-all duration-350 group-hover:rotate-90 rounded-full">
+          <div className="ml-auto flex items-center shrink-0 justify-center transition-all duration-350 group-hover:rotate-60 rounded-full">
             <Asterisk className="fill-black h-6" />
           </div>
         </div>
