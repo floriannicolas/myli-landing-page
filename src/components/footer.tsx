@@ -1,6 +1,6 @@
 import LogoMyli from '@/components/icons/logo-myli';
 import CentralContainer from '@/components/ui/central-container';
-import MagicButton from '@/components/ui/magic-button';
+import { Button } from '@/components/ui/button';
 import Asterisk from '@/components/icons/asterisk';
 import Link from 'next/link';
 
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mt-6 lg:mt-8">
             <div className="flex justify-center items-center">
-              <MagicButton size="big">Planifiez votre démo</MagicButton>
+              <Button variant="myli" size="xl">Planifiez votre démo</Button>
               <div className="hidden xl:flex items-center justify-center p-5 h-16 w-16 justify-center rounded-full overflow-hidden bg-[#ffce67] transition-all duration-350 group hover:w-[344px] hover:bg-[#ffefc6]">
                 <div className="text-left w-[280px] px-2 shrink-0 delay-200 transition-opacity duration-1000 opacity-0 leading-[1.375rem] hidden group-hover:block group-hover:opacity-100">
                   On parie qu&apos;on va vous surprendre avec au moins une info

@@ -2,7 +2,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import PageHeader from '@/components/ui/page-header';
 import Link from 'next/link';
-import MagicButton from '@/components/ui/magic-button';
+import { Button } from '@/components/ui/button';
 
 export default function NotFound() {
   return (
@@ -13,9 +13,9 @@ export default function NotFound() {
           <div className="flex flex-col gap-6">
             <h1>Oups, vous êtes perdus.</h1>
             <div className="flex items-center justify-center">
-              <MagicButton size="big" variant="dark" asChild>
+              <Button size="xl" variant="myli-dark" asChild>
                 <Link href="/">Ramenez moi à l&apos;accueil</Link>
-              </MagicButton>
+              </Button>
             </div>
           </div>
         </PageHeader>

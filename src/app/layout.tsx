@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${process.env.HOST_DOMAIN}/meta/og-image-fr.jpg`,
+        url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/meta/og-image-fr.jpg`,
         width: 1200,
         height: 630,
         alt: 'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: [`${process.env.HOST_DOMAIN}/meta/og-image-fr.jpg`],
+    images: [`${process.env.NEXT_PUBLIC_DOMAIN_URL}/meta/og-image-fr.jpg`],
   },
 };
 

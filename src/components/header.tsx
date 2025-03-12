@@ -2,13 +2,13 @@
 
 import { useScroll, useMotionValueEvent, useSpring } from "motion/react";
 import { useRef, useState } from "react";
-import LogoMyli from "@/components/icons/logo-myli";
-import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
-import CentralContainer from "@/components/ui/central-container";
-import MagicButton from "@/components/ui/magic-button";
 import { useMediaQuery } from "usehooks-ts";
 import Link from "next/link";
 import { SPRING_SCROLL_MASS } from "@/lib/constants";
+import LogoMyli from "@/components/icons/logo-myli";
+import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
+import CentralContainer from "@/components/ui/central-container";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const sectionRef = useRef(null);
@@ -47,14 +47,14 @@ export default function Header() {
               </Link>
             </li>
             <li className="ml-auto lg:bg-white lg:px-1 lg:py-1 lg:rounded-l-full overflow-hidden">
-              <MagicButton asChild variant="transparent-gray" className="h-10 border border-[#e5e5e5] lg:border-none" style={isLgScreen ? {} : loginBtnStyle}>
+              <Button asChild variant="myli-ghost-gray" className="h-10 border border-[#e5e5e5] lg:border-none" style={isLgScreen ? {} : loginBtnStyle}>
                 <a href="https://next.myli.io/fr">Se connecter</a>
-              </MagicButton>
+              </Button>
             </li>
             <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">
-              <MagicButton>
+              <Button variant="myli">
                 Planifiez votre démo
-              </MagicButton>
+              </Button>
             </li>
           </ul>
         </nav>
