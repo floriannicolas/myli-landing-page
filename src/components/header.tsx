@@ -9,7 +9,7 @@ import LogoMyli from "@/components/icons/logo-myli";
 import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
 import CentralContainer from "@/components/ui/central-container";
 import { Button } from "@/components/ui/button";
-import { PlanDemoDialog } from "./plan-demo-dialog";
+import { PlanDemoDialog } from '@/components/dialogs/plan-demo-dialog';
 
 export default function Header() {
   const sectionRef = useRef(null);

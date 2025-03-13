@@ -5,14 +5,14 @@ import { cn } from '@/lib/utils';
 
 const variantMyliClassNames =
   "overflow-hidden relative bg-[#ffce67] text-[#171b26] font-semibold hover:text-white transition-all duration-350 after:bg-[#171b26] hover:after:bg-transparent after:content-[''] after:duration-350 after:transition-transform hover:after:transition-none after:absolute after:cursor-pointer after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:translate-y-[-100%] hover:after:translate-y-0 before:bg-[#171b26] before:content-[''] before:duration-450 before:transition-none hover:before:transition-transform before:absolute before:cursor-pointer before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:translate-y-full hover:before:translate-y-0 leading-[40px]";
+const variantDefault = "overflow-hidden relative bg-[#171b26] text-white font-semibold hover:text-white transition-all duration-350 after:bg-[#363b4b] hover:after:bg-transparent after:content-[''] after:duration-350 after:transition-transform hover:after:transition-none after:absolute after:cursor-pointer after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:translate-y-[-100%] hover:after:translate-y-0 before:bg-[#363b4b] before:content-[''] before:duration-450 before:transition-none hover:before:transition-transform before:absolute before:cursor-pointer before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:translate-y-full hover:before:translate-y-0";
 
 const buttonVariants = cva(
   "inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
-        default:
-          'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',
+        default: variantDefault,
         destructive:
           'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40',
         outline:

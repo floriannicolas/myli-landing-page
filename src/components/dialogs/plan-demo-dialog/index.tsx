@@ -2,6 +2,8 @@ import Image from 'next/image';
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
+  DialogDescription,
   DialogTrigger
 } from '@/components/ui/dialog';
 import Asterisk from '@/components/icons/asterisk';
@@ -14,6 +16,8 @@ export function PlanDemoDialog({ children }: { children?: React.ReactNode }) {
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent variant="ghost" className="max-w-[calc(min(1012px,100vw))]">
+        <DialogTitle />
+        <DialogDescription />
         <div className="flex items-stretch justify-center flex-col lg:flex-row gap-0 lg:gap-4">
           <div className="bg-white rounded-t-[2rem] lg:rounded-[2rem] p-6 lg:p-10 lg:w-[418px]">
             <h3 className="font-medium font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
@@ -29,23 +33,23 @@ export function PlanDemoDialog({ children }: { children?: React.ReactNode }) {
                 <Image
                   alt="Adrien"
                   src="/images/contact/portrait-adrien.webp"
-                  width={40}
-                  height={40}
-                  className="rounded-full border border-white"
+                  width={38}
+                  height={38}
+                  className="rounded-full border border-white box-content"
                 />
                 <Image
                   alt="Marylou"
                   src="/images/contact/portrait-marylou.webp"
-                  width={40}
-                  height={40}
-                  className="rounded-full border border-white -ml-3"
+                  width={38}
+                  height={38}
+                  className="rounded-full border border-white box-content -ml-3"
                 />
                 <Image
                   alt="Samuel"
                   src="/images/contact/portrait-samuel.webp"
-                  width={40}
-                  height={40}
-                  className="rounded-full border border-white -ml-3"
+                  width={38}
+                  height={38}
+                  className="rounded-full border border-white box-content -ml-3"
                 />
               </div>
               <p className="pt-4 leading-[1.375rem]">
