@@ -55,6 +55,9 @@ const formSchema = z.object({
     })
     .trim()
     .min(1, { message: requiredFieldMessage })
+    .regex(new RegExp(
+      /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
+    ), 'Téléphone invalide')
 });
 
 export function PlanDemoForm() {

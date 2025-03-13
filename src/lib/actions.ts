@@ -14,7 +14,7 @@ const mailgunClient = mailgun.client({
 });
 
 const DEFAULT_ERROR_MESSAGE =
-  'Une erreur est apparue, merci de réessayer plus tard';
+  'Une erreur est apparue, merci de réessayer plus tard.';
 
 export const sendPlanDemoEmail = async (data: {
   firstname: string;
