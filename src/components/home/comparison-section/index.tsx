@@ -34,7 +34,7 @@ export default function ComparisonSection() {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['-80vh', '170vh']
+    offset: ['-40vh', '170vh']
   });
 
   const clipPathPercent = useTransform(
