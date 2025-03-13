@@ -7,7 +7,7 @@ import {
   useMotionTemplate,
   useSpring
 } from 'motion/react';
-import { useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { SPRING_SCROLL_MASS } from '@/lib/constants';
 import LogoMyli from '@/components/icons/logo-myli';
 import LogoGoogle from '@/components/icons/logo-google';
@@ -21,9 +21,13 @@ import PinContent from './components/pin-content';
 import PinContainer from './components/pin-container';
 import Image from 'next/image';
 
-
 export default function ComparisonSection() {
+  const [isReady, setIsReady] = useState(false);
   const sectionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    setIsReady(true);
+  }, []);
 
   const { scrollYProgress: scrollYClipPathProgress } = useScroll({
     target: sectionRef,
@@ -46,7 +50,9 @@ export default function ComparisonSection() {
     [0, 0.8],
     [0, 100]
   );
-  const clipPath = useMotionTemplate`polygon(0% ${clipPathPercent}%, 100% ${clipPathPercent}%, 100% 100%, 0% 100%)`;
+  const clipPath = isReady
+    ? useMotionTemplate`polygon(0% ${clipPathPercent}%, 100% ${clipPathPercent}%, 100% 100%, 0% 100%)`
+    : useMotionTemplate`polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)`;
 
   const containerTranslate = useTransform(
     smoothScrollYProgress,
@@ -58,20 +64,25 @@ export default function ComparisonSection() {
     [0, 0.32, 0.8, 1],
     [0.825, 1, 1, 0.825]
   );
-  const containerTransform = useMotionTemplate`translate(0%, ${containerTranslate}%) scale(${containerScale}, ${containerScale})`;
+  const containerTransform = isReady
+    ? useMotionTemplate`translate(0%, ${containerTranslate}%) scale(${containerScale}, ${containerScale})`
+    : useMotionTemplate`translate(0%, -5%) scale(0.825, 0.825)`;
 
   const containerInnerScale = useTransform(
     smoothScrollYProgress,
     [0, 0.32, 0.8, 1],
     [1.25, 1, 1, 1.25]
   );
-  const containerInnerTransform = useMotionTemplate`scale(${containerInnerScale}, ${containerInnerScale})`;
+  const containerInnerTransform = isReady
+    ? useMotionTemplate`scale(${containerInnerScale}, ${containerInnerScale})`
+    : useMotionTemplate`scale(1.25, 1.25)`;
 
-  const containerPinsOpacity = useTransform(
+  const containerPinsOpacityTransform = useTransform(
     smoothScrollYProgress,
     [0.26, 0.34, 0.78, 0.84],
     [0, 1, 1, 0]
   );
+  const containerPinsOpacity = isReady ? containerPinsOpacityTransform : 0;
 
   return (
     <section className="relative py-6 lg:py-10 xl:py-15">

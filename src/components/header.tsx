@@ -13,7 +13,10 @@ import { PlanDemoDialog } from '@/components/dialogs/plan-demo-dialog';
 
 export default function Header() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
+  const isLgScreen = useMediaQuery('(width >= 64rem)', {
+    defaultValue: true,
+    initializeWithValue: false
+  });
   const [loginBtnStyle, setLoginBtnStyle] = useState({});
 
   const { scrollY } = useScroll({

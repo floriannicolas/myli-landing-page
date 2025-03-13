@@ -19,7 +19,10 @@ import Menu from './components/menu';
 
 export default function ProductsSection() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
+  const isLgScreen = useMediaQuery('(width >= 64rem)', {
+    defaultValue: true,
+    initializeWithValue: false
+  });
 
   const { scrollYProgress: scrollYClipPathProgress } = useScroll({
     target: sectionRef,

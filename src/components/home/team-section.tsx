@@ -30,7 +30,10 @@ const sponsors = [
 ];
 export default function TeamSection() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
+  const isLgScreen = useMediaQuery('(width >= 64rem)', {
+    defaultValue: true,
+    initializeWithValue: false
+  });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,

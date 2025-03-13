@@ -17,7 +17,10 @@ import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
 export default function ToolsSection() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
+  const isLgScreen = useMediaQuery('(width >= 64rem)', {
+    defaultValue: true,
+    initializeWithValue: false
+  });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
