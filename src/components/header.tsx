@@ -9,6 +9,7 @@ import LogoMyli from "@/components/icons/logo-myli";
 import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
 import CentralContainer from "@/components/ui/central-container";
 import { Button } from "@/components/ui/button";
+import { PlanDemoDialog } from "./plan-demo-dialog";
 
 export default function Header() {
   const sectionRef = useRef(null);
@@ -52,9 +53,11 @@ export default function Header() {
               </Button>
             </li>
             <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">
-              <Button variant="myli">
-                Planifiez votre démo
-              </Button>
+              <PlanDemoDialog>
+                <Button variant="myli">
+                  Planifiez votre démo
+                </Button>
+              </PlanDemoDialog>
             </li>
           </ul>
         </nav>
