@@ -56,6 +56,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {!process.env.NEXT_PUBLIC_DISABLE_SEO && (
+          <script defer data-domain="myli.io" src="https://plausible.io/js/script.js"></script>
+        )}
+      </head>
       <body className={`${mosvita.variable} antialiased`}>{children}</body>
     </html>
   );
