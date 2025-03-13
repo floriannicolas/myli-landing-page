@@ -1,35 +1,43 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import './globals.css';
+import Axeptio from '@/components/axeptio';
 
 const mosvita = localFont({
-  variable: "--font-mosvita",
+  variable: '--font-mosvita',
   src: [
     {
       path: '../fonts/mosvita/mosvita-regular.woff2',
       weight: '400',
-      style: 'normal',
+      style: 'normal'
     },
     {
       path: '../fonts/mosvita/mosvita-medium.woff2',
       weight: '500',
-      style: 'normal',
+      style: 'normal'
     },
     {
       path: '../fonts/mosvita/mosvita-semi-bold.woff2',
       weight: '600',
-      style: 'normal',
-    },
-  ],
+      style: 'normal'
+    }
+  ]
 });
 
 export const metadata: Metadata = {
-  title: 'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses',
+  title:
+    'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses',
   description:
     "Plateforme d'E-réputation et d'Acquisition, pour les chaines d'établissements, perfusée à l'IA et soutenue par une équipe reconnue par la fidélité de nos clients",
   icons: {
-    icon: [{ url: '/meta/favicon.png' }, { url: '/meta/favicon-dark.png', media: '(prefers-color-scheme: dark)' }],
-    apple: [{ url: '/meta/favicon.png' }, { url: '/meta/favicon-apple-x3.png', sizes: '196x196', type: 'image/png' }],
+    icon: [
+      { url: '/meta/favicon.png' },
+      { url: '/meta/favicon-dark.png', media: '(prefers-color-scheme: dark)' }
+    ],
+    apple: [
+      { url: '/meta/favicon.png' },
+      { url: '/meta/favicon-apple-x3.png', sizes: '196x196', type: 'image/png' }
+    ]
   },
   openGraph: {
     url: process.env.HOST_DOMAIN,
@@ -39,18 +47,18 @@ export const metadata: Metadata = {
         url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/meta/og-image-fr.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses',
-      },
-    ],
+        alt: 'Myli - AI-Powered E-Reputation & Customer Acquisition Platform for Multi-Location Businesses'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    images: [`${process.env.NEXT_PUBLIC_DOMAIN_URL}/meta/og-image-fr.jpg`],
-  },
+    images: [`${process.env.NEXT_PUBLIC_DOMAIN_URL}/meta/og-image-fr.jpg`]
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -58,10 +66,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {!process.env.NEXT_PUBLIC_DISABLE_SEO && (
-          <script defer data-domain="myli.io" src="https://plausible.io/js/script.js"></script>
+          <script
+            defer
+            data-domain="myli.io"
+            src="https://plausible.io/js/script.js"
+          ></script>
         )}
       </head>
-      <body className={`${mosvita.variable} antialiased`}>{children}</body>
+      <body className={`${mosvita.variable} antialiased`}>
+        {children}
+
+        {!process.env.NEXT_PUBLIC_DISABLE_SEO &&
+          process.env.ENV === 'production' && <Axeptio />}
+      </body>
     </html>
   );
 }
