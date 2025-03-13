@@ -65,7 +65,7 @@ const dialogContentVariants = cva(
 const dialogContentInnerVariants = cva('w-full gap-4', {
   variants: {
     variant: {
-      default: 'bg-background rounded-[2rem] p-6 lg:p-10 shadow-lg',
+      default: 'bg-background rounded-[2rem] p-4 sm:p-6 lg:p-10 shadow-lg',
       ghost: 'bg-transparent'
     }
   },
@@ -89,7 +89,7 @@ function DialogContent({
         className="fixed inset-0 z-60 overflow-y-scroll max-h-screen"
         {...props}
       >
-        <div className="relative w-full min-h-screen flex items-center justify-center py-18 lg:py-12 px-12 lg:px-18">
+        <div className="relative w-full min-h-screen flex items-center justify-center py-18 lg:py-12 px-4 sm:px-8 md:px-12 lg:px-18">
           <div className={cn(dialogContentVariants({ variant, className }))}>
             <div className={cn(dialogContentInnerVariants({ variant }))}>
               {children}

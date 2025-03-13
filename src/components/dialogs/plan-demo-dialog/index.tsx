@@ -19,7 +19,7 @@ export function PlanDemoDialog({ children }: { children?: React.ReactNode }) {
         <DialogTitle />
         <DialogDescription />
         <div className="flex items-stretch justify-center flex-col lg:flex-row gap-0 lg:gap-4">
-          <div className="bg-white rounded-t-[2rem] lg:rounded-[2rem] p-6 lg:p-10 lg:w-[418px]">
+          <div className="bg-white rounded-t-[2rem] lg:rounded-[2rem] p-4 sm:p-6 lg:p-10 lg:w-[418px]">
             <h3 className="font-medium font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
               Planifions votre démo
             </h3>
@@ -68,7 +68,7 @@ export function PlanDemoDialog({ children }: { children?: React.ReactNode }) {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-b-[2rem] lg:rounded-[2rem] p-6 lg:p-10 pt-0 lg:pt-10 flex-1">
+          <div className="bg-white rounded-b-[2rem] lg:rounded-[2rem] p-4 sm:p-6 lg:p-10 pt-0 lg:pt-10 flex-1">
             <PlanDemoForm />
           </div>
         </div>
