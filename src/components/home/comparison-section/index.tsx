@@ -20,7 +20,7 @@ import PinContainer from './components/pin-container';
 import Image from 'next/image';
 
 export default function ComparisonSection() {
-  const [isReady, setIsReady] = useState(true);
+  const [isReady, setIsReady] = useState(false);
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
