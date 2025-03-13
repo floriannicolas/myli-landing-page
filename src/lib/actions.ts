@@ -23,13 +23,12 @@ export const sendPlanDemoEmail = async (data: {
   email: string;
   phone: string;
 }): Promise<ActionState> => {
-  return new Promise((resolve, reject) => {
-    mailgunClient.messages
-      .create(MAILGUN_DOMAIN, {
-        from: `${data.firstname} ${data.lastname} <${data.email}>`,
-        to: [MAILGUN_RECIPIENT_ADDRESS],
-        subject: `Prise de contact démonstration - ${data.firstname} ${data.lastname}`,
-        html: `
+  return mailgunClient.messages
+    .create(MAILGUN_DOMAIN, {
+      from: `${data.firstname} ${data.lastname} <${data.email}>`,
+      to: [MAILGUN_RECIPIENT_ADDRESS],
+      subject: `Prise de contact démonstration - ${data.firstname} ${data.lastname}`,
+      html: `
           <p>
             Bonjour,<br/>
             Une nouvelle demande de démonstration vient d'être soumise via le formulaire en ligne.
@@ -50,16 +49,14 @@ export const sendPlanDemoEmail = async (data: {
             <li>Présentation personnalisée des produits</li>
           </ul>
         `
-      })
-      .then((success) => {
-        resolve({
-          status: 'success' as const,
-          response: success
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-        reject(new Error(DEFAULT_ERROR_MESSAGE));
-      });
-  });
+    })
+    .then((success) => ({
+        status: 'success' as const,
+        response: success
+      }))
+    .catch((error) => ({
+      status: 'error' as const,
+      message: DEFAULT_ERROR_MESSAGE,
+      response: error,
+    }));
 };

@@ -69,16 +69,11 @@ export function PlanDemoForm() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     startTransition(async () => {
-      try {
-        const actionState = await sendPlanDemoEmail(values);
-        if (actionState.status === 'success') {
-          setIsSubmitted(true);
-        } else {
-          setErrorMessage(actionState.message);
-        }
-      } catch (e) {
-        const error = e as Error;
-        setErrorMessage(error.message as string);
+      const actionState = await sendPlanDemoEmail(values);
+      if (actionState.status === 'success') {
+        setIsSubmitted(true);
+      } else {
+        setErrorMessage(actionState.message);
       }
     });
   };
