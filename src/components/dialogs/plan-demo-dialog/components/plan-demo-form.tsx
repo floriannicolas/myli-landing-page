@@ -14,8 +14,11 @@ import {
   FormLabel,
   FormMessage
 } from '@/components/ui/form';
-import { useState } from 'react';
-import { PlanDemoSubmittedState } from './plan-demo-submitted-state';
+import { useState, useTransition } from 'react';
+import { sendPlanDemoEmail } from '@/lib/actions';
+import PlanDemoSubmitSuccess from './plan-demo-submit-success';
+import Loader from '@/components/ui/loader';
+import { cn } from '@/lib/utils';
 
 const requiredFieldMessage = 'Champs requis';
 const formSchema = z.object({
@@ -31,7 +34,7 @@ const formSchema = z.object({
     })
     .trim()
     .min(1, { message: requiredFieldMessage }),
-  businessName: z
+  company: z
     .string({
       required_error: requiredFieldMessage
     })
@@ -55,21 +58,33 @@ const formSchema = z.object({
 });
 
 export function PlanDemoForm() {
+  const [isPending, startTransition] = useTransition();
+  const [errorMessage, setErrorMessage] = useState<string>();
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
+    resolver: zodResolver(formSchema),
+    disabled: isPending
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log('form.onSubmit', values);
-    setIsSubmitted(true);
-  }
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    startTransition(async () => {
+      try {
+        const actionState = await sendPlanDemoEmail(values);
+        if (actionState.status === 'success') {
+          setIsSubmitted(true);
+        } else {
+          setErrorMessage(actionState.message);
+        }
+      } catch (e) {
+        const error = e as Error;
+        setErrorMessage(error.message as string);
+      }
+    });
+  };
 
   if (isSubmitted) {
-    return <PlanDemoSubmittedState />;
+    return <PlanDemoSubmitSuccess />;
   }
 
   return (
@@ -117,7 +132,7 @@ export function PlanDemoForm() {
         <div className="grid w-full items-center gap-1">
           <FormField
             control={form.control}
-            name="businessName"
+            name="company"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
@@ -167,10 +182,22 @@ export function PlanDemoForm() {
           />
         </div>
         <div className="pt-6">
-          <Button type="submit" size="lg" className="w-full lg:w-auto">
-            Contactez-moi
+          <Button
+            type="submit"
+            size="lg"
+            className="relative w-full lg:w-auto"
+            aria-disabled={isPending}
+            disabled={isPending}
+          >
+            {isPending && (
+              <Loader size="lg" className="absolute inset-0 m-auto text-12" />
+            )}
+            <span className={cn(isPending && 'invisible')}>Contactez-moi</span>
           </Button>
         </div>
+        {errorMessage && (
+          <div className="pt-6 text-destructive">{errorMessage}</div>
+        )}
       </form>
     </Form>
   );

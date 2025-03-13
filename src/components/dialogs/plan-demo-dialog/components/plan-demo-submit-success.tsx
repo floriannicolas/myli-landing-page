@@ -3,7 +3,7 @@
 import { DialogClose } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
-export function PlanDemoSubmittedState() {
+export default function PlanDemoSubmitSuccess() {
   return (
     <div className="flex min-h-full flex-col">
       <h3 className="font-medium font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
