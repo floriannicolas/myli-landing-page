@@ -4,7 +4,7 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionTemplate,
+  useMotionTemplate
 } from 'motion/react';
 import { useLayoutEffect, useRef, useState } from 'react';
 import LogoMyli from '@/components/icons/logo-myli';
@@ -98,8 +98,9 @@ export default function ComparisonSection() {
                     className="absolute top-0 left-0 right-0 w-full h-full object-cover z-1 bg-[#f5f6f8]"
                     src="/images/comparison/comparison-before.webp"
                     alt="Avant Myli"
-                    width={1920}
-                    height={1920}
+                    sizes="(max-width: 1800px) 100vw"
+                    fill
+                    priority
                   />
                   <motion.div
                     className="absolute top-8 left-1/2 -translate-x-1/2 transform flex justify-center items-center gap-2 bg-white py-2 px-4 rounded-2xl z-2"
@@ -165,8 +166,8 @@ export default function ComparisonSection() {
                     className="absolute top-0 left-0 right-0 w-full h-full object-cover z-1 bg-[#f5f6f8]"
                     src="/images/comparison/comparison-after.webp"
                     alt="Avant Myli"
-                    width={1920}
-                    height={1920}
+                    sizes="(max-width: 1800px) 100vw"
+                    fill
                   />
                   <motion.div
                     className="absolute top-8 left-1/2 -translate-x-1/2 transform flex justify-center items-center gap-3 bg-[#ffce67] py-2 px-4 rounded-2xl z-2"
