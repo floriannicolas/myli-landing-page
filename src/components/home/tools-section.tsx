@@ -17,13 +17,15 @@ import { SPRING_SCROLL_MASS } from '@/lib/constants';
 
 export default function ToolsSection() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery('(width >= 64rem)');
+  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['-50vh', '150vh']
   });
-  const smoothScrollYProgress = useSpring(scrollYProgress, { mass: SPRING_SCROLL_MASS });
+  const smoothScrollYProgress = useSpring(scrollYProgress, {
+    mass: SPRING_SCROLL_MASS
+  });
 
   const textContainerTranslate = useTransform(
     smoothScrollYProgress,

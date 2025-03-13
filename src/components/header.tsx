@@ -1,43 +1,46 @@
-"use client";
+'use client';
 
-import { useScroll, useMotionValueEvent, useSpring } from "motion/react";
-import { useRef, useState } from "react";
-import { useMediaQuery } from "usehooks-ts";
-import Link from "next/link";
-import { SPRING_SCROLL_MASS } from "@/lib/constants";
-import LogoMyli from "@/components/icons/logo-myli";
-import LogoMyliMobile from "@/components/icons/logo-myli-mobile";
-import CentralContainer from "@/components/ui/central-container";
-import { Button } from "@/components/ui/button";
+import { useScroll, useMotionValueEvent, useSpring } from 'motion/react';
+import { useRef, useState } from 'react';
+import { useMediaQuery } from 'usehooks-ts';
+import Link from 'next/link';
+import { SPRING_SCROLL_MASS } from '@/lib/constants';
+import LogoMyli from '@/components/icons/logo-myli';
+import LogoMyliMobile from '@/components/icons/logo-myli-mobile';
+import CentralContainer from '@/components/ui/central-container';
+import { Button } from '@/components/ui/button';
 import { PlanDemoDialog } from '@/components/dialogs/plan-demo-dialog';
 
 export default function Header() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery("(width >= 64rem)");
+  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
   const [loginBtnStyle, setLoginBtnStyle] = useState({});
 
   const { scrollY } = useScroll({
     target: sectionRef,
-    offset: ["end end", "start start"],
+    offset: ['end end', 'start start']
   });
   const smoothScrollY = useSpring(scrollY, { mass: SPRING_SCROLL_MASS });
 
-  useMotionValueEvent(smoothScrollY, "change", (current) => {
+  useMotionValueEvent(smoothScrollY, 'change', (current) => {
     if (current < 55) {
       setLoginBtnStyle({
-        transform: "translateY(0%)",
-        opacity: 1,
+        transform: 'translateY(0%)',
+        opacity: 1
       });
     } else {
       setLoginBtnStyle({
-        transform: "translateY(-100%)",
-        opacity: 0,
+        transform: 'translateY(-100%)',
+        opacity: 0
       });
     }
   });
 
   return (
-    <header ref={sectionRef} className="fixed top-4 lg:top-8 left-0 right-0 z-50">
+    <header
+      ref={sectionRef}
+      className="fixed top-4 lg:top-8 left-0 right-0 z-50"
+    >
       <CentralContainer>
         <nav className="px-0 lg:px-4">
           <ul className="flex gap-0 items-center justify-center">
@@ -48,15 +51,18 @@ export default function Header() {
               </Link>
             </li>
             <li className="ml-auto lg:bg-white lg:px-1 lg:py-1 lg:rounded-l-full overflow-hidden">
-              <Button asChild variant="myli-ghost-gray" className="h-10 border border-[#e5e5e5] lg:border-none" style={isLgScreen ? {} : loginBtnStyle}>
+              <Button
+                asChild
+                variant="myli-ghost-gray"
+                className="h-10 border border-[#e5e5e5] lg:border-none"
+                style={isLgScreen ? {} : loginBtnStyle}
+              >
                 <a href="https://next.myli.io/fr">Se connecter</a>
               </Button>
             </li>
             <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">
               <PlanDemoDialog>
-                <Button variant="myli">
-                  Planifiez votre démo
-                </Button>
+                <Button variant="myli">Planifiez votre démo</Button>
               </PlanDemoDialog>
             </li>
           </ul>

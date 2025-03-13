@@ -15,13 +15,22 @@ import { useMediaQuery } from 'usehooks-ts';
 
 const sponsors = [
   { image: '/images/sponsors/logo-partner-jei.webp', label: 'Jei' },
-  { image: '/images/sponsors/logo-partner-google-startup.webp', label: 'Google for Startups' },
-  { image: '/images/sponsors/logo-partner-facebook.webp', label: 'Startup garage PACA from Facebook' },
-  { image: '/images/sponsors/logo-partner-frenchtech.webp', label: 'La French Tech' }
+  {
+    image: '/images/sponsors/logo-partner-google-startup.webp',
+    label: 'Google for Startups'
+  },
+  {
+    image: '/images/sponsors/logo-partner-facebook.webp',
+    label: 'Startup garage PACA from Facebook'
+  },
+  {
+    image: '/images/sponsors/logo-partner-frenchtech.webp',
+    label: 'La French Tech'
+  }
 ];
 export default function TeamSection() {
   const sectionRef = useRef(null);
-  const isLgScreen = useMediaQuery('(width >= 64rem)');
+  const isLgScreen = useMediaQuery('(width >= 64rem)', { defaultValue: true });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
