@@ -5,10 +5,8 @@ import {
   useScroll,
   useTransform,
   useMotionTemplate,
-  useSpring
 } from 'motion/react';
 import { useLayoutEffect, useRef, useState } from 'react';
-import { SPRING_SCROLL_MASS } from '@/lib/constants';
 import LogoMyli from '@/components/icons/logo-myli';
 import LogoGoogle from '@/components/icons/logo-google';
 import Reviews from '@/components/icons/reviews';
@@ -22,7 +20,7 @@ import PinContainer from './components/pin-container';
 import Image from 'next/image';
 
 export default function ComparisonSection() {
-  const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(true);
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -33,20 +31,14 @@ export default function ComparisonSection() {
     target: sectionRef,
     offset: ['end end', 'start start']
   });
-  const smoothScrollYClipPathProgress = useSpring(scrollYClipPathProgress, {
-    mass: SPRING_SCROLL_MASS
-  });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['-80vh', '170vh']
   });
-  const smoothScrollYProgress = useSpring(scrollYProgress, {
-    mass: SPRING_SCROLL_MASS
-  });
 
   const clipPathPercent = useTransform(
-    smoothScrollYClipPathProgress,
+    scrollYClipPathProgress,
     [0, 0.8],
     [0, 100]
   );
@@ -55,12 +47,12 @@ export default function ComparisonSection() {
     : useMotionTemplate`polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)`;
 
   const containerTranslate = useTransform(
-    smoothScrollYProgress,
+    scrollYProgress,
     [0, 0.32, 0.8, 1],
     [-5, 0, 0, -5]
   );
   const containerScale = useTransform(
-    smoothScrollYProgress,
+    scrollYProgress,
     [0, 0.32, 0.8, 1],
     [0.825, 1, 1, 0.825]
   );
@@ -69,7 +61,7 @@ export default function ComparisonSection() {
     : useMotionTemplate`translate(0%, -5%) scale(0.825, 0.825)`;
 
   const containerInnerScale = useTransform(
-    smoothScrollYProgress,
+    scrollYProgress,
     [0, 0.32, 0.8, 1],
     [1.25, 1, 1, 1.25]
   );
@@ -78,7 +70,7 @@ export default function ComparisonSection() {
     : useMotionTemplate`scale(1.25, 1.25)`;
 
   const containerPinsOpacityTransform = useTransform(
-    smoothScrollYProgress,
+    scrollYProgress,
     [0.26, 0.34, 0.78, 0.84],
     [0, 1, 1, 0]
   );
