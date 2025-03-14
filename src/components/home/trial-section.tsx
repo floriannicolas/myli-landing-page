@@ -16,7 +16,7 @@ export default function TrialSection() {
           </p>
           <div className="mt-10 flex justify-center">
             <PlanDemoDialog>
-              <Button variant="myli-hover-white" size="xl">
+              <Button variant="yellow-hover-white" size="xl">
                 Planifiez votre démo
               </Button>
             </PlanDemoDialog>
