@@ -48,18 +48,18 @@ const sectorsKeys = sectors.map(({ key }) => key);
 
 export default function SectorsSection() {
   const sectorsRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const sectionRef = useRef<(HTMLDivElement | null)>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
   const [currentSector, setCurrentSector] = useState(sectorsKeys[0]);
   const [imageTranslateY, setImageTranslateY] = useState(0);
   const { scrollY } = useScroll();
-
 
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
 
       const sectionRect = sectionRef.current.getBoundingClientRect();
-      const isVisible = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
+      const isVisible =
+        sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
       if (!isVisible) return;
 
       const windowHeight = window.innerHeight;
