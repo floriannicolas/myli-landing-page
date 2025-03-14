@@ -12,7 +12,7 @@ export default function Footer() {
       <CentralContainer>
         <footer className="py-6 px-4 mt-4 lg:py-14 lg:px-20 bg-[#f5f6f8] rounded-t-[2rem]">
           <div className="flex flex-col lg:flex-row items-start justify-between">
-            <div className="flex lg:flex-col items-start justify-between lg:justify-start gap-6 w-full lg:w-auto">
+            <div className="flex lg:flex-col items-center justify-between lg:justify-start gap-6 w-full lg:w-auto">
               <Link href="/" aria-label="Myli">
                 <LogoMyliAnimated className='h-8 hidden lg:block' />
                 <LogoMyli className='h-8 block lg:hidden' />
