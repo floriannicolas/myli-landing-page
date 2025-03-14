@@ -1,7 +1,7 @@
 'use client';
 
 import { useScroll, useMotionValueEvent, useSpring } from 'motion/react';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'usehooks-ts';
 import Link from 'next/link';
 import { SPRING_SCROLL_MASS } from '@/lib/constants';
@@ -12,17 +12,13 @@ import { Button } from '@/components/ui/button';
 import { PlanDemoDialog } from '@/components/dialogs/plan-demo-dialog';
 
 export default function Header() {
-  const sectionRef = useRef(null);
   const isLgScreen = useMediaQuery('(width >= 64rem)', {
     defaultValue: true,
     initializeWithValue: false
   });
   const [loginBtnStyle, setLoginBtnStyle] = useState({});
 
-  const { scrollY } = useScroll({
-    target: sectionRef,
-    offset: ['end end', 'start start']
-  });
+  const { scrollY } = useScroll();
   const smoothScrollY = useSpring(scrollY, { mass: SPRING_SCROLL_MASS });
 
   useMotionValueEvent(smoothScrollY, 'change', (current) => {
@@ -40,10 +36,7 @@ export default function Header() {
   });
 
   return (
-    <header
-      ref={sectionRef}
-      className="fixed top-4 lg:top-8 left-0 right-0 z-50"
-    >
+    <header className="fixed top-4 lg:top-8 left-0 right-0 z-50">
       <CentralContainer>
         <nav className="px-0 lg:px-4">
           <ul className="flex gap-0 items-center justify-center">
