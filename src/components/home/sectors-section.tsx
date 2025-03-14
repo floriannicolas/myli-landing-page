@@ -51,29 +51,16 @@ export default function SectorsSection() {
   const sectionRef = useRef<(HTMLDivElement | null)>(null);
   const [currentSector, setCurrentSector] = useState(sectorsKeys[0]);
   const [imageTranslateY, setImageTranslateY] = useState(0);
-  const [isSectionVisible, setIsSectionVisible] = useState(false);
   const { scrollY } = useScroll();
 
-  useEffect(() => {
-    if (!sectionRef.current) return;
-    
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsSectionVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 } // Déclenche quand au moins 10% de l'élément est visible
-    );
-    
-    observer.observe(sectionRef.current);
-    
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isSectionVisible) return;
+      if (!sectionRef.current) return;
+
+      const sectionRect = sectionRef.current.getBoundingClientRect();
+      const isVisible = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
+      if (!isVisible) return;
 
       const windowHeight = window.innerHeight;
       const centerPosition = windowHeight / 2;
