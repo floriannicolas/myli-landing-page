@@ -13,7 +13,7 @@ export default function NotFound() {
           <div className="flex flex-col gap-6">
             <h1>Oups, vous êtes perdus.</h1>
             <div className="flex items-center justify-center">
-              <Button size="xl" variant="myli-dark" asChild>
+              <Button size="xl" variant="dark-hover-white" asChild>
                 <Link href="/">Ramenez moi à l&apos;accueil</Link>
               </Button>
             </div>

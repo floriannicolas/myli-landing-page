@@ -10,6 +10,7 @@ import ArrowLeft from '@/components/icons/arrow-left';
 import ArrowRight from '@/components/icons/arrow-right';
 
 import ChatBlock, { type ChatInfo } from './components/chat-block';
+import { Button } from '@/components/ui/button';
 
 
 const chatsList: ChatInfo[] = [
@@ -175,6 +176,12 @@ export default function ChatSection() {
               >
                 <ArrowRight className="h-6 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
               </div>
+              <Button className="px-2.5">
+                <ArrowLeft className="size-5 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
+              </Button>
+              <Button className="px-2.5">
+                <ArrowRight className="size-5 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
+              </Button>
             </div>
           </div>
         </div>

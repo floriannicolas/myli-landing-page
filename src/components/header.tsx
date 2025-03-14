@@ -49,7 +49,7 @@ export default function Header() {
             <li className="ml-auto lg:bg-white lg:px-1 lg:py-1 lg:rounded-l-full overflow-hidden">
               <Button
                 asChild
-                variant="myli-ghost-gray"
+                variant="ghost"
                 className="h-10 border border-[#e5e5e5] lg:border-none"
                 style={isLgScreen ? {} : loginBtnStyle}
               >
@@ -58,7 +58,7 @@ export default function Header() {
             </li>
             <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">
               <PlanDemoDialog>
-                <Button variant="myli">Planifiez votre démo</Button>
+                <Button variant="yellow">Planifiez votre démo</Button>
               </PlanDemoDialog>
             </li>
           </ul>

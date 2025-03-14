@@ -13,12 +13,9 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-start justify-between">
             <div className="flex lg:flex-col items-center justify-between lg:justify-start gap-6 w-full lg:w-auto">
               <LogoMyli className="h-8" />
-              <a
-                className="ml-auto rounded-full bg-transparent border border-[#e1e2e9] py-2 px-4 font-semibold text-sm hover:bg-[#171b26] hover:text-white transition-all"
-                href="https://next.myli.io/fr"
-              >
-                Se connecter
-              </a>
+              <Button variant="outline" className="ml-auto" asChild>
+                <a href="https://next.myli.io/fr">Se connecter</a>
+              </Button>
             </div>
             <div className="flex flex-col justify-end gap-4 mt-12 lg:mt-0">
               <div>Nous contacter :</div>
@@ -46,7 +43,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mt-6 lg:mt-8">
             <div className="flex justify-center items-center">
               <PlanDemoDialog>
-                <Button variant="myli" size="xl">
+                <Button variant="yellow" size="xl">
                   Planifiez votre démo
                 </Button>
               </PlanDemoDialog>

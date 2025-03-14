@@ -23,7 +23,7 @@ export default function HeroSection() {
       </div>
       <div className="mt-10 flex justify-center items-center">
         <PlanDemoDialog>
-          <Button variant="myli" size="xl">Planifiez votre démo</Button>
+          <Button variant="yellow" size="xl">Planifiez votre démo</Button>
         </PlanDemoDialog>
         <div className="hidden xl:flex items-center justify-center p-5 h-16 w-16 justify-center rounded-full overflow-hidden bg-[#ffce67] transition-all duration-350 group hover:w-[344px] hover:bg-[#ffefc6]">
           <div className="text-left w-[280px] px-2 shrink-0 delay-200 transition-opacity duration-1000 opacity-0 leading-[1.375rem] hidden group-hover:block group-hover:opacity-100">
