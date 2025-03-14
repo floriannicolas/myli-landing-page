@@ -1,4 +1,5 @@
 import LogoMyliAnimated from '@/components/icons/logo-myli-animated';
+import LogoMyli from '@/components/icons/logo-myli';
 import CentralContainer from '@/components/ui/central-container';
 import { Button } from '@/components/ui/button';
 import Asterisk from '@/components/icons/asterisk';
@@ -13,7 +14,8 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-start justify-between">
             <div className="flex lg:flex-col items-start justify-between lg:justify-start gap-6 w-full lg:w-auto">
               <Link href="/" aria-label="Myli">
-                <LogoMyliAnimated className='h-8' />
+                <LogoMyliAnimated className='h-8 hidden lg:block' />
+                <LogoMyli className='h-8 block lg:hidden' />
               </Link>
               <Button variant="outline" className="ml-auto lg:ml-0" asChild>
                 <a href="https://next.myli.io/fr">Se connecter</a>
