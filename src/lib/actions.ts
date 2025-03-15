@@ -51,12 +51,12 @@ export const sendPlanDemoEmail = async (data: {
         `
     })
     .then((success) => ({
-        status: 'success' as const,
-        response: success
-      }))
+      status: 'success' as const,
+      response: success
+    }))
     .catch((error) => ({
       status: 'error' as const,
       message: DEFAULT_ERROR_MESSAGE,
-      response: error,
+      response: error
     }));
 };

@@ -80,22 +80,22 @@ export default function ComparisonSection() {
     <section className="relative py-6 lg:py-10 xl:py-15">
       <CentralContainer className="h-[200svh]">
         <div ref={sectionRef} className="h-full">
-          <div className="sticky top-18 lg:top-4 mx-auto flex justify-center items-center">
+          <div className="sticky top-18 mx-auto flex items-center justify-center lg:top-4">
             <motion.div
-              className="relative w-full h-[calc(100svh-5.5rem)] lg:h-[calc(100svh-2rem)] rounded-[2rem] overflow-hidden"
+              className="relative h-[calc(100svh-5.5rem)] w-full overflow-hidden rounded-[2rem] lg:h-[calc(100svh-2rem)]"
               style={{
                 transform: containerTransform
               }}
             >
               <motion.div
-                className="relative w-full h-full"
+                className="relative h-full w-full"
                 style={{
                   transform: containerInnerTransform
                 }}
               >
-                <div className="relative w-full h-full">
+                <div className="relative h-full w-full">
                   <Image
-                    className="absolute top-0 left-0 right-0 w-full h-full object-cover z-1 bg-[#f5f6f8]"
+                    className="absolute top-0 right-0 left-0 z-1 h-full w-full bg-[#f5f6f8] object-cover"
                     src="/images/comparison/comparison-before.webp"
                     alt="Avant Myli"
                     sizes="(max-width: 1800px) 100vw"
@@ -103,16 +103,16 @@ export default function ComparisonSection() {
                     priority
                   />
                   <motion.div
-                    className="absolute top-8 left-1/2 -translate-x-1/2 transform flex justify-center items-center gap-2 bg-white py-2 px-4 rounded-2xl z-2"
+                    className="absolute top-8 left-1/2 z-2 flex -translate-x-1/2 transform items-center justify-center gap-2 rounded-2xl bg-white px-4 py-2"
                     style={{ opacity: containerPinsOpacity }}
                   >
-                    <span className="text-lg xl:text-xl font-semibold opacity-60">
+                    <span className="text-lg font-semibold opacity-60 xl:text-xl">
                       Avant
                     </span>
                     <LogoMyli className="opacity-60" />
                   </motion.div>
                   <motion.div
-                    className="absolute flex justify-center items-end gap-2 flex-wrap lg:items-center bottom-0 lg:top-0 left-0 w-full lg:h-full px-8 lg:px-2 pb-8 lg:pb-0 z-2"
+                    className="absolute bottom-0 left-0 z-2 flex w-full flex-wrap items-end justify-center gap-2 px-8 pb-8 lg:top-0 lg:h-full lg:items-center lg:px-2 lg:pb-0"
                     style={{ opacity: containerPinsOpacity }}
                   >
                     <PinContainer className="lg:mt-[15%] lg:ml-[0]">
@@ -120,7 +120,7 @@ export default function ComparisonSection() {
                       <PinBar className="h-[130px]" />
                       <PinContent className="lg:top-[-110px] lg:left-[40px]">
                         <Reviews />
-                        <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
+                        <div className="text-sm leading-[1.5rem] font-semibold text-[#171b26]">
                           Peu&nbsp;d&apos;avis&nbsp;clients
                         </div>
                       </PinContent>
@@ -130,14 +130,14 @@ export default function ComparisonSection() {
                       <PinBar />
                       <PinContent className="lg:top-[-130px] lg:left-[40px]">
                         <LogoGoogle className="grayscale" />
-                        <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
+                        <div className="text-sm leading-[1.5rem] font-semibold text-[#171b26]">
                           Visibilité&nbsp;médiocre
                         </div>
                       </PinContent>
                     </PinContainer>
                     <PinContainer className="lg:mt-[12%] lg:ml-[-57%]">
                       <Pin />
-                      <PinBar className="rotate-135 left-[-52px]" />
+                      <PinBar className="left-[-52px] rotate-135" />
                       <PinContent className="lg:top-[-130px] lg:left-[-170px]">
                         <Star />
                         <Star className="opacity-20" />
@@ -148,10 +148,10 @@ export default function ComparisonSection() {
                     </PinContainer>
                     <PinContainer className="lg:mt-[-4%] lg:ml-[-20%]">
                       <Pin />
-                      <PinBar className="rotate-135 left-[-52px]" />
+                      <PinBar className="left-[-52px] rotate-135" />
                       <PinContent className="lg:top-[-130px] lg:left-[-220px]">
-                        <span className="block bg-[#da2828] rounded-full w-3 h-3" />
-                        <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
+                        <span className="block h-3 w-3 rounded-full bg-[#da2828]" />
+                        <div className="text-sm leading-[1.5rem] font-semibold text-[#171b26]">
                           Mauvais&nbsp;horaires&nbsp;d&apos;ouverture
                         </div>
                       </PinContent>
@@ -159,27 +159,27 @@ export default function ComparisonSection() {
                   </motion.div>
                 </div>
                 <motion.div
-                  className="absolute top-0 left-0 w-full h-full will-change-[clipPath] z-2"
+                  className="absolute top-0 left-0 z-2 h-full w-full will-change-[clipPath]"
                   style={{ clipPath }}
                 >
                   <Image
-                    className="absolute top-0 left-0 right-0 w-full h-full object-cover z-1 bg-[#f5f6f8]"
+                    className="absolute top-0 right-0 left-0 z-1 h-full w-full bg-[#f5f6f8] object-cover"
                     src="/images/comparison/comparison-after.webp"
                     alt="Avant Myli"
                     sizes="(max-width: 1800px) 100vw"
                     fill
                   />
                   <motion.div
-                    className="absolute top-8 left-1/2 -translate-x-1/2 transform flex justify-center items-center gap-3 bg-[#ffce67] py-2 px-4 rounded-2xl z-2"
+                    className="absolute top-8 left-1/2 z-2 flex -translate-x-1/2 transform items-center justify-center gap-3 rounded-2xl bg-[#ffce67] px-4 py-2"
                     style={{ opacity: containerPinsOpacity }}
                   >
-                    <span className="text-lg xl:text-xl font-semibold">
+                    <span className="text-lg font-semibold xl:text-xl">
                       Avec
                     </span>
                     <LogoMyli />
                   </motion.div>
                   <motion.div
-                    className="absolute flex justify-center items-end gap-2 flex-wrap lg:items-center bottom-0 lg:top-0 left-0 w-full lg:h-full px-8 lg:px-2 pb-8 lg:pb-0 z-2"
+                    className="absolute bottom-0 left-0 z-2 flex w-full flex-wrap items-end justify-center gap-2 px-8 pb-8 lg:top-0 lg:h-full lg:items-center lg:px-2 lg:pb-0"
                     style={{ opacity: containerPinsOpacity }}
                   >
                     <PinContainer className="lg:mt-[15%] lg:ml-[0]">
@@ -187,7 +187,7 @@ export default function ComparisonSection() {
                       <PinBar className="h-[130px]" />
                       <PinContent className="lg:top-[-110px] lg:left-[40px]">
                         <Reviews />
-                        <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
+                        <div className="text-sm leading-[1.5rem] font-semibold text-[#171b26]">
                           356&nbsp;nouveaux&nbsp;avis
                         </div>
                       </PinContent>
@@ -197,14 +197,14 @@ export default function ComparisonSection() {
                       <PinBar />
                       <PinContent className="lg:top-[-130px] lg:left-[40px]">
                         <LogoGoogle />
-                        <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
+                        <div className="text-sm leading-[1.5rem] font-semibold text-[#171b26]">
                           Top&nbsp;3&nbsp;sur&nbsp;Google
                         </div>
                       </PinContent>
                     </PinContainer>
                     <PinContainer className="lg:mt-[12%] lg:ml-[-57%]">
                       <Pin />
-                      <PinBar className="rotate-135 left-[-52px]" />
+                      <PinBar className="left-[-52px] rotate-135" />
                       <PinContent className="lg:top-[-130px] lg:left-[-170px]">
                         <Star className="fill-[#ffce67]" />
                         <Star className="fill-[#ffce67]" />
@@ -215,10 +215,10 @@ export default function ComparisonSection() {
                     </PinContainer>
                     <PinContainer className="lg:mt-[-4%] lg:ml-[-20%]">
                       <Pin />
-                      <PinBar className="rotate-135 left-[-52px]" />
+                      <PinBar className="left-[-52px] rotate-135" />
                       <PinContent className="lg:top-[-130px] lg:left-[-220px]">
-                        <span className="block bg-[#a2cd92] rounded-full w-3 h-3" />
-                        <div className="text-sm font-semibold text-[#171b26] leading-[1.5rem]">
+                        <span className="block h-3 w-3 rounded-full bg-[#a2cd92]" />
+                        <div className="text-sm leading-[1.5rem] font-semibold text-[#171b26]">
                           Ouvert&nbsp;actuellement
                         </div>
                       </PinContent>

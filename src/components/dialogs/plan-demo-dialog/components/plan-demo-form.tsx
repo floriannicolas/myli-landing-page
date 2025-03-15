@@ -55,9 +55,10 @@ const formSchema = z.object({
     })
     .trim()
     .min(1, { message: requiredFieldMessage })
-    .regex(new RegExp(
-      /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
-    ), 'Téléphone invalide')
+    .regex(
+      new RegExp(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
+      'Téléphone invalide'
+    )
 });
 
 export function PlanDemoForm() {
@@ -91,7 +92,7 @@ export function PlanDemoForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex flex-col gap-2"
       >
-        <div className="flex items-start flex-col lg:flex-row gap-2">
+        <div className="flex flex-col items-start gap-2 lg:flex-row">
           <div className="grid w-full">
             <FormField
               control={form.control}
@@ -188,13 +189,13 @@ export function PlanDemoForm() {
             disabled={isPending}
           >
             {isPending && (
-              <Loader size="lg" className="absolute inset-0 m-auto text-12" />
+              <Loader size="lg" className="text-12 absolute inset-0 m-auto" />
             )}
             <span className={cn(isPending && 'invisible')}>Contactez-moi</span>
           </Button>
         </div>
         {errorMessage && (
-          <div className="pt-6 text-destructive">{errorMessage}</div>
+          <div className="text-destructive pt-6">{errorMessage}</div>
         )}
       </form>
     </Form>

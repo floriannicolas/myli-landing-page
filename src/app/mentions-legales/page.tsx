@@ -7,18 +7,21 @@ import ArrowLeft from '@/components/icons/arrow-left';
 
 export default function Page() {
   return (
-    <main className="min-h-screen relative pt-18 lg:pt-28 flex flex-col">
+    <main className="relative flex min-h-screen flex-col pt-18 lg:pt-28">
       <Header />
       <div>
         <PageHeader>
           <h1>Mentions légales</h1>
         </PageHeader>
         <CentralContainer variant="mini" className="my-8 lg:my-16">
-          <Link href="/" className="inline-flex gap-1 items-center group hover:text-[#464646]">
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-1 hover:text-[#464646]"
+          >
             <ArrowLeft className="h-4 fill-black group-hover:fill-[#464646]" />
             <span className="font-semibold">Retourner à l’accueil</span>
           </Link>
-          <div className="mt-4 lg:mt-10 flex flex-col gap-4 lg:gap-6 text-base lg:text-2xl">
+          <div className="mt-4 flex flex-col gap-4 text-base lg:mt-10 lg:gap-6 lg:text-2xl">
             <p>
               <b className="font-semibold">Nom de la société : </b>
               <span>My Local Influence</span>
@@ -31,7 +34,7 @@ export default function Page() {
               <b className="font-semibold">Numéro de téléphone : </b>
               <span>
                 <a
-                  className="text-[#3d77d3] hover:text-[#70a6fe] transition-all"
+                  className="text-[#3d77d3] transition-all hover:text-[#70a6fe]"
                   href="tel:0176420579"
                 >
                   01 76 42 05 79
@@ -42,7 +45,7 @@ export default function Page() {
               <b className="font-semibold">Email : </b>
               <span>
                 <a
-                  className="text-[#3d77d3] hover:text-[#70a6fe] transition-all"
+                  className="text-[#3d77d3] transition-all hover:text-[#70a6fe]"
                   href="mailto:support@myli.io"
                 >
                   support@myli.io

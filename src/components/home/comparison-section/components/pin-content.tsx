@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export default function PinContent({
   children,
-  className,
+  className
 }: {
   children?: React.ReactNode;
   className?: string;
@@ -10,7 +10,7 @@ export default function PinContent({
   return (
     <div
       className={cn(
-        "relative lg:absolute h-[40px] lg:h-auto bg-white flex justify-center items-center gap-2 py-2 px-4 rounded-full",
+        'relative flex h-[40px] items-center justify-center gap-2 rounded-full bg-white px-4 py-2 lg:absolute lg:h-auto',
         className
       )}
     >

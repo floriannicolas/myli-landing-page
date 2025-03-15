@@ -8,18 +8,21 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-[#171b26] text-white after:bg-[#363b4b] before:bg-[#363b4b]',
+        default:
+          'bg-[#171b26] text-white after:bg-[#363b4b] before:bg-[#363b4b]',
         destructive:
           'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40',
         outline:
           'border border-[#e1e2e9] bg-transparent text-[#171b26] after:bg-[#171b26] before:bg-[#171b26] hover:text-white',
         secondary:
           'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
-        ghost: 'bg-transparent text-[#171b26] after:bg-[#f5f6f8] before:bg-[#f5f6f8] hover:text-[#171b26]',
+        ghost:
+          'bg-transparent text-[#171b26] after:bg-[#f5f6f8] before:bg-[#f5f6f8] hover:text-[#171b26]',
         link: 'text-primary underline-offset-4 hover:underline',
         yellow:
           'bg-[#ffce67] text-[#171b26] after:bg-[#171b26] before:bg-[#171b26]',
-        'yellow-hover-white': 'bg-[#ffce67] text-[#171b26] after:bg-white before:bg-white hover:text-[#171b26]',
+        'yellow-hover-white':
+          'bg-[#ffce67] text-[#171b26] after:bg-white before:bg-white hover:text-[#171b26]',
         'dark-hover-white':
           'bg-[#171b26] text-[#fafafa] after:bg-[#fafafa] before:bg-[#fafafa] hover:text-[#171b26] tracking-[.01em]'
       },

@@ -360,7 +360,7 @@ export default function Page() {
     'p-4 text-left text-base lg:text-lg border border-b-0 border-r-0 border-[#e1e2e9]';
 
   return (
-    <main className="min-h-screen relative pt-18 lg:pt-28 flex flex-col">
+    <main className="relative flex min-h-screen flex-col pt-18 lg:pt-28">
       <Header />
       <div>
         <PageHeader>
@@ -369,13 +369,13 @@ export default function Page() {
         <CentralContainer variant="mini" className="my-8 lg:my-16">
           <Link
             href="/"
-            className="inline-flex gap-1 items-center group hover:text-[#464646]"
+            className="group inline-flex items-center gap-1 hover:text-[#464646]"
           >
             <ArrowLeft className="h-4 fill-black group-hover:fill-[#464646]" />
             <span className="font-semibold">Retourner à l’accueil</span>
           </Link>
           <div className="mt-4 lg:mt-10">
-            <h2 className="font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+            <h2 className="text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[2.5rem] lg:leading-[3rem]">
               Synthèse de la politique de confidentialité
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -383,9 +383,9 @@ export default function Page() {
               obtenir plus d&apos;informations sur le traitement de vos données,
               veuillez consulter le document disponible ci-dessous.
             </p>
-            <div className="overflow-x-auto mt-4 lg:mt-6">
-              <div className="min-w-179 w-full">
-                <table className="relative w-full border-separate border-spacing-0 table-fixed rounded-t-2xl">
+            <div className="mt-4 overflow-x-auto lg:mt-6">
+              <div className="w-full min-w-179">
+                <table className="relative w-full table-fixed border-separate border-spacing-0 rounded-t-2xl">
                   <thead>
                     <tr>
                       <th className={cn(thClassName, 'rounded-tl-2xl')}>
@@ -497,7 +497,7 @@ export default function Page() {
                 </table>
               </div>
             </div>
-            <div className="mt-4 lg:mt-6 text-right text-[#737373] text-xs">
+            <div className="mt-4 text-right text-xs text-[#737373] lg:mt-6">
               1. Vos données personnelles sont en sécurité et protégées.
               <br />
               2. Vous gardez le contrôle de vos données et bénéficiez de vos
@@ -507,7 +507,7 @@ export default function Page() {
               collecte respectueuse des consommateurs, en adéquation avec la
               finalité déterminée.
             </div>
-            <h2 className="my-8 lg:my-16 font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+            <h2 className="my-8 text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:my-16 lg:text-[2.5rem] lg:leading-[3rem]">
               Politique de confidentialité
             </h2>
             <Accordion type="multiple" className="w-full">

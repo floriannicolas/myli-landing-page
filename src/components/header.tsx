@@ -36,17 +36,17 @@ export default function Header() {
   });
 
   return (
-    <header className="fixed top-4 lg:top-8 left-0 right-0 z-50">
+    <header className="fixed top-4 right-0 left-0 z-50 lg:top-8">
       <CentralContainer>
         <nav className="px-0 lg:px-4">
-          <ul className="flex gap-0 items-center justify-center">
+          <ul className="flex items-center justify-center gap-0">
             <li>
               <Link href="/" aria-label="Myli">
                 <LogoMyli className="hidden lg:block" />
-                <LogoMyliMobile className="block lg:hidden h-8" />
+                <LogoMyliMobile className="block h-8 lg:hidden" />
               </Link>
             </li>
-            <li className="ml-auto lg:bg-white lg:px-1 lg:py-1 lg:rounded-l-full overflow-hidden">
+            <li className="ml-auto overflow-hidden lg:rounded-l-full lg:bg-white lg:px-1 lg:py-1">
               <Button
                 asChild
                 variant="ghost"
@@ -56,7 +56,7 @@ export default function Header() {
                 <a href="https://next.myli.io/fr">Se connecter</a>
               </Button>
             </li>
-            <li className="ml-2 lg:ml-0 lg:bg-white lg:px-1 lg:py-1 lg:rounded-r-full">
+            <li className="ml-2 lg:ml-0 lg:rounded-r-full lg:bg-white lg:px-1 lg:py-1">
               <PlanDemoDialog>
                 <Button variant="yellow">Planifiez votre démo</Button>
               </PlanDemoDialog>

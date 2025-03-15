@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export type ChatInfo = {
   client: {
@@ -15,16 +15,12 @@ export type ChatInfo = {
   }[];
 };
 
-export default function ChatBlock({
-  chatInfo
-}: {
-  chatInfo: ChatInfo;
-}) {
+export default function ChatBlock({ chatInfo }: { chatInfo: ChatInfo }) {
   let lastAuthorType: 'client' | 'myli' | null = null;
   const marginLeftClass = 'ml-auto';
 
   return (
-    <div className="relative bg-white rounded-2xl p-6 flex flex-col h-full">
+    <div className="relative flex h-full flex-col rounded-2xl bg-white p-6">
       <div className="flex flex-col items-start gap-2">
         {chatInfo.messages.map((message, index) => {
           const marginClass =
@@ -35,7 +31,7 @@ export default function ChatBlock({
           return (
             <div
               key={index}
-              className={`flex max-w-[80%] rounded-2xl py-3 px-4 ${marginClass} ${
+              className={`flex max-w-[80%] rounded-2xl px-4 py-3 ${marginClass} ${
                 message.author === 'myli' ? marginLeftClass : ''
               } ${
                 message.author === 'client'
@@ -48,7 +44,7 @@ export default function ChatBlock({
           );
         })}
       </div>
-      <div className="mt-auto pt-8 flex items-center gap-3">
+      <div className="mt-auto flex items-center gap-3 pt-8">
         <Image
           alt={chatInfo.client.label}
           src={chatInfo.client.image}

@@ -12,7 +12,6 @@ import ArrowRight from '@/components/icons/arrow-right';
 import ChatBlock, { type ChatInfo } from './components/chat-block';
 import { Button } from '@/components/ui/button';
 
-
 const chatsList: ChatInfo[] = [
   {
     client: {
@@ -148,23 +147,26 @@ export default function ChatSection() {
   const swiperRef = useRef<SwiperType>(null);
 
   return (
-    <section className="py-10 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]">
-      <CentralContainer className="flex items-center justify-center" variant="small">
+    <section className="bg-linear-90 from-[#f1f7fd] to-[#fbf7fd] py-10">
+      <CentralContainer
+        className="flex items-center justify-center"
+        variant="small"
+      >
         <div className="flex-1">
           <div className="flex justify-between">
             <div className="max-w-[560px] xl:max-w-[680px]">
-              <h2 className="mx-auto max-w-3xl text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
+              <h2 className="mx-auto max-w-3xl text-[2rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[4rem] lg:leading-[4.25rem]">
                 Notre secret ?<br />
                 Ne jamais rien lâcher.
               </h2>
               <p className="mt-4">(Et nos clients nous en remercient)</p>
             </div>
-            <div className="hidden lg:flex items-end justify-center gap-4">
+            <div className="hidden items-end justify-center gap-4 lg:flex">
               <div
                 onClick={() => {
                   swiperRef.current?.slidePrev();
                 }}
-                className="cursor-pointer rounded-full h-12 w-12 bg-[#171b26] transition-all hover:bg-[#ffce67] flex items-center justify-center group"
+                className="group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#171b26] transition-all hover:bg-[#ffce67]"
               >
                 <ArrowLeft className="h-6 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
               </div>
@@ -172,7 +174,7 @@ export default function ChatSection() {
                 onClick={() => {
                   swiperRef.current?.slideNext();
                 }}
-                className="cursor-pointer rounded-full h-12 w-12 bg-[#171b26] transition-all hover:bg-[#ffce67] flex items-center justify-center group"
+                className="group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#171b26] transition-all hover:bg-[#ffce67]"
               >
                 <ArrowRight className="h-6 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
               </div>
@@ -186,7 +188,7 @@ export default function ChatSection() {
           </div>
         </div>
       </CentralContainer>
-      <div className="mt-6 lg:mt-12 overflow-hidden">
+      <div className="mt-6 overflow-hidden lg:mt-12">
         <CentralContainer variant="small">
           <div>
             <Swiper
@@ -194,14 +196,14 @@ export default function ChatSection() {
               onBeforeInit={(swiper) => {
                 swiperRef.current = swiper;
               }}
-              className="w-full h-full !overflow-visible"
+              className="h-full w-full !overflow-visible"
               slidesPerView={'auto'}
               spaceBetween={16}
             >
               {chatsList.map((chatInfo) => (
                 <SwiperSlide
                   key={chatInfo.client.label}
-                  className="!w-[calc(.8333*100vw-.8333*16px*2+.8333*1rem)] md:!w-[calc(.5*100vw-.5*16px*2+.5*1rem)] lg:!w-[calc(.333*100vw-.333*16px*2+.333*1rem)] xl:!w-[calc(.25*100vw-.25*16px*2+.25*1rem)] max-w-[446px] !h-[408px]"
+                  className="!h-[408px] !w-[calc(.8333*100vw-.8333*16px*2+.8333*1rem)] max-w-[446px] md:!w-[calc(.5*100vw-.5*16px*2+.5*1rem)] lg:!w-[calc(.333*100vw-.333*16px*2+.333*1rem)] xl:!w-[calc(.25*100vw-.25*16px*2+.25*1rem)]"
                 >
                   <ChatBlock chatInfo={chatInfo} />
                 </SwiperSlide>

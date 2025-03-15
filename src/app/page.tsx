@@ -13,7 +13,7 @@ import TrialSection from '@/components/home/trial-section';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative pt-18 lg:pt-28">
+    <main className="relative min-h-screen pt-18 lg:pt-28">
       <Header />
       <HeroSection />
       <ComparisonSection />

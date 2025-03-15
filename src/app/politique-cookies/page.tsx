@@ -13,7 +13,7 @@ export default function Page() {
     'p-4 text-left text-base lg:text-lg border border-b-0 border-r-0 border-[#e1e2e9]';
 
   return (
-    <main className="min-h-screen relative pt-18 lg:pt-28 flex flex-col">
+    <main className="relative flex min-h-screen flex-col pt-18 lg:pt-28">
       <Header />
       <div>
         <PageHeader>
@@ -22,13 +22,13 @@ export default function Page() {
         <CentralContainer variant="mini" className="my-8 lg:my-16">
           <Link
             href="/"
-            className="inline-flex gap-1 items-center group hover:text-[#464646]"
+            className="group inline-flex items-center gap-1 hover:text-[#464646]"
           >
             <ArrowLeft className="h-4 fill-black group-hover:fill-[#464646]" />
             <span className="font-semibold">Retourner à l’accueil</span>
           </Link>
           <div className="mt-4 lg:mt-10">
-            <h2 className="font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+            <h2 className="text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[2.5rem] lg:leading-[3rem]">
               Politique des cookies
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -41,7 +41,7 @@ export default function Page() {
               l&apos;icône située en bas à gauche. Vous pouvez également refuser
               ces cookies en configurant les paramètres de votre navigateur.
             </p>
-            <h2 className="mt-6 font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+            <h2 className="mt-6 text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[2.5rem] lg:leading-[3rem]">
               Qu&apos;est-ce qu&apos;un cookie ?
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -54,7 +54,7 @@ export default function Page() {
               identifiant permettant de tracer votre navigation à des fins
               statistiques ou publicitaires etc…
             </p>
-            <h2 className="mt-6 font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+            <h2 className="mt-6 text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[2.5rem] lg:leading-[3rem]">
               À quelles fins My Local Influence utilise les cookies ?
             </h2>
             <p className="mt-4 lg:mt-6">
@@ -66,12 +66,12 @@ export default function Page() {
               internet. Ces cookies sont soumis au consentement de
               l&apos;utilisateur.
             </p>
-            <h2 className="mt-6 font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+            <h2 className="mt-6 text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[2.5rem] lg:leading-[3rem]">
               Qu&apos;est ce que les cookies tiers exactement ?
             </h2>
-            <div className="overflow-x-auto mt-4 lg:mt-6">
-              <div className="min-w-179 w-full">
-                <table className="relative w-full border-separate border-spacing-0 table-fixed rounded-t-2xl">
+            <div className="mt-4 overflow-x-auto lg:mt-6">
+              <div className="w-full min-w-179">
+                <table className="relative w-full table-fixed border-separate border-spacing-0 rounded-t-2xl">
                   <thead>
                     <tr>
                       <th className={cn(thClassName, 'rounded-tl-2xl')}>

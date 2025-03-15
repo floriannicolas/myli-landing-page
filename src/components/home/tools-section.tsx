@@ -48,48 +48,48 @@ export default function ToolsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-svh text-center py-5 lg:py-10 xl:py-15 bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]"
+      className="relative min-h-svh bg-linear-90 from-[#f1f7fd] to-[#fbf7fd] py-5 text-center lg:py-10 xl:py-15"
     >
       <motion.div
-        className="absolute flex items-center justify-center h-full w-full top-0 left-0"
+        className="absolute top-0 left-0 flex h-full w-full items-center justify-center"
         style={{
           transform: isLgScreen
             ? lgTextContainerTransform
             : textContainerTransform
         }}
       >
-        <div className="relative max-w-xl lg:max-w-4xl mx-auto">
-          <h2 className="font-medium text-balance text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em]">
+        <div className="relative mx-auto max-w-xl lg:max-w-4xl">
+          <h2 className="text-[2.5rem] leading-[2.75rem] font-medium tracking-[-.02em] text-balance lg:text-[5rem] lg:leading-[5.5rem]">
             Quatre outils puissants, une seule plateforme
           </h2>
-          <div className="mx-4 mt-6 lg:mt-10 text-lg max-w-lg lg:mx-auto">
+          <div className="mx-4 mt-6 max-w-lg text-lg lg:mx-auto lg:mt-10">
             De la gestion des avis à la conquête locale, nous avons créé des
             solutions puissantes, complémentaires et faciles à intégrer :
             Review, Presence, Store Locator, Lottery.
           </div>
         </div>
       </motion.div>
-      <div className="relative min-h-svh flex flex-col items-center justify-center">
-        <div className="mt-25 lg:mt-45 translate-x-[calc(min(100vw,1800px)*.1)] relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
-          <div className="rounded-full bg-[#afb7f5] w-10 h-10 flex items-center justify-center">
+      <div className="relative flex min-h-svh flex-col items-center justify-center">
+        <div className="relative mt-25 flex translate-x-[calc(min(100vw,1800px)*.1)] items-center justify-center gap-3 rounded-full bg-white p-3 pr-[1.375rem] shadow-[0_1px_43px_0_rgba(0,0,0,0.15)] lg:mt-45">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#afb7f5]">
             <ToolStoreLocator className="h-[22px]" />
           </div>
           <span className="text-xl">Store Locator</span>
         </div>
-        <div className="mt-18 lg:mt-60 xl:mt-70 translate-x-[calc(min(100vw,1800px)*-.25)] relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
-          <div className="rounded-full bg-[#ffce67] w-10 h-10 flex items-center justify-center">
+        <div className="relative mt-18 flex translate-x-[calc(min(100vw,1800px)*-.25)] items-center justify-center gap-3 rounded-full bg-white p-3 pr-[1.375rem] shadow-[0_1px_43px_0_rgba(0,0,0,0.15)] lg:mt-60 xl:mt-70">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffce67]">
             <ToolReview className="h-[22px]" />
           </div>
           <span className="text-xl">Review</span>
         </div>
-        <div className="mt-86 lg:mt-25 translate-x-[calc(min(100vw,1800px)*.225)] relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
-          <div className="rounded-full bg-[#a2cd92] w-10 h-10 flex items-center justify-center">
+        <div className="relative mt-86 flex translate-x-[calc(min(100vw,1800px)*.225)] items-center justify-center gap-3 rounded-full bg-white p-3 pr-[1.375rem] shadow-[0_1px_43px_0_rgba(0,0,0,0.15)] lg:mt-25">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#a2cd92]">
             <ToolPresence className="h-[22px]" />
           </div>
           <span className="text-xl">Presence</span>
         </div>
-        <div className="mt-20 xl:mt-20 xl:mt-30 translate-x-[calc(min(100vw,1800px)*-.085)] mb-20 xl:mb-30 relative bg-white p-3 pr-[1.375rem] rounded-full flex items-center justify-center gap-3 shadow-[0_1px_43px_0_rgba(0,0,0,0.15)]">
-          <div className="rounded-full bg-[#d3b3ea] w-10 h-10 flex items-center justify-center">
+        <div className="relative mt-20 mb-20 flex translate-x-[calc(min(100vw,1800px)*-.085)] items-center justify-center gap-3 rounded-full bg-white p-3 pr-[1.375rem] shadow-[0_1px_43px_0_rgba(0,0,0,0.15)] xl:mt-20 xl:mt-30 xl:mb-30">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#d3b3ea]">
             <ToolLottery className="h-[22px]" />
           </div>
           <span className="text-xl">Lottery</span>

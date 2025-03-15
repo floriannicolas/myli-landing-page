@@ -1,9 +1,9 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export default function LogoMyliMobile({ className }: { className?: string }) {
   return (
     <svg
-      className={cn("block h-6", className)}
+      className={cn('block h-6', className)}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"

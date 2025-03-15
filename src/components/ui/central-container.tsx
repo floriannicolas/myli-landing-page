@@ -18,9 +18,9 @@ export default function CentralContainer({
       className={cn(
         'mx-auto w-screen max-w-[1800px]',
         className,
-        withPadding && 'px-4 max-w-[1832px]',
+        withPadding && 'max-w-[1832px] px-4',
         withPadding && variant == 'small' && 'lg:px-[min(10%,135px)]',
-        withPadding && variant == 'mini' && 'lg:px-[min(15%,252px)]',
+        withPadding && variant == 'mini' && 'lg:px-[min(15%,252px)]'
       )}
     >
       {children}

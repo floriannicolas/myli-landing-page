@@ -126,9 +126,9 @@ export default function ProductsSection() {
     <section className="relative py-6 lg:py-10 xl:py-15">
       <CentralContainer className="lg:h-[400svh]">
         <div ref={sectionRef} className="h-full">
-          <div className="lg:sticky lg:top-4 mx-auto flex justify-center items-center">
+          <div className="mx-auto flex items-center justify-center lg:sticky lg:top-4">
             <motion.div
-              className="relative w-full lg:h-[calc(100svh-2rem)] rounded-none lg:rounded-[2rem] overflow-hidden"
+              className="relative w-full overflow-hidden rounded-none lg:h-[calc(100svh-2rem)] lg:rounded-[2rem]"
               style={{
                 transform: isLgScreen
                   ? containerTransform
@@ -136,42 +136,42 @@ export default function ProductsSection() {
               }}
             >
               <motion.div
-                className="relative w-full h-full"
+                className="relative h-full w-full"
                 style={{
                   transform: isLgScreen
                     ? containerInnerTransform
                     : mdContainerInnerTransform
                 }}
               >
-                <div className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 mt-4 lg:mt-0 rounded-[2rem] lg:rounded-none relative w-full h-full flex justify-center items-center bg-linear-180 from-[#ffefc6] to-[#fff9eb]">
-                  <div className="flex flex-col lg:flex-row items-center justify-center h-full w-full">
+                <div className="relative mt-4 flex h-full w-full items-center justify-center rounded-[2rem] bg-linear-180 from-[#ffefc6] to-[#fff9eb] px-[1rem] py-[3.25rem] lg:mt-0 lg:rounded-none lg:px-0 lg:py-0">
+                  <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
                     <Menu section="review" />
-                    <div className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center">
-                      <div className="flex flex-col w-full max-w-[43.75rem] gap-6">
-                        <div className="w-auto max-w-fit bg-[#ffce67] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                    <div className="mt-[2.375rem] flex h-full flex-1 items-center justify-center md:mx-[20vw] lg:mx-auto lg:mt-0">
+                      <div className="flex w-full max-w-[43.75rem] flex-col gap-6">
+                        <div className="w-auto max-w-fit rounded-[1.25rem] bg-[#ffce67] px-6 py-5 lg:text-lg">
                           Y&apos;a t-il des{' '}
                           <b className="font-semibold">soucis particuliers</b>{' '}
                           dans mes établissements ?
                         </div>
-                        <div className="w-auto max-w-fit flex gap-2">
-                          <div className="rounded-full w-12 h-12 flex justify-center items-center bg-white border border-[#e1e2e9]">
+                        <div className="flex w-auto max-w-fit gap-2">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#e1e2e9] bg-white">
                             <LogoMyliChat />
                           </div>
-                          <div className="flex flex-wrap flex-1 flex-col gap-2">
-                            <div className="w-auto max-w-fit flex flex-wrap items-center gap-2 bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
-                              <div className="lg:flex gap-2 items-center leading-8">
+                          <div className="flex flex-1 flex-col flex-wrap gap-2">
+                            <div className="flex w-auto max-w-fit flex-wrap items-center gap-2 rounded-[1.25rem] border border-[#e1e2e9] bg-white px-6 py-5 lg:text-lg">
+                              <div className="items-center gap-2 leading-8 lg:flex">
                                 <b className="font-semibold">5%</b> de vos
                                 clients sont{' '}
-                                <span className="leading-[20px] bg-white border border-[#e1e2e9] align-middle inline-flex gap-1 lg:gap-2 justify-center items-center rounded-lg p-1 lg:p-2">
+                                <span className="inline-flex items-center justify-center gap-1 rounded-lg border border-[#e1e2e9] bg-white p-1 align-middle leading-[20px] lg:gap-2 lg:p-2">
                                   <SmileyAngry />
-                                  <span className="lg:text-lg font-semibold">
+                                  <span className="font-semibold lg:text-lg">
                                     En colère
                                   </span>
                                 </span>{' '}
                                 à propos du{' '}
-                                <span className="leading-[20px] bg-white border border-[#e1e2e9] inline-flex gap-1 lg:gap-2 justify-center items-center rounded-lg p-1 lg:p-2">
-                                  <span className="w-[.625rem] h-[.625rem] bg-[#da2828] rounded-full" />
-                                  <span className="lg:text-lg font-semibold">
+                                <span className="inline-flex items-center justify-center gap-1 rounded-lg border border-[#e1e2e9] bg-white p-1 leading-[20px] lg:gap-2 lg:p-2">
+                                  <span className="h-[.625rem] w-[.625rem] rounded-full bg-[#da2828]" />
+                                  <span className="font-semibold lg:text-lg">
                                     Temps d&apos;attente
                                   </span>
                                 </span>
@@ -184,15 +184,15 @@ export default function ProductsSection() {
                   </div>
                 </div>
                 <motion.div
-                  className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 mt-4 lg:mt-0 rounded-[2rem] lg:rounded-none lg:absolute top-0 left-0 w-full h-full flex justify-center items-center will-change-[clipPath] bg-linear-180 from-[#e8f4e4] to-[#f5faf3] z-2"
+                  className="top-0 left-0 z-2 mt-4 flex h-full w-full items-center justify-center rounded-[2rem] bg-linear-180 from-[#e8f4e4] to-[#f5faf3] px-[1rem] py-[3.25rem] will-change-[clipPath] lg:absolute lg:mt-0 lg:rounded-none lg:px-0 lg:py-0"
                   style={{
                     clipPath: isLgScreen ? clipPathPresence : mdClipPath
                   }}
                 >
-                  <div className="flex flex-col lg:flex-row items-center justify-center h-full w-full">
+                  <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
                     <Menu section="presence" />
                     <motion.div
-                      className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center"
+                      className="mt-[2.375rem] flex h-full flex-1 items-center justify-center md:mx-[20vw] lg:mx-auto lg:mt-0"
                       style={{
                         transform: isLgScreen
                           ? translateYTemplatePresence
@@ -200,26 +200,26 @@ export default function ProductsSection() {
                         opacity: isLgScreen ? opacityPresence : 1
                       }}
                     >
-                      <div className="flex flex-col w-full max-w-[43.75rem] gap-6">
-                        <div className="w-auto max-w-fit bg-[#a2cd92] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                      <div className="flex w-full max-w-[43.75rem] flex-col gap-6">
+                        <div className="w-auto max-w-fit rounded-[1.25rem] bg-[#a2cd92] px-6 py-5 lg:text-lg">
                           Je souhaite{' '}
                           <b className="font-semibold">
                             attirer plus de clients
                           </b>{' '}
                           avec ma fiche Google
                         </div>
-                        <div className="w-auto max-w-fit flex gap-2">
-                          <div className="rounded-full w-12 h-12 flex justify-center items-center bg-white border border-[#e1e2e9]">
+                        <div className="flex w-auto max-w-fit gap-2">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#e1e2e9] bg-white">
                             <LogoMyliChat />
                           </div>
-                          <div className="flex flex-wrap flex-1 flex-col gap-2">
-                            <div className="w-auto max-w-fit flex items-center gap-2 bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                          <div className="flex flex-1 flex-col flex-wrap gap-2">
+                            <div className="flex w-auto max-w-fit items-center gap-2 rounded-[1.25rem] border border-[#e1e2e9] bg-white px-6 py-5 lg:text-lg">
                               Effectivement, votre photo de couverture est peu
                               vendeuse.
                               <br />
                               Souhaitez-vous la modifier ?
                             </div>
-                            <div className="w-auto max-w-fit flex items-center gap-2 bg-white border border-[#e1e2e9] px-2 py-2 lg:text-lg rounded-[1.25rem]">
+                            <div className="flex w-auto max-w-fit items-center gap-2 rounded-[1.25rem] border border-[#e1e2e9] bg-white px-2 py-2 lg:text-lg">
                               <Image
                                 className="rounded-[.75rem]"
                                 src="/images/products/products-chat-burger.webp"
@@ -235,13 +235,13 @@ export default function ProductsSection() {
                   </div>
                 </motion.div>
                 <motion.div
-                  className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 mt-4 lg:mt-0 rounded-[2rem] lg:rounded-none lg:absolute top-0 left-0 w-full h-full flex justify-center items-center will-change-[clipPath] bg-linear-180 from-[#e3e7fc] to-[#eff2fe] z-3"
+                  className="top-0 left-0 z-3 mt-4 flex h-full w-full items-center justify-center rounded-[2rem] bg-linear-180 from-[#e3e7fc] to-[#eff2fe] px-[1rem] py-[3.25rem] will-change-[clipPath] lg:absolute lg:mt-0 lg:rounded-none lg:px-0 lg:py-0"
                   style={{ clipPath: isLgScreen ? clipPathSeo : mdClipPath }}
                 >
-                  <div className="flex flex-col lg:flex-row items-center justify-center h-full w-full">
+                  <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
                     <Menu section="seo" />
                     <motion.div
-                      className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center"
+                      className="mt-[2.375rem] flex h-full flex-1 items-center justify-center md:mx-[20vw] lg:mx-auto lg:mt-0"
                       style={{
                         transform: isLgScreen
                           ? translateYTemplateSeo
@@ -249,24 +249,24 @@ export default function ProductsSection() {
                         opacity: isLgScreen ? opacitySeo : 1
                       }}
                     >
-                      <div className="flex flex-col w-full max-w-[43.75rem] gap-6">
-                        <div className="w-auto max-w-fit bg-[#afb7f5] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                      <div className="flex w-full max-w-[43.75rem] flex-col gap-6">
+                        <div className="w-auto max-w-fit rounded-[1.25rem] bg-[#afb7f5] px-6 py-5 lg:text-lg">
                           Je jette mon{' '}
                           <b className="font-semibold">budget SEO</b> par les
                           fenêtres sans résultat...
                         </div>
-                        <div className="w-auto max-w-fit flex gap-2">
-                          <div className="rounded-full w-12 h-12 flex justify-center items-center bg-white border border-[#e1e2e9]">
+                        <div className="flex w-auto max-w-fit gap-2">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#e1e2e9] bg-white">
                             <LogoMyliChat />
                           </div>
-                          <div className="flex flex-wrap flex-1 flex-col gap-2">
-                            <div className="w-auto max-w-fit bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                          <div className="flex flex-1 flex-col flex-wrap gap-2">
+                            <div className="w-auto max-w-fit rounded-[1.25rem] border border-[#e1e2e9] bg-white px-6 py-5 lg:text-lg">
                               Votre{' '}
                               <b className="font-semibold">Store Locator</b> est
                               prêt. <b className="font-semibold">356 pages</b>{' '}
                               locales parfaitement optimisées.
                             </div>
-                            <div className="w-auto max-w-fit flex items-center gap-2 bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                            <div className="flex w-auto max-w-fit items-center gap-2 rounded-[1.25rem] border border-[#e1e2e9] bg-white px-6 py-5 lg:text-lg">
                               Vos concurrents vont adorer (ou pas)
                             </div>
                           </div>
@@ -276,15 +276,15 @@ export default function ProductsSection() {
                   </div>
                 </motion.div>
                 <motion.div
-                  className="py-[3.25rem] px-[1rem] lg:py-0 lg:px-0 mt-4 lg:mt-0 rounded-[2rem] lg:rounded-none lg:absolute top-0 left-0 w-full h-full flex justify-center items-center will-change-[clipPath] bg-linear-180 from-[#f4edfa] to-[#fbf7fd] z-4"
+                  className="top-0 left-0 z-4 mt-4 flex h-full w-full items-center justify-center rounded-[2rem] bg-linear-180 from-[#f4edfa] to-[#fbf7fd] px-[1rem] py-[3.25rem] will-change-[clipPath] lg:absolute lg:mt-0 lg:rounded-none lg:px-0 lg:py-0"
                   style={{
                     clipPath: isLgScreen ? clipPathLottery : mdClipPath
                   }}
                 >
-                  <div className="flex flex-col lg:flex-row items-center justify-center h-full w-full">
+                  <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row">
                     <Menu section="lottery" />
                     <motion.div
-                      className="mt-[2.375rem] md:mx-[20vw] lg:mt-0 lg:mx-auto flex-1 h-full flex justify-center items-center"
+                      className="mt-[2.375rem] flex h-full flex-1 items-center justify-center md:mx-[20vw] lg:mx-auto lg:mt-0"
                       style={{
                         transform: isLgScreen
                           ? translateYTemplateLottery
@@ -292,25 +292,25 @@ export default function ProductsSection() {
                         opacity: isLgScreen ? opacityLottery : 1
                       }}
                     >
-                      <div className="flex flex-col w-full max-w-[43.75rem] gap-6">
-                        <div className="w-auto max-w-fit bg-[#d3b3ea] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                      <div className="flex w-full max-w-[43.75rem] flex-col gap-6">
+                        <div className="w-auto max-w-fit rounded-[1.25rem] bg-[#d3b3ea] px-6 py-5 lg:text-lg">
                           Ça existe un outil qui{' '}
                           <b className="font-semibold">collecte des avis</b>{' '}
                           facilement ?
                         </div>
-                        <div className="w-auto max-w-fit flex gap-2">
-                          <div className="rounded-full w-12 h-12 flex justify-center items-center bg-white border border-[#e1e2e9]">
+                        <div className="flex w-auto max-w-fit gap-2">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#e1e2e9] bg-white">
                             <LogoMyliChat />
                           </div>
-                          <div className="flex flex-wrap flex-1 flex-col gap-2">
-                            <div className="w-auto max-w-fit bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
-                              <b className="font-semibold inline">
+                          <div className="flex flex-1 flex-col flex-wrap gap-2">
+                            <div className="w-auto max-w-fit rounded-[1.25rem] border border-[#e1e2e9] bg-white px-6 py-5 lg:text-lg">
+                              <b className="inline font-semibold">
                                 Myli Lottery
                               </b>{' '}
                               : Vos clients jouent, laissent des avis et
                               reviennent.
                             </div>
-                            <div className="w-auto max-w-fit flex items-center gap-2 bg-white border border-[#e1e2e9] px-6 py-5 lg:text-lg rounded-[1.25rem]">
+                            <div className="flex w-auto max-w-fit items-center gap-2 rounded-[1.25rem] border border-[#e1e2e9] bg-white px-6 py-5 lg:text-lg">
                               En bonus ? Vous collectez des données clients.
                             </div>
                           </div>

@@ -57,14 +57,14 @@ export default function TeamSection() {
       ref={sectionRef}
       className="overflow-hidden bg-linear-90 from-[#f1f7fd] to-[#fbf7fd]"
     >
-      <div className="flex items-center flex-col justify-center py-34 lg:py-50">
+      <div className="flex flex-col items-center justify-center py-34 lg:py-50">
         <CentralContainer
           withPadding={false}
           className="flex items-center justify-center"
         >
           <div className="text-center">
             <motion.div
-              className="text-[1.125rem] leading-[2rem] lg:text-[2rem] lg:leading-[2rem] tracking-[-.02em] font-medium"
+              className="text-[1.125rem] leading-[2rem] font-medium tracking-[-.02em] lg:text-[2rem] lg:leading-[2rem]"
               style={{
                 transform: smallTeamScaleTransform
               }}
@@ -72,7 +72,7 @@ export default function TeamSection() {
               Small team
             </motion.div>
             <motion.div
-              className="text-[4.5rem] leading-[4.5rem] lg:text-[13.75rem] lg:leading-[10.625rem] tracking-[-.02em] font-medium"
+              className="text-[4.5rem] leading-[4.5rem] font-medium tracking-[-.02em] lg:text-[13.75rem] lg:leading-[10.625rem]"
               style={{
                 transform: bigImpackScaleTransform
               }}
@@ -82,9 +82,9 @@ export default function TeamSection() {
           </div>
         </CentralContainer>
         <CentralContainer variant="mini">
-          <div className="flex items-center justify-center lg:justify-normal lg:flex-row-reverse mt-10 lg:-mt-10 lg:-mr-10">
+          <div className="mt-10 flex items-center justify-center lg:-mt-10 lg:-mr-10 lg:flex-row-reverse lg:justify-normal">
             <motion.div
-              className="relative bg-white rounded-[2.5rem] p-6 lg:p-10 text-base lg:text-lg z-2 w-[calc(.8333333333*100vw-.8333333333*16px*2+.8333333333*1rem)] lg:w-[calc(max(40%,490px))]"
+              className="relative z-2 w-[calc(.8333333333*100vw-.8333333333*16px*2+.8333333333*1rem)] rounded-[2.5rem] bg-white p-6 text-base lg:w-[calc(max(40%,490px))] lg:p-10 lg:text-lg"
               style={{
                 transform: isLgScreen
                   ? lgTextTranslateYTransform
@@ -100,11 +100,11 @@ export default function TeamSection() {
         </CentralContainer>
       </div>
       <CentralContainer variant="mini">
-        <div className="flex flex-wrap items-center gap-4 py-4 lg:py-10 mx-auto w-full">
+        <div className="mx-auto flex w-full flex-wrap items-center gap-4 py-4 lg:py-10">
           {sponsors.map(({ image, label }) => (
             <div
               key={image}
-              className="relative overflow-hidden group flex items-center justify-center w-[calc(50%-.5rem)] lg:w-[calc(25%-.75rem)] aspect-square rounded-3xl border border-[#e1e2e9] text-center"
+              className="group relative flex aspect-square w-[calc(50%-.5rem)] items-center justify-center overflow-hidden rounded-3xl border border-[#e1e2e9] text-center lg:w-[calc(25%-.75rem)]"
             >
               <Image alt={label} width={124} height={124} src={image} />
             </div>

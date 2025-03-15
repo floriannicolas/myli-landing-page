@@ -160,11 +160,11 @@ export default function StoresSection() {
   return (
     <section className="min-h-100/2 py-10 text-center">
       <CentralContainer variant="small">
-        <h2 className="mx-auto text-balance lg:max-w-lg xl:max-w-5xl text-[2rem] leading-[2.25rem] lg:text-[4rem] lg:leading-[4.25rem] tracking-[-.01em] font-medium">
+        <h2 className="mx-auto text-[2rem] leading-[2.25rem] font-medium tracking-[-.01em] text-balance lg:max-w-lg lg:text-[4rem] lg:leading-[4.25rem] xl:max-w-5xl">
           Leaders
-          <span className="relative mx-2 translate-y-[-50%] lg:translate-y-[-100%] transition-all group inline-flex items-center justify-center rounded-full aspect-square w-6 bg-[#ffce67] lg:hover:bg-[#171b26]">
-            <Asterisk className="fill-black lg:group-hover:fill-white transition-all duration-300 lg:group-hover:-rotate-90" />
-            <div className="hidden lg:flex absolute text-balance items-center top-[calc(-200%-3.5rem)] pt-[.5625rem] px-4 pb-2 rounded-full bg-[#ffefc6] text-sm font-semibold transition-all duration-300 opacity-0 transform translate-y-9 scale-0 rotate-[25deg] group-hover:opacity-100 group-hover:translate-z-0 group-hover:scale-100 group-hover:rotate-0">
+          <span className="group relative mx-2 inline-flex aspect-square w-6 translate-y-[-50%] items-center justify-center rounded-full bg-[#ffce67] transition-all lg:translate-y-[-100%] lg:hover:bg-[#171b26]">
+            <Asterisk className="fill-black transition-all duration-300 lg:group-hover:-rotate-90 lg:group-hover:fill-white" />
+            <div className="absolute top-[calc(-200%-3.5rem)] hidden translate-y-9 scale-0 rotate-[25deg] transform items-center rounded-full bg-[#ffefc6] px-4 pt-[.5625rem] pb-2 text-sm font-semibold text-balance opacity-0 transition-all duration-300 group-hover:translate-z-0 group-hover:scale-100 group-hover:rotate-0 group-hover:opacity-100 lg:flex">
               <span className="w-[1000px] max-w-83">
                 40% du Top 100 des chaînes de la restauration rapide par France
                 Snacking Avril 2024
@@ -176,10 +176,10 @@ export default function StoresSection() {
           Reconnus dans tous les secteurs.
         </h2>
         <div className="relative mx-auto mt-6 lg:mt-16">
-          <div className="flex lg:hidden items-center justify-center gap-2 mb-8 p-2 rounded-full border border-[#e1e2e9]">
+          <div className="mb-8 flex items-center justify-center gap-2 rounded-full border border-[#e1e2e9] p-2 lg:hidden">
             <div
               className={cn(
-                'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+                'flex h-8 flex-1 cursor-pointer items-center justify-center rounded-full text-sm font-semibold transition-all',
                 currentStoreType === '1-50' && 'bg-[#ffce67]'
               )}
               onClick={() => {
@@ -190,7 +190,7 @@ export default function StoresSection() {
             </div>
             <div
               className={cn(
-                'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+                'flex h-8 flex-1 cursor-pointer items-center justify-center rounded-full text-sm font-semibold transition-all',
                 currentStoreType === '50-200' && 'bg-[#a2cd92]'
               )}
               onClick={() => {
@@ -201,7 +201,7 @@ export default function StoresSection() {
             </div>
             <div
               className={cn(
-                'transition-all rounded-full flex-1 h-8 flex items-center justify-center cursor-pointer text-sm font-semibold',
+                'flex h-8 flex-1 cursor-pointer items-center justify-center rounded-full text-sm font-semibold transition-all',
                 currentStoreType === '200+' && 'bg-[#faa96b]'
               )}
               onClick={() => {
@@ -217,8 +217,8 @@ export default function StoresSection() {
               currentStoreType !== '1-50' && 'hidden'
             )}
           >
-            <div className="hidden lg:flex mx-auto items-center justify-center w-[calc(20%-.8rem)] aspect-square rounded-3xl bg-[#ffce67] text-center">
-              <span className="text-lg leading-7 px-4">
+            <div className="mx-auto hidden aspect-square w-[calc(20%-.8rem)] items-center justify-center rounded-3xl bg-[#ffce67] text-center lg:flex">
+              <span className="px-4 text-lg leading-7">
                 1-50 établissements
               </span>
             </div>
@@ -228,12 +228,12 @@ export default function StoresSection() {
           </div>
           <div
             className={cn(
-              'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
+              'mt-4 flex flex-wrap items-center justify-center gap-4 lg:!flex',
               currentStoreType !== '50-200' && 'hidden'
             )}
           >
-            <div className="hidden lg:flex mx-auto items-center justify-center w-[calc(20%-.8rem)] aspect-square rounded-3xl bg-[#a2cd92] text-center">
-              <span className="text-lg leading-7 px-4">
+            <div className="mx-auto hidden aspect-square w-[calc(20%-.8rem)] items-center justify-center rounded-3xl bg-[#a2cd92] text-center lg:flex">
+              <span className="px-4 text-lg leading-7">
                 50-200 établissements
               </span>
             </div>
@@ -243,12 +243,12 @@ export default function StoresSection() {
           </div>
           <div
             className={cn(
-              'flex flex-wrap items-center justify-center mt-4 gap-4 lg:!flex',
+              'mt-4 flex flex-wrap items-center justify-center gap-4 lg:!flex',
               currentStoreType !== '200+' && 'hidden'
             )}
           >
-            <div className="hidden lg:flex mx-auto items-center justify-center w-[calc(20%-.8rem)] aspect-square rounded-3xl bg-[#faa96b] text-center">
-              <span className="text-lg leading-7 px-4">
+            <div className="mx-auto hidden aspect-square w-[calc(20%-.8rem)] items-center justify-center rounded-3xl bg-[#faa96b] text-center lg:flex">
+              <span className="px-4 text-lg leading-7">
                 200+ établissements
               </span>
             </div>

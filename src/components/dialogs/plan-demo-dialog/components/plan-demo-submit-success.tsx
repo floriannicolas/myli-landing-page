@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 export default function PlanDemoSubmitSuccess() {
   return (
     <div className="flex min-h-full flex-col">
-      <h3 className="font-medium font-medium text-[1.75rem] leading-[2.25rem] lg:text-[2.5rem] lg:leading-[3rem] tracking-[-.01em]">
+      <h3 className="text-[1.75rem] leading-[2.25rem] font-medium tracking-[-.01em] lg:text-[2.5rem] lg:leading-[3rem]">
         Demande envoyée
       </h3>
       <p className="mt-2">

@@ -104,26 +104,26 @@ export default function SectorsSection() {
                   sectorsRefs.current[index] = el;
                 }}
                 className={cn(
-                  'transition-all duration-400 will-change-opacity',
+                  'will-change-opacity transition-all duration-400',
                   key !== currentSector && 'opacity-50'
                 )}
               >
-                <h3 className="text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em] font-medium text-left">
+                <h3 className="text-left text-[2.5rem] leading-[2.75rem] font-medium tracking-[-.02em] lg:text-[5rem] lg:leading-[5.5rem]">
                   {title}
                 </h3>
-                <p className="text-lg mt-2 text-balance">{description}</p>
+                <p className="mt-2 text-lg text-balance">{description}</p>
               </div>
             ))}
           </div>
-          <div className="hidden lg:block sticky top-[calc(50%-20vh)] right-0 z-1 block w-[30vh] h-[40vh] bg-[#f5f6f8] rounded-[2rem] overflow-hidden">
+          <div className="sticky top-[calc(50%-20vh)] right-0 z-1 block hidden h-[40vh] w-[30vh] overflow-hidden rounded-[2rem] bg-[#f5f6f8] lg:block">
             <div
-              className="w-full min-h-full transition-all duration-400 will-change-transform"
+              className="min-h-full w-full transition-all duration-400 will-change-transform"
               style={{ transform: `translateY(-${imageTranslateY}%)` }}
             >
               {sectors.map(({ key, image, title }) => (
                 <Image
                   key={key}
-                  className="w-full h-[40vh] object-cover"
+                  className="h-[40vh] w-full object-cover"
                   src={image}
                   alt={title}
                   width={300}

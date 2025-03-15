@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen relative pt-18 lg:pt-28 flex flex-col">
+    <main className="relative flex min-h-screen flex-col pt-18 lg:pt-28">
       <Header />
       <div>
         <PageHeader>

@@ -86,15 +86,15 @@ function DialogContent({
       <DialogOverlay />
       <DialogPrimitive.Content
         data-slot="dialog-content"
-        className="fixed inset-0 z-60 overflow-y-scroll max-h-screen"
+        className="fixed inset-0 z-60 max-h-screen overflow-y-scroll"
         {...props}
       >
-        <div className="relative w-full min-h-screen flex items-center justify-center py-18 lg:py-12 px-4 sm:px-8 md:px-12 lg:px-18">
+        <div className="relative flex min-h-screen w-full items-center justify-center px-4 py-18 sm:px-8 md:px-12 lg:px-18 lg:py-12">
           <div className={cn(dialogContentVariants({ variant, className }))}>
             <div className={cn(dialogContentInnerVariants({ variant }))}>
               {children}
             </div>
-            <DialogPrimitive.Close className="absolute -top-14 lg:top-0 right-0 lg:-right-14 h-10 group aspect-square rounded-full flex items-center justify-center overflow-hidden bg-[#ffce67] text-[#171b26] font-semibold hover:text-white transition-all duration-350 after:bg-[#171b26] hover:after:bg-transparent after:content-[''] after:duration-350 after:transition-transform hover:after:transition-none after:absolute after:cursor-pointer after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:translate-y-[-100%] hover:after:translate-y-0 before:bg-[#171b26] before:content-[''] before:duration-450 before:transition-none hover:before:transition-transform before:absolute before:cursor-pointer before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:translate-y-full hover:before:translate-y-0">
+            <DialogPrimitive.Close className="group absolute -top-14 right-0 flex aspect-square h-10 items-center justify-center overflow-hidden rounded-full bg-[#ffce67] font-semibold text-[#171b26] transition-all duration-350 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:translate-y-full before:cursor-pointer before:rounded-full before:bg-[#171b26] before:transition-none before:duration-450 before:content-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:translate-y-[-100%] after:cursor-pointer after:rounded-full after:bg-[#171b26] after:transition-transform after:duration-350 after:content-[''] hover:text-white hover:before:translate-y-0 hover:before:transition-transform hover:after:translate-y-0 hover:after:bg-transparent hover:after:transition-none lg:top-0 lg:-right-14">
               <CloseDialog className="fill-black group-hover:fill-white" />
               <span className="sr-only">Close</span>
             </DialogPrimitive.Close>

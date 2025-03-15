@@ -1,9 +1,9 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export default function SmileyAngry({ className }: { className?: string }) {
   return (
     <svg
-      className={cn("block h-5", className)}
+      className={cn('block h-5', className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="none"

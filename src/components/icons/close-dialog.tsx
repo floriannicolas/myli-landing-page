@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 export default function CloseDialog({ className }: { className?: string }) {
   return (
     <svg
-      className={cn('block h-4 z-2', className)}
+      className={cn('z-2 block h-4', className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 13"
     >

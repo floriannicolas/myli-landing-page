@@ -12,7 +12,7 @@ export default function PageHeader({
     <CentralContainer>
       <div
         className={cn(
-          'bg-[#ffce67] rounded-[24px] p-8 flex text-center items-center justify-center font-medium text-[2.5rem] leading-[2.75rem] lg:text-[5rem] lg:leading-[5.5rem] tracking-[-.02em] min-h-[172px] lg:min-h-[304px]',
+          'flex min-h-[172px] items-center justify-center rounded-[24px] bg-[#ffce67] p-8 text-center text-[2.5rem] leading-[2.75rem] font-medium tracking-[-.02em] lg:min-h-[304px] lg:text-[5rem] lg:leading-[5.5rem]',
           className
         )}
       >
