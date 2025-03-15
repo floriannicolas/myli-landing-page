@@ -162,26 +162,14 @@ export default function ChatSection() {
               <p className="mt-4">(Et nos clients nous en remercient)</p>
             </div>
             <div className="hidden items-end justify-center gap-4 lg:flex">
-              <div
-                onClick={() => {
+              <Button className="px-2.5" onClick={() => {
                   swiperRef.current?.slidePrev();
-                }}
-                className="group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#171b26] transition-all hover:bg-[#ffce67]"
-              >
-                <ArrowLeft className="h-6 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
-              </div>
-              <div
-                onClick={() => {
-                  swiperRef.current?.slideNext();
-                }}
-                className="group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#171b26] transition-all hover:bg-[#ffce67]"
-              >
-                <ArrowRight className="h-6 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
-              </div>
-              <Button className="px-2.5">
+                }}>
                 <ArrowLeft className="size-5 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
               </Button>
-              <Button className="px-2.5">
+              <Button className="px-2.5" onClick={() => {
+                  swiperRef.current?.slideNext();
+                }}>
                 <ArrowRight className="size-5 fill-[#fff] transition-all group-hover:fill-[#171b26]" />
               </Button>
             </div>

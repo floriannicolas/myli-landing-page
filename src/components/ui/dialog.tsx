@@ -6,6 +6,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 import CloseDialog from '../icons/close-dialog';
+import { Button } from './button';
 
 function Dialog({
   ...props
@@ -94,10 +95,16 @@ function DialogContent({
             <div className={cn(dialogContentInnerVariants({ variant }))}>
               {children}
             </div>
-            <DialogPrimitive.Close className="group absolute -top-14 right-0 flex aspect-square h-10 items-center justify-center overflow-hidden rounded-full bg-[#ffce67] font-semibold text-[#171b26] transition-all duration-350 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:translate-y-full before:cursor-pointer before:rounded-full before:bg-[#171b26] before:transition-none before:duration-450 before:content-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:translate-y-[-100%] after:cursor-pointer after:rounded-full after:bg-[#171b26] after:transition-transform after:duration-350 after:content-[''] hover:text-white hover:before:translate-y-0 hover:before:transition-transform hover:after:translate-y-0 hover:after:bg-transparent hover:after:transition-none lg:top-0 lg:-right-14">
-              <CloseDialog className="fill-black group-hover:fill-white" />
-              <span className="sr-only">Close</span>
-            </DialogPrimitive.Close>
+            <Button
+              asChild
+              variant="yellow"
+              className="group absolute -top-14 right-0 px-3 lg:top-0 lg:-right-14"
+            >
+              <DialogPrimitive.Close>
+                <CloseDialog className="fill-black group-hover:fill-white" />
+                <span className="sr-only">Close</span>
+              </DialogPrimitive.Close>
+            </Button>
           </div>
         </div>
       </DialogPrimitive.Content>
